@@ -14,7 +14,7 @@ class Juhuiadmin
 {
     public  function index()
     {
-        echo 43434;exit;
+        echo 323;exit;
         return view();
     }
 
