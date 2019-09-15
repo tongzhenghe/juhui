@@ -37,7 +37,7 @@ layui.define(mods, function (e) {
                 elem: e.elem,
                 title: "菜单管理",
                 shade: !0,
-                url: "table",
+                url: "menu",
                 direction: "left",
                 dynamicRender: !0,
                 width: "100%"
