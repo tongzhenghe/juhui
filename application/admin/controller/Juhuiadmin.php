@@ -216,6 +216,18 @@ public  function pas()
 
     }
 
+
+    public  function addmenu()
+    {
+        return view();
+
+    }
+
+
+
+
+
+
     public  function formindex()
     {
         return view();
