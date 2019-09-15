@@ -33,7 +33,8 @@ layui.define(mods, function (e) {
                 shade: !0,
                 dynamicRender: !0,
                 url: "setting"
-            }), "menu" === t && layui.sidebar.render({
+            })
+             /*   , "menu" === t && layui.sidebar.render({
                 elem: e.elem,
                 title: "菜单管理",
                 shade: !0,
@@ -41,7 +42,7 @@ layui.define(mods, function (e) {
                 direction: "left",
                 dynamicRender: !0,
                 width: "100%"
-            })
+            })*/
         }), layui.mockjs.inject(APIs), "SPA" === i.loadType && n.render(), "function" == typeof e && e()
     };
     var u = {
