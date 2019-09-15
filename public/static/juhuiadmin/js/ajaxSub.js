@@ -5,21 +5,15 @@ layui.use(['form', 'layedit', 'laydate'], function() {
     laydate = layui.laydate;
 
     form.render();
-    console.log(laydate)
 
     //日期
 
-    laydate.render({
-
-        elem: '#date_hash'
-
-    });
-
+    laydate.render({ elem: '#date_hash' });
 
     //menu
     form.on('submit(tomenu)', function(data) {
         alert(1)
-        console.log(data)
+        console.log(data);
         $.fn.repost( data.field, data.field);
 
     });
