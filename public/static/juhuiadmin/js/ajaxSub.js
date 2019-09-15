@@ -1,5 +1,3 @@
-
-console.log(layui)
 layui.use(['form', 'layedit', 'laydate'], function() {
 
     var form = layui.form,
@@ -19,36 +17,11 @@ layui.use(['form', 'layedit', 'laydate'], function() {
     });
 
 
-
-    form.on('submit(formKeywords_link)', function(data) {
-
-        var arr_re_keywords = [];
-
-        $(".beDemo-k").children(".layui-self");
-
-        $.each($(".beDemo-k").children(".layui-self"), function (k, v ) {
-
-            arr_re_keywords.push($(v).text())
-
-        });
-
-
-
-        data.field.arr_re_keywords = arr_re_keywords;
-
-        $.fn.repost( data.field.requestUrl, data.field);
-
-    });
-
-
-
-
-
     //menu
+    form.on('submit(tomenu)', function(data) {
 
-    form.on('submit(formDemo)', function(data) {
-
-        $.fn.repost( data.field.requestUrl, data.field);
+        console.log(data.field)
+        $.fn.repost( data.field, data.field);
 
     });
 
@@ -601,3 +574,28 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 });
+
+
+
+
+
+
+$.fn.repost = function(url, data) {
+    $.post(url  , data, function(res) {
+        console.log(res);
+        if ( res.status )  {
+            layer.msg('<span><i class="layui-icon layui-icon-ok" style="    color: white; background: #6cd965;     margin-right: 13px;border-radius: 10px;"></i>'+res.msg+'</span>', {
+                time : 1000,
+                maxWidth: 850,
+            }, function() {
+                layer.close(layer.index);
+                window.parent.location.reload();
+            });
+        } else {
+            layer.msg('<span><i class="layui-icon layui-icon-close" style="    color: white; background: red;     margin-right: 13px;border-radius: 10px;"></i>'+res.msg+'</span>', {
+                time : 3000,
+                // time: 2, //2s后自动关闭
+            });
+        }
+    }, 'json');
+};
