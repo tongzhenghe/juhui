@@ -1,4 +1,6 @@
 $ = layui.jquery;
+alert(1)
+console.log($)
 layui.use(['form', 'layedit', 'laydate'], function() {
 
     var form = layui.form,
