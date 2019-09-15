@@ -75,42 +75,42 @@ layui.define(mods, function (e) {
                     path: "/cascader",
                     component: "views/cascader/index.html",
                     name: "Cascader"}
-                , {path: "/", component: "/Juhuiadmin/app", name: "主页"}
-                , {path: "/juhui/profile", component: "/Juhuiadmin/profile", name: "用户中心"}
-                , {path: "/juhui/grid", component: "/Juhuiadmin/grid", name: "Grid"}
-                , {path: "/juhui/button", component: "/Juhuiadmin/button", name: "按钮"}
-                , {path: "/juhui/form", component: "/Juhuiadmin/form", name: "表单"}
-                , {path: "/juhui/nav", component: "/Juhuiadmin/nav.html", name: "导航/面包屑"}
-                , {path: "/juhui/tab", component: "/Juhuiadmin/tab.html", name: "选项卡"}
-                , {path: "/juhui/progress", component: "/Juhuiadmin/progress.html", name: "progress"}
-                , {path: "/juhui/panel", component: "/Juhuiadmin/panel.html", name: "panel"}
-                , {path: "/juhui/badge", component: "/Juhuiadmin/badge.html", name: "badge"}
-                , {path: "/juhui/timeline", component: "/Juhuiadmin/timeline.html", name: "timeline"}
-                , {path: "/juhui/table_element", component: "/Juhuiadmin/table_element", name: "table-element"}
-                , {path: "/juhui/anim", component: "/Juhuiadmin/anim.html", name: "anim"}
-                , {path: "/juhui/auxiliar", component: "/Juhuiadmin/auxiliar", name: "anim"}
-                , {path: "/juhui/layer", component: "/Juhuiadmin/layer", name: "layer"}
-                , {path: "/juhui/laydate", component: "/Juhuiadmin/laydate", name: "laydate"}
-                , {path: "/juhui/table", component: "/Juhuiadmin/table", name: "table"}
-                , {path: "/juhui/laypage", component: "/Juhuiadmin/laypage", name: "laypage"}
-                , {path: "/juhui/upload", component: "/Juhuiadmin/upload", name: "upload"}
-                , {path: "/juhui/carousel", component: "/Juhuiadmin/carousel",}
-                , {path: "/juhui/laytpl", component: "/Juhuiadmin/laytpl", name: "laytpl"}
-                , {path: "/juhui/flow", component: "/Juhuiadmin/flow", name: "flow"}
-                , {path: "/juhui/util", component: "/Juhuiadmin/util", name: "util"}
-                , {path: "/juhui/code", component: "/Juhuiadmin/code", name: "code"}
-                , {path: "/juhui/select", component: "/Juhuiadmin/select", name: "code"}
-                , {path: "/juhui/403", component: "/Juhuiadmin/p403", name: "code"}
-                , {path: "/juhui/404", component: "/Juhuiadmin/p404", name: "code"}
-                , {path: "/juhui/500", component: "/Juhuiadmin/p500", name: "code"}
-                , {path: "/juhui/mockjs", component: "/Juhuiadmin/mockjs", name: "拦截器(Mockjs)"}
-                , { path: "/juhui/menu", component: "/Juhuiadmin/menu", name: "左侧菜单(Menu)"}
-                , {path: "/juhui/route", component: "/Juhuiadmin/route", name: "路由配置(Route)"}
-                , { path: "/juhui/tabs", component: "/Juhuiadmin/tabs", name: "选项卡(Tabs)"}
-                , {path: "/juhui/utils", component: "/Juhuiadmin/utils", name: "工具包(Utils)"}
+                , {path: "/", component: "app", name: "主页"}
+                , {path: "/juhui/profile", component: "profile", name: "用户中心"}
+                , {path: "/juhui/grid", component: "grid", name: "Grid"}
+                , {path: "/juhui/button", component: "button", name: "按钮"}
+                , {path: "/juhui/form", component: "form", name: "表单"}
+                , {path: "/juhui/nav", component: "nav.html", name: "导航/面包屑"}
+                , {path: "/juhui/tab", component: "tab.html", name: "选项卡"}
+                , {path: "/juhui/progress", component: "progress.html", name: "progress"}
+                , {path: "/juhui/panel", component: "panel.html", name: "panel"}
+                , {path: "/juhui/badge", component: "badge.html", name: "badge"}
+                , {path: "/juhui/timeline", component: "timeline.html", name: "timeline"}
+                , {path: "/juhui/table_element", component: "table_element", name: "table-element"}
+                , {path: "/juhui/anim", component: "anim.html", name: "anim"}
+                , {path: "/juhui/auxiliar", component: "auxiliar", name: "anim"}
+                , {path: "/juhui/layer", component: "layer", name: "layer"}
+                , {path: "/juhui/laydate", component: "laydate", name: "laydate"}
+                , {path: "/juhui/table", component: "table", name: "table"}
+                , {path: "/juhui/laypage", component: "laypage", name: "laypage"}
+                , {path: "/juhui/upload", component: "upload", name: "upload"}
+                , {path: "/juhui/carousel", component: "carousel",}
+                , {path: "/juhui/laytpl", component: "laytpl", name: "laytpl"}
+                , {path: "/juhui/flow", component: "flow", name: "flow"}
+                , {path: "/juhui/util", component: "util", name: "util"}
+                , {path: "/juhui/code", component: "code", name: "code"}
+                , {path: "/juhui/select", component: "select", name: "code"}
+                , {path: "/juhui/403", component: "p403", name: "code"}
+                , {path: "/juhui/404", component: "p404", name: "code"}
+                , {path: "/juhui/500", component: "p500", name: "code"}
+                , {path: "/juhui/mockjs", component: "mockjs", name: "拦截器(Mockjs)"}
+                , { path: "/juhui/menu", component: "menu", name: "左侧菜单(Menu)"}
+                , {path: "/juhui/route", component: "route", name: "路由配置(Route)"}
+                , { path: "/juhui/tabs", component: "tabs", name: "选项卡(Tabs)"}
+                , {path: "/juhui/utils", component: "utils", name: "工具包(Utils)"}
                 , {path: "/juhui/table", component: "/views/table/teble", name: "Table"}
-                , {path: "/juhui/table2", component: "/Juhuiadminer/teble2", name: "数据表格2"}
-                , {path: "/juhui/table3", component: "/Juhuiadminer/teble3", name: "数据表格3"}
+                , {path: "/juhui/table2", component: "r/teble2", name: "数据表格2"}
+                , {path: "/juhui/table3", component: "r/teble3", name: "数据表格3"}
                 ]};
             return "TABS" === e.loadType && (a.onChanged = function () {
                 i.existsByPath(location.hash) ? i.switchByPath(location.hash) : t.addTab(location.hash, (new Date).getTime())
