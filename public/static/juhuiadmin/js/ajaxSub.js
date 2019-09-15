@@ -20,8 +20,8 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     //menu
     form.on('submit(tomenu)', function(data) {
-
-        console.log(data.field)
+        alert(1)
+        console.log(data)
         $.fn.repost( data.field, data.field);
 
     });
