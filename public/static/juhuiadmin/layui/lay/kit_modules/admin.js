@@ -14,7 +14,7 @@ layui.define(mods, function (e) {
             shade: !0,
             direction: "left",
             dynamicRender: !0,
-            url: "/admin/Juhuiadmin/app",
+            url: "app",
             width: "50%"
         }), a("#cc").on("click", function () {
             layui.sidebar.render({
@@ -22,7 +22,7 @@ layui.define(mods, function (e) {
                 title: "这是表单盒子",
                 shade: !0,
                 dynamicRender: !0,
-                url: "/admin/Juhuiadmin/formindex",
+                url: "formindex",
                 width: "50%"
             })
         }), m.on("nav(header_right)", function (e) {
@@ -32,12 +32,12 @@ layui.define(mods, function (e) {
                 title: "设置",
                 shade: !0,
                 dynamicRender: !0,
-                url: "/admin/Juhuiadmin/setting"
+                url: "setting"
             }), "menu" === t && layui.sidebar.render({
                 elem: e.elem,
                 title: "菜单管理",
                 shade: !0,
-                url: "/admin/Juhuiadmin/table",
+                url: "table",
                 direction: "left",
                 dynamicRender: !0,
                 width: "100%"
@@ -49,13 +49,13 @@ layui.define(mods, function (e) {
             var t = this, a = {
                 r: [{
                     path: "/user/index",
-                    component: "/views/user/index.html",
+                    component: "/views/user/index",
                     name: "用户列表",
                     children: [{
                         path: "/user/create",
-                        component: "views/user/create.html",
+                        component: "views/user/create",
                         name: "新增用户"
-                    }, {path: "/user/edit", component: "views/user/edit.html", name: "编辑用户"}]
+                    }, {path: "/user/edit", component: "views/user/edit", name: "编辑用户"}]
                 }],
                 routes: [{
                     path: "/juhui/fly",
@@ -67,27 +67,27 @@ layui.define(mods, function (e) {
                     component: "https://www.baidu.com/",
                     name: "百度一下",
                     iframe: !0
-                }, {path: "/user/index", component: "/views/user/index.html", name: "用户列表"}, {
+                }, {path: "/user/index", component: "/views/user/index", name: "用户列表"}, {
                     path: "/user/create",
-                    component: "views/user/create.html",
+                    component: "views/user/create",
                     name: "新增用户"
-                }, {path: "/user/edit", component: "views/user/edit.html", name: "编辑用户"}, {
+                }, {path: "/user/edit", component: "views/user/edit", name: "编辑用户"}, {
                     path: "/cascader",
-                    component: "views/cascader/index.html",
+                    component: "views/cascader/index",
                     name: "Cascader"}
                 , {path: "/", component: "app", name: "主页"}
                 , {path: "/juhui/profile", component: "profile", name: "用户中心"}
                 , {path: "/juhui/grid", component: "grid", name: "Grid"}
                 , {path: "/juhui/button", component: "button", name: "按钮"}
                 , {path: "/juhui/form", component: "form", name: "表单"}
-                , {path: "/juhui/nav", component: "nav.html", name: "导航/面包屑"}
-                , {path: "/juhui/tab", component: "tab.html", name: "选项卡"}
-                , {path: "/juhui/progress", component: "progress.html", name: "progress"}
-                , {path: "/juhui/panel", component: "panel.html", name: "panel"}
-                , {path: "/juhui/badge", component: "badge.html", name: "badge"}
-                , {path: "/juhui/timeline", component: "timeline.html", name: "timeline"}
+                , {path: "/juhui/nav", component: "nav", name: "导航/面包屑"}
+                , {path: "/juhui/tab", component: "tab", name: "选项卡"}
+                , {path: "/juhui/progress", component: "progress", name: "progress"}
+                , {path: "/juhui/panel", component: "panel", name: "panel"}
+                , {path: "/juhui/badge", component: "badge", name: "badge"}
+                , {path: "/juhui/timeline", component: "timeline", name: "timeline"}
                 , {path: "/juhui/table_element", component: "table_element", name: "table-element"}
-                , {path: "/juhui/anim", component: "anim.html", name: "anim"}
+                , {path: "/juhui/anim", component: "anim", name: "anim"}
                 , {path: "/juhui/auxiliar", component: "auxiliar", name: "anim"}
                 , {path: "/juhui/layer", component: "layer", name: "layer"}
                 , {path: "/juhui/laydate", component: "laydate", name: "laydate"}
