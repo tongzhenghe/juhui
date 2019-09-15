@@ -38,7 +38,6 @@
 
                 <th lay-data="{field:'path', width:200}">跳转链接</th>
 
-                <th lay-data="{field:'操作', width:80}">操作</th>
 
               </tr>
 
@@ -99,7 +98,7 @@
     });
 
 
-    layui.jquery(".layui-tab-title li").click(function(){
+    layui.jquery(".layui-tab-title li").click(function() {
 
         var picTabNum = layui.jquery(this).index();
 
@@ -109,7 +108,7 @@
 
     });
 
-    layui.jquery(function(){
+    layui.jquery(function() {
 
         var getPicTabNum = sessionStorage.getItem("picTabNum");
 
