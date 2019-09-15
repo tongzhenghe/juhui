@@ -23,4 +23,4 @@
 
 
 use \think\Route;
-Route::alias('admin','/admin/Juhuiadmin/');
+Route::alias('Juhuiadmin','/admin/Juhuiadmin/');
