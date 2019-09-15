@@ -212,7 +212,6 @@ public  function pas()
 
     public  function menu()
     {
-        echo 343;exit;
         return view();
 
     }
