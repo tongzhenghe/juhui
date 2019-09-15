@@ -1,9 +1,9 @@
-console.log(layui.jquery)
+$ = layui.jquery;
 layui.use(['form', 'layedit', 'laydate'], function() {
 
     var form = layui.form,
 
-        $ = layui.jquery;
+
 
     laydate = layui.laydate;
 
