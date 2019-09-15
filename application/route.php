@@ -22,5 +22,5 @@
 
 
 
-use \think\Route;
-Route::alias('Juhuiadmin','/admin/Juhuiadmin/');
+//use \think\Route;
+//Route::alias('Juhuiadmin','/admin/Juhuiadmin/');
