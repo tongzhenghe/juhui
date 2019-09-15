@@ -27,37 +27,22 @@
           <div class="layui-card-body">
 
             <table lay-filter="demo"  lay-data="{height:315, page:true, id:'test'}" >
-
               <thead>
-
               <tr>
-
                 <th lay-data="{field:'id', width:100, sort:true}">(编号id)</th>
-
                 <th lay-data="{field:'name', width:150}">菜单名称</th>
-
                 <th lay-data="{field:'path', width:200}">跳转链接</th>
-
                 <th lay-data="{field:'操作', width:80}">操作</th>
-
               </tr>
-
               </thead>
-
               <tbody>
               <tr>
                 <td>12</td>
-
                 <td>333</td>
-
                 <td>33333</td>
-
                 <td>
-
                   <a href="#/website/addmenu?id=112" class="point"><i class="layui-icon" title="编辑数据">&#xe642;</i></a>
-
                   <a href="javascript:;" data-ids="112" data-url="{:url('index/menu')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a>
-
                 </td>
               </tr>
               </tbody>
@@ -68,6 +53,125 @@
     </div>
   </div>
 </div>
+
+
+<script>
+
+
+
+    layui.config({
+
+        base: '/src/js/'
+
+    }).use(['jquery', 'mockjs', 'table', 'sidebar', 'form'], function () {
+
+        var $ = layui.jquery,
+
+            sidebar = layui.sidebar,
+
+            form = layui.form;
+
+        var table = layui.table;
+
+        //转换静态表格
+
+        table.init('demo', {
+
+            size: 'sm'
+
+            ,height: 500 //设置高度
+
+            ,limit: 10 //注意：请务必确保 limit 参数（默认：10）是与你服务端限定的数据条数一致
+
+            //支持所有基础参数
+
+        });
+
+
+
+        $('#search_hash').on('click', function () {
+
+            var that = this;
+
+            // console.log($('#search_tpl_hash').html());
+
+            sidebar.render({
+
+                elem: that,
+
+                content: $('#search_tpl_hash').html(),
+
+                title: '搜索',
+
+                shade: true,
+
+                // shadeClose:false,
+
+                // direction: 'left'
+
+                // dynamicRender: false,
+
+                // url: 'views/member/all/search.html',
+
+                width: '500px', //可以设置百分比和px
+
+                done: function () {
+
+                    console.log('ccc');
+
+                    form.render();
+
+
+
+                    //监听提交
+
+                    form.on('submit(formDemo_hash)', function (data) {
+
+                        // layer.msg(JSON.stringify(data.field));
+
+                        table.reload('demo_hash', {
+
+                            where: data.field
+
+                        });
+
+                        return false;
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+    $(".layui-tab-title li").click(function(){
+
+        var picTabNum = $(this).index();
+
+        // console.log("当前图片标题下标是："+picTabNum);
+
+        sessionStorage.setItem("picTabNum",picTabNum);
+
+    });
+
+    $(function(){
+
+        var getPicTabNum = sessionStorage.getItem("picTabNum");
+
+        $(".layui-tab-title li").eq(getPicTabNum).addClass("layui-this").siblings().removeClass("layui-this");
+
+        $(".layui-tab-content>div").eq(getPicTabNum).addClass("layui-show").siblings().removeClass("layui-show");
+
+    })
+
+</script>
+
+
+
 
 
 
