@@ -1,15 +1,11 @@
-$ = layui.jquery;
-alert(1)
-console.log($)
+var $ = layui.jquery;
 layui.use(['form', 'layedit', 'laydate'], function() {
 
     var form = layui.form,
-
-
-
     laydate = layui.laydate;
 
     form.render();
+    console.log(laydate)
 
     //日期
 
