@@ -14,7 +14,7 @@ layui.define(mods, function (e) {
             shade: !0,
             direction: "left",
             dynamicRender: !0,
-            url: "/juhui/juhui/public/admin/Juhuiadmin/app",
+            url: "/admin/Juhuiadmin/app",
             width: "50%"
         }), a("#cc").on("click", function () {
             layui.sidebar.render({
@@ -22,7 +22,7 @@ layui.define(mods, function (e) {
                 title: "这是表单盒子",
                 shade: !0,
                 dynamicRender: !0,
-                url: "/juhui/juhui/public/admin/Juhuiadmin/formindex",
+                url: "/admin/Juhuiadmin/formindex",
                 width: "50%"
             })
         }), m.on("nav(header_right)", function (e) {
@@ -32,12 +32,12 @@ layui.define(mods, function (e) {
                 title: "设置",
                 shade: !0,
                 dynamicRender: !0,
-                url: "/juhui/juhui/public/admin/Juhuiadmin/setting"
+                url: "/admin/Juhuiadmin/setting"
             }), "menu" === t && layui.sidebar.render({
                 elem: e.elem,
                 title: "菜单管理",
                 shade: !0,
-                url: "/juhui/juhui/public/admin/Juhuiadmin/table",
+                url: "/admin/Juhuiadmin/table",
                 direction: "left",
                 dynamicRender: !0,
                 width: "100%"
@@ -76,41 +76,41 @@ layui.define(mods, function (e) {
                     component: "views/cascader/index.html",
                     name: "Cascader"}
                 , {path: "/", component: "/admin/Juhuiadmin/index", name: "主页"}
-                , {path: "/juhui/profile", component: "/juhui/juhui/public/admin/Juhuiadmin/profile", name: "用户中心"}
-                , {path: "/juhui/grid", component: "/juhui/juhui/public/admin/Juhuiadmin/grid", name: "Grid"}
-                , {path: "/juhui/button", component: "/juhui/juhui/public/admin/Juhuiadmin/button", name: "按钮"}
-                , {path: "/juhui/form", component: "/juhui/juhui/public/admin/Juhuiadmin/form", name: "表单"}
-                , {path: "/juhui/nav", component: "/juhui/juhui/public/admin/Juhuiadmin/nav.html", name: "导航/面包屑"}
-                , {path: "/juhui/tab", component: "/juhui/juhui/public/admin/Juhuiadmin/tab.html", name: "选项卡"}
-                , {path: "/juhui/progress", component: "/juhui/juhui/public/admin/Juhuiadmin/progress.html", name: "progress"}
-                , {path: "/juhui/panel", component: "/juhui/juhui/public/admin/Juhuiadmin/panel.html", name: "panel"}
-                , {path: "/juhui/badge", component: "/juhui/juhui/public/admin/Juhuiadmin/badge.html", name: "badge"}
-                , {path: "/juhui/timeline", component: "/juhui/juhui/public/admin/Juhuiadmin/timeline.html", name: "timeline"}
-                , {path: "/juhui/table_element", component: "/juhui/juhui/public/admin/Juhuiadmin/table_element", name: "table-element"}
-                , {path: "/juhui/anim", component: "/juhui/juhui/public/admin/Juhuiadmin/anim.html", name: "anim"}
-                , {path: "/juhui/auxiliar", component: "/juhui/juhui/public/admin/Juhuiadmin/auxiliar", name: "anim"}
-                , {path: "/juhui/layer", component: "/juhui/juhui/public/admin/Juhuiadmin/layer", name: "layer"}
-                , {path: "/juhui/laydate", component: "/juhui/juhui/public/admin/Juhuiadmin/laydate", name: "laydate"}
-                , {path: "/juhui/table", component: "/juhui/juhui/public/admin/Juhuiadmin/table", name: "table"}
-                , {path: "/juhui/laypage", component: "/juhui/juhui/public/admin/Juhuiadmin/laypage", name: "laypage"}
-                , {path: "/juhui/upload", component: "/juhui/juhui/public/admin/Juhuiadmin/upload", name: "upload"}
-                , {path: "/juhui/carousel", component: "/juhui/juhui/public/admin/Juhuiadmin/carousel",}
-                , {path: "/juhui/laytpl", component: "/juhui/juhui/public/admin/Juhuiadmin/laytpl", name: "laytpl"}
-                , {path: "/juhui/flow", component: "/juhui/juhui/public/admin/Juhuiadmin/flow", name: "flow"}
-                , {path: "/juhui/util", component: "/juhui/juhui/public/admin/Juhuiadmin/util", name: "util"}
-                , {path: "/juhui/code", component: "/juhui/juhui/public/admin/Juhuiadmin/code", name: "code"}
-                , {path: "/juhui/select", component: "/juhui/juhui/public/admin/Juhuiadmin/select", name: "code"}
-                , {path: "/juhui/403", component: "/juhui/juhui/public/admin/Juhuiadmin/p403", name: "code"}
-                , {path: "/juhui/404", component: "/juhui/juhui/public/admin/Juhuiadmin/p404", name: "code"}
-                , {path: "/juhui/500", component: "/juhui/juhui/public/admin/Juhuiadmin/p500", name: "code"}
-                , {path: "/juhui/mockjs", component: "/juhui/juhui/public/admin/Juhuiadmin/mockjs", name: "拦截器(Mockjs)"}
-                , { path: "/juhui/menu", component: "/juhui/juhui/public/admin/Juhuiadmin/menu", name: "左侧菜单(Menu)"}
-                , {path: "/juhui/route", component: "/juhui/juhui/public/admin/Juhuiadmin/route", name: "路由配置(Route)"}
-                , { path: "/juhui/tabs", component: "/juhui/juhui/public/admin/Juhuiadmin/tabs", name: "选项卡(Tabs)"}
-                , {path: "/juhui/utils", component: "/juhui/juhui/public/admin/Juhuiadmin/utils", name: "工具包(Utils)"}
+                , {path: "/juhui/profile", component: "/admin/Juhuiadmin/profile", name: "用户中心"}
+                , {path: "/juhui/grid", component: "/admin/Juhuiadmin/grid", name: "Grid"}
+                , {path: "/juhui/button", component: "/admin/Juhuiadmin/button", name: "按钮"}
+                , {path: "/juhui/form", component: "/admin/Juhuiadmin/form", name: "表单"}
+                , {path: "/juhui/nav", component: "/admin/Juhuiadmin/nav.html", name: "导航/面包屑"}
+                , {path: "/juhui/tab", component: "/admin/Juhuiadmin/tab.html", name: "选项卡"}
+                , {path: "/juhui/progress", component: "/admin/Juhuiadmin/progress.html", name: "progress"}
+                , {path: "/juhui/panel", component: "/admin/Juhuiadmin/panel.html", name: "panel"}
+                , {path: "/juhui/badge", component: "/admin/Juhuiadmin/badge.html", name: "badge"}
+                , {path: "/juhui/timeline", component: "/admin/Juhuiadmin/timeline.html", name: "timeline"}
+                , {path: "/juhui/table_element", component: "/admin/Juhuiadmin/table_element", name: "table-element"}
+                , {path: "/juhui/anim", component: "/admin/Juhuiadmin/anim.html", name: "anim"}
+                , {path: "/juhui/auxiliar", component: "/admin/Juhuiadmin/auxiliar", name: "anim"}
+                , {path: "/juhui/layer", component: "/admin/Juhuiadmin/layer", name: "layer"}
+                , {path: "/juhui/laydate", component: "/admin/Juhuiadmin/laydate", name: "laydate"}
+                , {path: "/juhui/table", component: "/admin/Juhuiadmin/table", name: "table"}
+                , {path: "/juhui/laypage", component: "/admin/Juhuiadmin/laypage", name: "laypage"}
+                , {path: "/juhui/upload", component: "/admin/Juhuiadmin/upload", name: "upload"}
+                , {path: "/juhui/carousel", component: "/admin/Juhuiadmin/carousel",}
+                , {path: "/juhui/laytpl", component: "/admin/Juhuiadmin/laytpl", name: "laytpl"}
+                , {path: "/juhui/flow", component: "/admin/Juhuiadmin/flow", name: "flow"}
+                , {path: "/juhui/util", component: "/admin/Juhuiadmin/util", name: "util"}
+                , {path: "/juhui/code", component: "/admin/Juhuiadmin/code", name: "code"}
+                , {path: "/juhui/select", component: "/admin/Juhuiadmin/select", name: "code"}
+                , {path: "/juhui/403", component: "/admin/Juhuiadmin/p403", name: "code"}
+                , {path: "/juhui/404", component: "/admin/Juhuiadmin/p404", name: "code"}
+                , {path: "/juhui/500", component: "/admin/Juhuiadmin/p500", name: "code"}
+                , {path: "/juhui/mockjs", component: "/admin/Juhuiadmin/mockjs", name: "拦截器(Mockjs)"}
+                , { path: "/juhui/menu", component: "/admin/Juhuiadmin/menu", name: "左侧菜单(Menu)"}
+                , {path: "/juhui/route", component: "/admin/Juhuiadmin/route", name: "路由配置(Route)"}
+                , { path: "/juhui/tabs", component: "/admin/Juhuiadmin/tabs", name: "选项卡(Tabs)"}
+                , {path: "/juhui/utils", component: "/admin/Juhuiadmin/utils", name: "工具包(Utils)"}
                 , {path: "/juhui/table", component: "/views/table/teble", name: "Table"}
-                , {path: "/juhui/table2", component: "/juhui/juhui/public/admin/Juhuiadminer/teble2", name: "数据表格2"}
-                , {path: "/juhui/table3", component: "/juhui/juhui/public/admin/Juhuiadminer/teble3", name: "数据表格3"}
+                , {path: "/juhui/table2", component: "/admin/Juhuiadminer/teble2", name: "数据表格2"}
+                , {path: "/juhui/table3", component: "/admin/Juhuiadminer/teble3", name: "数据表格3"}
                 ]};
             return "TABS" === e.loadType && (a.onChanged = function () {
                 i.existsByPath(location.hash) ? i.switchByPath(location.hash) : t.addTab(location.hash, (new Date).getTime())
