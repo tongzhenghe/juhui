@@ -10,7 +10,7 @@ namespace app\admin\controller;
 
 use think\Controller;
 
-class Juhuiadmin
+class Juhuiadmin extends  Controller
 {
     public  function index()
     {
