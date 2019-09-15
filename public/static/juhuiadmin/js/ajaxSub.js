@@ -1,8 +1,9 @@
+console.log(layui.jquery)
 layui.use(['form', 'layedit', 'laydate'], function() {
 
     var form = layui.form,
 
-       layui.jquery = layui.jquery;
+        $ = layui.jquery;
 
     laydate = layui.laydate;
 
@@ -21,7 +22,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
     form.on('submit(tomenu)', function(data) {
 
         console.log(data.field)
-       layui.jquery.fn.repost( data.field, data.field);
+        $.fn.repost( data.field, data.field);
 
     });
 
@@ -39,17 +40,17 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
             //链接框
 
-           layui.jquery(".content-url").show();
+            $(".content-url").show();
 
-           layui.jquery(".content-custom").hide();
+            $(".content-custom").hide();
 
             //UE.getEditor('container').setContent('', false);
 
         } else {
 
-           layui.jquery(".content-url").hide();
+            $(".content-url").hide();
 
-           layui.jquery(".content-custom").show();
+            $(".content-custom").show();
 
             //$("input[name='out_url']").val('');
 
@@ -63,9 +64,9 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formDemoPro)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -73,7 +74,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -87,9 +88,9 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.content =  ue.getContent();
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -97,7 +98,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -111,11 +112,11 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formBanner)', function(data) {
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -127,7 +128,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formActivity_cate)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -135,7 +136,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -145,7 +146,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formSubject)', function(data) {
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -153,7 +154,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -165,7 +166,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formSubject_cate)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -173,7 +174,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -185,7 +186,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formNews_cate)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -193,7 +194,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -203,7 +204,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formNews)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo2").attr('src');
+        data.field.icon = $(".imgdemo2").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -211,7 +212,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -225,7 +226,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formActivity)', function(data) {
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -233,7 +234,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -245,13 +246,13 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formReal_show)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
-        data.field.icon_title =layui.jquery(".icon_title").attr('src');
+        data.field.icon_title = $(".icon_title").attr('src');
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -263,7 +264,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formAsk_cate)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -273,7 +274,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         console.log(data.field)
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -283,7 +284,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formRealShowCate)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -293,7 +294,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         console.log(data.field)
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -303,7 +304,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formAsk)', function(data) {
 
-        data.field.icon =layui.jquery(".imgdemo2").attr('src');
+        data.field.icon = $(".imgdemo2").attr('src');
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
@@ -311,7 +312,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_new = ( data.field.is_new === 'on') ? 1 : 2;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -325,7 +326,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 
-       layui.jquery.each($("#imgdemo2").children("img"), function (key, val ) {
+        $.each($("#imgdemo2").children("img"), function (key, val ) {
 
             img.push($(val).attr("src"))
 
@@ -335,11 +336,11 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.img = img;
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
 
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
 
 
@@ -351,13 +352,13 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formGy)', function(data) {
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
 
 
         console.log()
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -371,9 +372,9 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
-        data.field.path = layui.jquery(".videoDemo").attr('href');
+        data.field.path =  $(".videoDemo").attr('href');
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -383,13 +384,13 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formMachine)', function(data) {
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
-        data.field.icon =layui.jquery(".imgdemo1").attr('src');
+        data.field.icon = $(".imgdemo1").attr('src');
 
         // console.log( data.field);
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -401,11 +402,11 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.is_tj = ( data.field.is_tj === 'on') ? 1 : 2;
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
         var arr = [];
 
-       layui.jquery.each($(".layui-badge"), function (k, v ) {
+        $.each($(".layui-badge"), function (k, v ) {
 
             arr.push($(v).text())
 
@@ -413,7 +414,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.be_expert_in = arr;
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -435,7 +436,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         console.log($(".beDemo-tel").children(".layui-self"));
 
-       layui.jquery.each($(".beDemo-tel").children(".layui-self"), function (k, v ) {
+        $.each($(".beDemo-tel").children(".layui-self"), function (k, v ) {
 
             arr_tel.push($(v).text())
 
@@ -445,7 +446,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 
-       layui.jquery.each($(".beDemo-bus").children(".layui-self"), function (k, v ) {
+        $.each($(".beDemo-bus").children(".layui-self"), function (k, v ) {
 
             arr_bus.push($(v).text())
 
@@ -455,7 +456,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
 
 
@@ -465,13 +466,13 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formAbout)', function(data) {
 
-        data.field.img =layui.jquery(".imgdemo2").attr('src');
+        data.field.img = $(".imgdemo2").attr('src');
 
-        data.field.about_video =layui.jquery(".videoDemo").attr("href");
+        data.field.about_video = $(".videoDemo").attr("href");
 
         console.log( data.field);
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -481,7 +482,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -491,7 +492,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
 
 
@@ -503,13 +504,13 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
     form.on('submit(formWebSetting)', function(data) {
 
-        data.field.left_poster =layui.jquery(".imgLeft").attr('src');
+        data.field.left_poster = $(".imgLeft").attr('src');
 
-        data.field.center_poster =layui.jquery(".imgCenter").attr('src');
+        data.field.center_poster = $(".imgCenter").attr('src');
 
-        data.field.mobile_poster =layui.jquery(".imgCenterMo").attr('src');
+        data.field.mobile_poster = $(".imgCenterMo").attr('src');
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -521,9 +522,9 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data.field.discount = ( data.field.discount === 'on') ? 1 : 2;
 
-        data.field.icon =layui.jquery("#imgdemo1").attr('src');
+        data.field.icon = $("#imgdemo1").attr('src');
 
-       layui.jquery.fn.repost( data.field.requestUrl, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -549,9 +550,9 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         //id， 字段， url
 
-        var id =layui.jquery(this).attr('data-ids')
+        var id = $(this).attr('data-ids')
 
-            ,field =layui.jquery(this).attr('data-field')
+            ,field = $(this).attr('data-field')
 
             ,value  = this.checked ? 1: 2;
 
@@ -559,7 +560,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
         data = {id:id, field:field, value:value,do:$(this).attr('data-do')};
 
-       layui.jquery.fn.repost($(this).attr('data-url'), data);
+        $.fn.repost($(this).attr('data-url'), data);
 
         // layer.msg((this.checked ? '已开启' : '已禁用'), {
 
@@ -581,7 +582,7 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 $.fn.repost = function(url, data) {
-   layui.jquery.post(url  , data, function(res) {
+    $.post(url  , data, function(res) {
         console.log(res);
         if ( res.status )  {
             layer.msg('<span><i class="layui-icon layui-icon-ok" style="    color: white; background: #6cd965;     margin-right: 13px;border-radius: 10px;"></i>'+res.msg+'</span>', {
