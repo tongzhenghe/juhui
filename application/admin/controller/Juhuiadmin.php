@@ -228,6 +228,7 @@ public  function pas()
 
         $param = request()->param();
         if (request()->isAjax()) {
+            jsondebug($param);
             $menuModel = new Menu;
             $data = [
             'title' => trim($param['title'])
