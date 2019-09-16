@@ -226,6 +226,9 @@ public  function pas()
         if (request()->isAjax()) {
 
             $menu = new Menu;
+
+            jsondebug($menu->status);
+
             $data = [
             'title' => trim($param['title'])
             ,'url' => trim($param['url'])
@@ -233,8 +236,6 @@ public  function pas()
             ,'pid' => intval($param['pid'])
             ,'intro' => trim($param['intro'])
             ];
-
-            jsondebug($data);
 
             if (!empty($param['id'])) {
                 $menu->save($data, ['id' => intval($param['id'])]);
