@@ -221,11 +221,11 @@ public  function pas()
 
     public  function addmenu()
     {
+        $menu = new Menu;
+        wl_debug($menu);
 
         $param = request()->param();
         if (request()->isAjax()) {
-
-            $menu = new Menu;
 
             $data = [
             'title' => trim($param['title'])
