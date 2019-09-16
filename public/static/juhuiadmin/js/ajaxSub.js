@@ -601,8 +601,8 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 });
-$.fn.repost = function(url, data) {
-    $.post(url  , data, function(res) {
+layui.jquery.fn.repost = function(url, data) {
+    layui.jquery.post(url  , data, function(res) {
         console.log(res);
         if ( res.status )  {
             layer.msg('<span><i class="layui-icon layui-icon-ok" style="    color: white; background: #6cd965;     margin-right: 13px;border-radius: 10px;"></i>'+res.msg+'</span>', {
