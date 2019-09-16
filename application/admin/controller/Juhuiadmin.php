@@ -224,8 +224,8 @@ public  function pas()
     {
 
         $param = request()->param();
+        $menuModel = new Menu;
         if (request()->isAjax()) {
-            $menu = new Menu;
             $data = [
             'title' => trim($param['title'])
             ,'url' => trim($param['url'])
@@ -234,12 +234,15 @@ public  function pas()
             ,'intro' => trim($param['intro'])
             ];
 
-            $r = Common::dataExecute($menu, $data, $param);
+            $r = Common::dataExecute($menuModel, $data, $param);
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
             exit(Common::json(400, '提交失败'));
         }
-        //字段：title、 url sort  pid  intro   git pull origin master
+
+        $menu = $menuModel->select();
+        wl_debug($menu);
+
         return view();
 
     }
