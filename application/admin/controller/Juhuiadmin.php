@@ -237,8 +237,8 @@ public  function pas()
             $r = Common::dataExecute($menu, $data, $param);
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
         }
-
         //字段：title、 url sort  pid  intro   git pull origin master
         return view();
 
