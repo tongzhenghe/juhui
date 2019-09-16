@@ -11,7 +11,7 @@ namespace app\admin\model;
 
 use app\admin\model\system\SystemAdmin;
 
-class Index extends SystemAdmin
+class Menu extends SystemAdmin
 {
     protected $autoWriteTimestamp = true;
     protected $insert = ['is_del' => 1, 'status' => 1];
