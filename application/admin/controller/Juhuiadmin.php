@@ -227,8 +227,6 @@ public  function pas()
 
             $menu = new Menu;
 
-            jsondebug($menu->status);
-
             $data = [
             'title' => trim($param['title'])
             ,'url' => trim($param['url'])
@@ -238,9 +236,11 @@ public  function pas()
             ];
 
             if (!empty($param['id'])) {
-                $menu->save($data, ['id' => intval($param['id'])]);
+                $r = $menu->save($data, ['id' => intval($param['id'])]);
             }
-            $menu->save($data);
+            $r = $menu->save($data);
+
+            jsondebug($r);
 
 
 
