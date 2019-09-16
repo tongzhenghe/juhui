@@ -8,6 +8,7 @@
 
 namespace app\admin\controller;
 
+use app\admin\model\Common;
 use app\admin\model\Menu;
 use think\Controller;
 use think\Db;
@@ -221,29 +222,10 @@ public  function pas()
 
     public  function addmenu()
     {
-        $menu = new Menu;
-
-//
-//        $da = [
-//
-//            'create_time'=> 1568604210
-//            ,'intro'=> "444"
-//            ,'is_del'=> 1
-//            ,'pid'=> 0
-//            ,'sort'=> 444
-//            ,'status'=> 1
-//            ,'title'=> "444"
-//            ,'update_time'=> 1568604210
-//            ,'url'=> "444"
-//
-//        ];
-//        $r = $menu->save($da);
-//
-//        wl_debug($r);
 
         $param = request()->param();
         if (request()->isAjax()) {
-
+            $menu = new Menu;
             $data = [
             'title' => trim($param['title'])
             ,'url' => trim($param['url'])
@@ -251,13 +233,8 @@ public  function pas()
             ,'pid' => intval($param['pid'])
             ,'intro' => trim($param['intro'])
             ];
-            $param['id'] = 1;
-            if (!empty($param['id'])) {
-                $r = $menu->save($data, ['id' => intval($param['id'])]);
-            } else {
 
-                $r = $menu->save($data);
-            }
+            $r = Common::dataExecute($menu, $data, $param['id']);
             jsondebug($r);
 
 
