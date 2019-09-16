@@ -228,6 +228,7 @@ public  function pas()
 
         $param = request()->param();
         if (request()->isAjax()) {
+            jsondebug($param);
             $menuModel = new Menu;
             $data = [
             'title' => trim($param['title'])
@@ -236,6 +237,7 @@ public  function pas()
             ,'pid' => intval($param['pid'])
             ,'intro' => trim($param['intro'])
             ];
+
             $r = Common::dataExecute($menuModel, $data, $param);
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
