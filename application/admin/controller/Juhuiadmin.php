@@ -241,6 +241,8 @@ public  function pas()
 
         $where = ['is_del' => 1, 'status' => 1];
         $menu = Db::name('menu')->where($where)->select();
+        $menu = tree($menu);
+        wl_debug($menu);
         return view('', ['menu' => $menu]);
 
     }
