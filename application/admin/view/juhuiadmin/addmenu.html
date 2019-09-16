@@ -34,7 +34,7 @@
                 <select name="pid" lay-verify="required">
 　　　           <option value="0">顶级</option>
                   {foreach $menu as $vo}
-　　　           <option value="{$vo.id}"><span style="color: #939393;">{$vo.html}</span>{$vo.title}</option>
+　　　           <option  value="{$vo.id}" {if $dataOne.pid == $vo.id}selected{/if}><span style="color: #939393;">{$vo.html}</span>{$vo.title}</option>
               　 {/foreach}
                 </select>
               </div>
