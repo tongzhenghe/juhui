@@ -236,6 +236,7 @@ public  function pas()
             ,'create_time' => time()
             ,'update_time' => time()
             ];
+            jsondebug($data);
 
 //            if (!empty($param['id'])) {
 //                $r = $menu->save($data, ['id' => intval($param['id'])]);
