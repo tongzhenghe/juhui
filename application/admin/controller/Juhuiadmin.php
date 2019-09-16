@@ -10,10 +10,9 @@ namespace app\admin\controller;
 
 use app\admin\model\Common;
 use app\admin\model\Menu;
-use think\Controller;
 use think\Db;
 
-class Juhuiadmin extends  Controller
+class Juhuiadmin extends \app\admin\controller\Common
 {
     public  function index()
     {
