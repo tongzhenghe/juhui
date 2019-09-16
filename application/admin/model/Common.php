@@ -17,6 +17,8 @@ class Common extends  SystemAdmin
 
     public  static  function  dataExecute($model, $data, $id = null)
     {
+
+        jsondebug($model);
         if (!empty($id)) {
             return $model->save($data, ['id' => intval($id)]);
         } else {
