@@ -223,7 +223,7 @@ public  function pas()
     public  function addmenu()
     {
 
-        wl_debug(json(1));
+        wl_debug(json(['2' => 1]));
 
         $param = request()->param();
         if (request()->isAjax()) {
