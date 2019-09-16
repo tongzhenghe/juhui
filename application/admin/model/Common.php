@@ -15,12 +15,11 @@ class Common extends  SystemAdmin
 {
 
 
-    public  static  function  dataExecute($model, $data, $id = null)
+    public  static  function  dataExecute($model, $data, $param = null)
     {
 
-        jsondebug($model);
-        if (!empty($id)) {
-            return $model->save($data, ['id' => intval($id)]);
+        if (!empty($param['id'])) {
+            return $model->save($data, ['id' => intval($param['id'])]);
         } else {
             return $model->save($data);
         }
