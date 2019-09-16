@@ -222,8 +222,6 @@ public  function pas()
     public  function addmenu()
     {
         $menu = new Menu;
-        wl_debug($menu);
-
         $param = request()->param();
         if (request()->isAjax()) {
 
@@ -235,9 +233,9 @@ public  function pas()
             ,'intro' => trim($param['intro'])
             ];
 
-            if (!empty($param['id'])) {
-                $r = $menu->save($data, ['id' => intval($param['id'])]);
-            }
+//            if (!empty($param['id'])) {
+//                $r = $menu->save($data, ['id' => intval($param['id'])]);
+//            }
             $r = $menu->save($data);
 
             jsondebug($r);
