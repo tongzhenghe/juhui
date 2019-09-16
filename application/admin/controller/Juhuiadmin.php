@@ -215,7 +215,10 @@ public  function pas()
 
     public  function menu()
     {
-        return view();
+        $where = ['is_del' => 1];
+        $menu = Db::name('menu')->where($where)->select();
+        wl_debug($menu);
+        return view('', ['menu' => $menu]);
 
     }
 
