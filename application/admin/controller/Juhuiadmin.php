@@ -234,7 +234,7 @@ public  function pas()
             ,'intro' => trim($param['intro'])
             ];
 
-            jsondebug($menu);
+            jsondebug($param['id']);
             $r = Common::dataExecute($menu, $data, $param['id']);
             jsondebug($r);
 
