@@ -28,7 +28,7 @@ class Common extends  Controller
         //if(!SystemAdmin::hasActiveAdmin()) return $this->redirect(url('Sign/signin'));
 
         $where = ['state' => 1, 'is_del' => 1];
-        $menu = Db::name('admin_menu')->where($where)->select();
+        $menu = Db::name('menu')->where($where)->select();
         $menu =tree($menu);
 
         wl_debug($menu);
