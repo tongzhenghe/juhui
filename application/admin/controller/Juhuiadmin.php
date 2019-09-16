@@ -231,6 +231,8 @@ public  function pas()
             ,'sort' => intval($param['sort'])
             ,'pid' => intval($param['pid'])
             ,'intro' => trim($param['intro'])
+            ,'status' => 1
+            ,'is_del' =>1
             ];
 
 //            if (!empty($param['id'])) {
