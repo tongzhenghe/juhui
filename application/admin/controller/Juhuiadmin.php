@@ -8,7 +8,9 @@
 
 namespace app\admin\controller;
 
+use app\admin\model\Menu;
 use think\Controller;
+use think\Db;
 
 class Juhuiadmin extends  Controller
 {
@@ -219,10 +221,32 @@ public  function pas()
 
     public  function addmenu()
     {
+        $menu = new Menu();
+
+
+        wl_debug($menu);
 
         $param = request()->param();
+        $tablename = 'menu';
         if (request()->isAjax()) {
-            jsondebug($param);
+            $id = intval($param['id']);
+
+            $data = [
+            'title' => trim($param['title'])
+            ,'url' => trim($param['url'])
+            ,'sort' => intval($param['sort'])
+            ,'pid' => intval($param['pid'])
+            ,'intro' => trim($param['intro'])
+            ];
+
+            if (empty($id)) {
+                $r = Db::name($tablename)->insert($data);
+            }
+
+            $r = Db::name($tablename)->where('id', $id)->update($data);
+
+            //if (!empty($r))
+                //返回json数据
         }
 
 
