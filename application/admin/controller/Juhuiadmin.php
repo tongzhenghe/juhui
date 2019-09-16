@@ -221,16 +221,12 @@ public  function pas()
 
     public  function addmenu()
     {
-        $menu = new Menu();
-
-
-        wl_debug($menu);
 
         $param = request()->param();
-        $tablename = 'menu';
         if (request()->isAjax()) {
-            $id = intval($param['id']);
 
+            $id = intval($param['id']);
+            $menu = new Menu;
             $data = [
             'title' => trim($param['title'])
             ,'url' => trim($param['url'])
@@ -239,11 +235,15 @@ public  function pas()
             ,'intro' => trim($param['intro'])
             ];
 
-            if (empty($id)) {
-                $r = Db::name($tablename)->insert($data);
-            }
+            jsondebug($data);
 
-            $r = Db::name($tablename)->where('id', $id)->update($data);
+            if (!empty($id)) {
+                $menu->save($data, ['id' => $id]);
+            }
+            $menu->save($data);
+
+
+
 
             //if (!empty($r))
                 //返回json数据
