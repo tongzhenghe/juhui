@@ -250,10 +250,6 @@ public  function pas()
             ,'sort' => intval($param['sort'])
             ,'pid' => intval($param['pid'])
             ,'intro' => trim($param['intro'])
-            ,'status' => 1
-            ,'is_del' =>1
-            ,'create_time' => time()
-            ,'update_time' => time()
             ];
 
             if (!empty($param['id'])) {
