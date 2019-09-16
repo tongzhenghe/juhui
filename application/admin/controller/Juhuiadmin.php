@@ -8,9 +8,12 @@
 
 namespace app\admin\controller;
 
+use app\admin\model\Common;
+use app\admin\model\Menu;
 use think\Controller;
+use think\Db;
 
-class Juhuiadmin
+class Juhuiadmin extends  Controller
 {
     public  function index()
     {
@@ -215,6 +218,42 @@ public  function pas()
         return view();
 
     }
+
+
+    public  function addmenu()
+    {
+
+        $param = request()->param();
+        if (request()->isAjax()) {
+            $menu = new Menu;
+            $data = [
+            'title' => trim($param['title'])
+            ,'url' => trim($param['url'])
+            ,'sort' => intval($param['sort'])
+            ,'pid' => intval($param['pid'])
+            ,'intro' => trim($param['intro'])
+            ];
+
+            $r = Common::dataExecute($menu, $data, $param);
+            jsondebug($r);
+
+
+
+
+            //if (!empty($r))
+                //返回json数据
+        }
+
+
+        //字段：title、 url sort  pid  intro
+        return view();
+
+    }
+
+
+
+
+
 
     public  function formindex()
     {
