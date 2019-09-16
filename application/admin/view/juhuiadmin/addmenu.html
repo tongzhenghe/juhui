@@ -31,11 +31,17 @@
 
 
 
+
+
+
             <div class="layui-form-item">
               <label class="layui-form-label">属于分类</label>
               <div class="layui-input-block">
                 <select name="pid" lay-verify="required">
-                      <option value="0">顶级</option>
+　　　           <option value="0">顶级</option>
+                  {foreach $menu as $vo}
+　　　           <option value="{$vo.id}">{$vo.title}</option>
+              　 {/foreach}
                 </select>
               </div>
             </div>
