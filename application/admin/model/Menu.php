@@ -21,6 +21,4 @@ class Menu extends SystemAdmin
         return request()->ip();
     }
 
-
-
 }
