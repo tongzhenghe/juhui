@@ -1,20 +1,54 @@
-var $ = layui.jquery;
+
 layui.use(['form', 'layedit', 'laydate'], function() {
 
     var form = layui.form,
+
+        $ = layui.jquery;
+
     laydate = layui.laydate;
 
     form.render();
 
     //日期
 
-    laydate.render({ elem: '#date_hash' });
+    laydate.render({
+
+        elem: '#date_hash'
+
+    });
+
+
+
+    form.on('submit(formKeywords_link)', function(data) {
+
+        var arr_re_keywords = [];
+
+        $(".beDemo-k").children(".layui-self");
+
+        $.each($(".beDemo-k").children(".layui-self"), function (k, v ) {
+
+            arr_re_keywords.push($(v).text())
+
+        });
+
+
+
+        data.field.arr_re_keywords = arr_re_keywords;
+
+        $.fn.repost( data.field.requestUrl, data.field);
+
+    });
+
+
+
+
 
     //menu
     form.on('submit(tomenu)', function(data) {
-        alert(1)
+
+        alert(2);
         console.log(data);
-        $.fn.repost( data.field, data.field);
+        $.fn.repost( data.field.requestUrl, data.field);
 
     });
 
@@ -567,14 +601,8 @@ layui.use(['form', 'layedit', 'laydate'], function() {
 
 
 });
-
-
-
-
-
-
-$.fn.repost = function(url, data) {
-    $.post(url  , data, function(res) {
+layui.jquery.fn.repost = function(url, data) {
+    layui.jquery.post(url  , data, function(res) {
         console.log(res);
         if ( res.status )  {
             layer.msg('<span><i class="layui-icon layui-icon-ok" style="    color: white; background: #6cd965;     margin-right: 13px;border-radius: 10px;"></i>'+res.msg+'</span>', {
