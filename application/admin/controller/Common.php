@@ -20,8 +20,8 @@ class Common extends  Controller
 
     public  function  _initialize()
     {
-        parent::_initialize();
-        self::$adminInfo  =  SystemAdmin::activeAdminInfoOrFail();
+       // parent::_initialize();
+       /// self::$adminInfo  =  SystemAdmin::activeAdminInfoOrFail();
         //if(!is_dir('./tmp/'))mkdir ('./tmp/', 0700);
        // session_save_path('./tmp/');
 
