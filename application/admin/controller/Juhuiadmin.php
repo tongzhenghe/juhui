@@ -236,7 +236,7 @@ public  function pas()
 
             $r = Common::dataExecute($menu, $data, $param);
             if (!empty($r))
-                exit(json($data));
+                exit(json());
         }
 
         //字段：title、 url sort  pid  intro   git pull origin master
