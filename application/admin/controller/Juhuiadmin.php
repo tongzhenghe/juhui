@@ -233,7 +233,6 @@ public  function pas()
             ,'pid' => intval($param['pid'])
             ,'intro' => trim($param['intro'])
             ];
-jsondebug($data);
             $r = Common::dataExecute($menuModel, $data, $param);
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
