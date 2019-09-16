@@ -223,8 +223,6 @@ public  function pas()
     public  function addmenu()
     {
 
-        wl_debug(json(['2' => 1]));
-
         $param = request()->param();
         if (request()->isAjax()) {
             $menu = new Menu;
@@ -238,7 +236,7 @@ public  function pas()
 
             $r = Common::dataExecute($menu, $data, $param);
             if (!empty($r))
-                exit();
+                exit(Common::json(200, '已提交'));
         }
 
         //字段：title、 url sort  pid  intro   git pull origin master
