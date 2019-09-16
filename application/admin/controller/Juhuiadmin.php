@@ -242,16 +242,16 @@ public  function pas()
             exit(Common::json(400, '提交失败'));
         }
 
+        $dataOne = null;;
         if (!empty($param['id'])) {
-
-            $data = Db::name('menu')->where('id', intval($param['id']))->find();
-            wl_debug($data);
+            $dataOne = Db::name('menu')->where('id', intval($param['id']))->find();
         }
 
+        wl_debug($dataOne);
         $where = ['is_del' => 1, 'status' => 1];
         $menu = Db::name('menu')->where($where)->select();
         $menu = tree($menu);
-        return view('', ['menu' => $menu]);
+        return view('', ['menu' => $menu, 'dataOne' => $dataOne]);
 
     }
 
