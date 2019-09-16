@@ -233,6 +233,8 @@ public  function pas()
             ,'intro' => trim($param['intro'])
             ,'status' => 1
             ,'is_del' =>1
+            ,'create_time' => time()
+            ,'update_time' => time()
             ];
 
 //            if (!empty($param['id'])) {
