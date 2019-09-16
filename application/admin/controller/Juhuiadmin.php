@@ -219,6 +219,14 @@ public  function pas()
 
     public  function addmenu()
     {
+
+        $param = request()->param();
+        if (request()->isAjax()) {
+            jsondebug($param);
+        }
+
+
+        //字段：title、 url sort  pid  intro
         return view();
 
     }
