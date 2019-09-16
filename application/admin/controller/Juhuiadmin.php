@@ -235,17 +235,11 @@ public  function pas()
             ];
 
             $r = Common::dataExecute($menu, $data, $param);
-            jsondebug($r);
-
-
-
-
-            //if (!empty($r))
-                //返回json数据
+            if (!empty($r))
+                exit(json($data));
         }
 
-
-        //字段：title、 url sort  pid  intro
+        //字段：title、 url sort  pid  intro   git pull origin master
         return view();
 
     }
