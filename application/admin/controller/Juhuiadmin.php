@@ -228,7 +228,6 @@ public  function pas()
 
         $param = request()->param();
         if (request()->isAjax()) {
-            jsondebug($param);
             $menuModel = new Menu;
             $data = [
             'title' => trim($param['title'])
@@ -241,6 +240,12 @@ public  function pas()
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
             exit(Common::json(400, '提交失败'));
+        }
+
+        if (!empty($param['id'])) {
+
+            $data = Db::name('menu')->where('id', intval($param['id']))->find();
+            wl_debug($data);
         }
 
         $where = ['is_del' => 1, 'status' => 1];
