@@ -217,7 +217,7 @@ public  function pas()
     {
         $where = ['is_del' => 1];
         $menu = Db::name('menu')->where($where)->select();
-        wl_debug($menu);
+        $menu = tree($menu);
         return view('', ['menu' => $menu]);
 
     }
