@@ -240,10 +240,9 @@ public  function pas()
             exit(Common::json(400, '提交失败'));
         }
 
-        $menu = Db::name('menu')->select();
-        wl_debug($menu);
-
-        return view();
+        $where = ['is_del' => 1, 'status' => 1];
+        $menu = Db::name('menu')->where($where)->select();
+        return view('', ['menu' => $menu]);
 
     }
 
