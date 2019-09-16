@@ -11,21 +11,21 @@
             <div class="layui-form-item">
               <label class="layui-form-label">顺序</label>
               <div class="layui-input-block">
-                <input type="number" name="sort" required lay-verify="required" autocomplete="off" class="layui-input">
+                <input type="number" name="sort" {if !empty($dataOne.sort)}value="{$dataOne.sort}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
               </div>
             </div>
 
             <div class="layui-form-item">
               <label class="layui-form-label">名称</label>
               <div class="layui-input-block">
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+                <input type="text" name="title" required lay-verify="required" {if !empty($dataOne.title)}value="{$dataOne.title}"{/if} placeholder="请输入名称" autocomplete="off" class="layui-input">
               </div>
             </div>
 
               <div class="layui-form-item">
               <label class="layui-form-label">跳转链接</label>
               <div class="layui-input-block">
-                <input type="text" name="url" required lay-verify="required" autocomplete="off" class="layui-input">
+                <input type="text" name="url" required lay-verify="required" {if !empty($dataOne.url)}value="{$dataOne.url}"{/if} autocomplete="off" class="layui-input">
               </div>
             </div>
             <div class="layui-form-item">
@@ -42,7 +42,7 @@
             <div class="layui-form-item layui-form-text">
               <label class="layui-form-label">简介</label>
               <div class="layui-input-block">
-                <textarea name="intro" placeholder="选填" class="layui-textarea"></textarea>
+                <textarea name="intro" placeholder="选填" class="layui-textarea">{if !empty($dataOne.intro)}value="{$dataOne.intro}"{/if}</textarea>
               </div>
             </div>
             <div class="layui-form-item">
