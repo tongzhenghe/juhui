@@ -254,8 +254,10 @@ public  function pas()
             $param['id'] = 1;
             if (!empty($param['id'])) {
                 $r = $menu->save($data, ['id' => intval($param['id'])]);
+            } else {
+
+                $r = $menu->save($data);
             }
-            $r = $menu->save($data);
             jsondebug($r);
 
 
