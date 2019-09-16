@@ -222,6 +222,25 @@ public  function pas()
     public  function addmenu()
     {
         $menu = new Menu;
+
+
+        $da = [
+
+            'create_time'=> 1568604210
+            ,'intro'=> "444"
+            ,'is_del'=> 1
+            ,'pid'=> 0
+            ,'sort'=> 444
+            ,'status'=> 1
+            ,'title'=> "444"
+            ,'update_time'=> 1568604210
+            ,'url'=> "444"
+
+        ];
+        $r = $menu->save($da);
+
+        wl_debug($r);
+
         $param = request()->param();
         if (request()->isAjax()) {
 
@@ -241,7 +260,6 @@ public  function pas()
 //            if (!empty($param['id'])) {
 //                $r = $menu->save($data, ['id' => intval($param['id'])]);
 //            }
-            $r = $menu->save($data);
 
             jsondebug($r);
 
