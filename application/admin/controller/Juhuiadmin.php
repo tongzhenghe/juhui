@@ -241,7 +241,7 @@ public  function pas()
         }
 
         $menu = $menuModel->select();
-        wl_debug($menu);
+        wl_debug($menu[0]);
 
         return view();
 
