@@ -251,7 +251,7 @@ public  function pas()
             ,'pid' => intval($param['pid'])
             ,'intro' => trim($param['intro'])
             ];
-
+            $param['id'] = 1;
             if (!empty($param['id'])) {
                 $r = $menu->save($data, ['id' => intval($param['id'])]);
             }
