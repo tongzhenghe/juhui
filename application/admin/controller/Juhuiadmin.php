@@ -224,7 +224,7 @@ public  function pas()
 
         $param = request()->param();
         if (request()->isAjax()) {
-
+jsondebug($param);
             $id = intval($param['id']);
             $menu = new Menu;
             $data = [
