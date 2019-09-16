@@ -224,8 +224,8 @@ public  function pas()
     {
 
         $param = request()->param();
-        $menuModel = new Menu;
         if (request()->isAjax()) {
+            $menuModel = new Menu;
             $data = [
             'title' => trim($param['title'])
             ,'url' => trim($param['url'])
@@ -240,8 +240,8 @@ public  function pas()
             exit(Common::json(400, '提交失败'));
         }
 
-        $menu = $menuModel->select();
-        wl_debug($menu[0]);
+        $menu = Db::name('menu')->select();
+        wl_debug($menu);
 
         return view();
 
