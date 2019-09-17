@@ -317,7 +317,6 @@ public  function pas()
     public  function cdnUploads()
     {
 
-        jsondebug(111);
         $img = $_FILES;
 
         jsondebug($img);
