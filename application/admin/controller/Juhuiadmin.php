@@ -316,15 +316,19 @@ public  function pas()
 
     public  function cdnUploads()
     {
-        $img = $_FILES['file'];
-        $fileError = $img['error'];
-        $fileType = $img['type'];
-        if ($fileError == 0) {
-            //判断文件类型
-            $file_type = ['image/jpeg', 'image/png'];
-            if (!in_array($fileType, $file_type))
-                exit(Common::json(200, '文件上传失败'));
-            if ($img) Upload::image($img);
+
+
+//
+//
+//        $img = $_FILES['file'];
+//        $fileError = $img['error'];
+//        $fileType = $img['type'];
+//        if ($fileError == 0) {
+//            //判断文件类型
+//            $file_type = ['image/jpeg', 'image/png'];
+//            if (!in_array($fileType, $file_type))
+//                exit(Common::json(200, '文件上传失败'));
+            Upload::image();
 
         }
     }
