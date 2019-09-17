@@ -76,7 +76,8 @@
                     var uploadInst = upload.render({
                         elem: '#Mobile-icon' //绑定元素
                         ,url: '/cdnUploads' //上传接口
-                        ,accept: 'txt' //允许上传的文件类型
+                        ,accept:"file"
+                        ,exts: 'txt|pdf'
                         ,done: function(res){
                             //上传完毕回调
                             console.log(res)
@@ -94,7 +95,8 @@
                     var uploadInst = upload.render({
                         elem: '#PC-icon' //绑定元素
                         ,url: '/cdnUploads' //上传接口
-                        ,accept: 'txt' //允许上传的文件类型
+                        ,accept:"file"
+                        ,exts: 'txt|pdf'
                         ,done: function(res){
                             //上传完毕回调
                             console.log(res)
