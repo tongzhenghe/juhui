@@ -268,6 +268,12 @@ public  function pas()
     }
 
 
+    public  function  nosey()
+    {
+        return view();
+    }
+
+
 
 
 }
