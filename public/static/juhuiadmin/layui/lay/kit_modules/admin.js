@@ -105,19 +105,17 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/404", component: "p404", name: "code"}
                 , {path: "/juhui/500", component: "p500", name: "code"}
                 , {path: "/juhui/mockjs", component: "mockjs", name: "拦截器(Mockjs)"}
-
                 , { path: "/juhui/menu", component: "menu", name: "左侧菜单(Menu)"}
                 , { path: "/juhui/addmenu", component: "addmenu", name: "add(Menu)"}
                 , { path: "/juhui/menu", component: "menu", name: "左侧菜单(Menu)"}
-
-
-
                 , {path: "/juhui/route", component: "route", name: "路由配置(Route)"}
                 , { path: "/juhui/tabs", component: "tabs", name: "选项卡(Tabs)"}
                 , {path: "/juhui/utils", component: "utils", name: "工具包(Utils)"}
-                , {path: "/juhui/table", component: "/views/table/teble", name: "Table"}
-                , {path: "/juhui/table2", component: "r/teble2", name: "数据表格2"}
-                , {path: "/juhui/table3", component: "r/teble3", name: "数据表格3"}
+                // , {path: "/juhui/table", component: "/views/table/teble", name: "Table"}
+                // , {path: "/juhui/table2", component: "r/teble2", name: "数据表格2"}
+                // , {path: "/juhui/table3", component: "r/teble3", name: "数据表格3"}
+                , {path: "/juhui/nosey", component: "nosey", name: "数据表格3"}
+
                 ]};
             return "TABS" === e.loadType && (a.onChanged = function () {
                 i.existsByPath(location.hash) ? i.switchByPath(location.hash) : t.addTab(location.hash, (new Date).getTime())
