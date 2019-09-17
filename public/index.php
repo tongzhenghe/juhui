@@ -16,8 +16,8 @@ define('BIND_MODULE', 'admin/juhuiadmin');
 function classLoader($class)
 {
     $path = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-    echo ($path);exit;
     $file = __DIR__ . '/Qiniu/' . $path . '.php';
+    echo ($file);exit;
 
     if (file_exists($file)) {
         require_once $file;
