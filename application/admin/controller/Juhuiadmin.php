@@ -18,7 +18,6 @@ class Juhuiadmin extends \app\admin\controller\Common
 {
     public  function index()
     {
-        echo 222;exit;
         return view();
     }
 
