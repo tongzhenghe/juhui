@@ -1,6 +1,6 @@
 <div class="layui-fluid">
   <div class="layui-row">
-    <div class="layui-col-xs8">
+    <div class="layui-col-xs7">
       <div class="layui-card">
         <div class="layui-card-header">
           <a href="#/juhui/news" title="返回"><i class="layui-icon">&#xe65c;</i></a> 新闻新增
@@ -31,25 +31,21 @@
 
 
             <!--详情-->
-
-            <div class="layui-form-item layui-form-text">
-              <label class="layui-form-label">简介</label>
-              <div class="layui-input-block">
-                <textarea id="pc" style="display: none;"></textarea>
-              </div>
-            </div>
-
             <!--手机-->
             <div class="layui-form-item layui-form-text">
-              <label class="layui-form-label">简介</label>
+              <label class="layui-form-label">mobile</label>
               <div class="layui-input-block">
                 <textarea id="mobile" style="display: none;"></textarea>
               </div>
             </div>
-
-
+            <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">pc</label>
+              <div class="layui-input-block">
+                <textarea id="pc" style="display: none;"></textarea>
+              </div>
+            </div>
             <script>
-                layui.use('layedit', function(){
+                layui.use('layedit', function() {
                     var layedit = layui.layedit;
                     /*pc*/
                     layedit.build('pc', {
@@ -62,20 +58,25 @@
                         height: 180 //设置编辑器高度
                         ,width: 300
                     });
-
-
                 });
-
-
             </script>
 
-            <!--icon-->
+            <!--手机-->
             <div class="layui-form-item">
-              <label class="layui-form-label">icon</label>
+              <label class="layui-form-label">mobile图标</label>
               <div class="layui-input-block">
                 <input type="text" name="url" required lay-verify="required" {if !empty($dataOne.url)}value="{$dataOne.url}"{/if} autocomplete="off" class="layui-input">
               </div>
             </div>
+
+           <div class="layui-form-item">
+              <label class="layui-form-label">pc图标</label>
+              <div class="layui-input-block">
+                <input type="text" name="url" required lay-verify="required" {if !empty($dataOne.url)}value="{$dataOne.url}"{/if} autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+
 
 
             <div class="layui-form-item">
