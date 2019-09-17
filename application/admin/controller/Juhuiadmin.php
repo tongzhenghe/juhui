@@ -12,16 +12,12 @@ use app\admin\model\Common;
 use app\admin\model\Menu;
 use app\admin\model\News;
 use app\extra\Upload;
-use Qiniu\Auth;
 use think\Db;
 
 class Juhuiadmin extends \app\admin\controller\Common
 {
     public  function index()
     {
-
-        $dd = new Auth();
-        wl_debug($dd);
         return view();
     }
 
@@ -80,112 +76,112 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     }
 
-     public  function timeline()
+    public  function timeline()
     {
         return view();
 
     }
-   public  function table_element()
-    {
-        return view();
-
-    }
-
-  public  function anim()
+    public  function table_element()
     {
         return view();
 
     }
 
-     public  function auxiliar()
+    public  function anim()
     {
         return view();
 
     }
 
-     public  function layer()
-    {
-        return view();
-
-    }
-   public  function laydate()
+    public  function auxiliar()
     {
         return view();
 
     }
 
-  public  function table()
+    public  function layer()
+    {
+        return view();
+
+    }
+    public  function laydate()
     {
         return view();
 
     }
 
- public  function laypage()
+    public  function table()
     {
         return view();
 
     }
 
- public  function upload()
+    public  function laypage()
     {
         return view();
 
     }
 
- public  function carousel()
+    public  function upload()
     {
         return view();
 
     }
 
- public  function laytpl()
+    public  function carousel()
     {
         return view();
 
     }
 
- public  function flow()
+    public  function laytpl()
     {
         return view();
 
     }
 
- public  function util()
+    public  function flow()
     {
         return view();
 
     }
 
- public  function code()
+    public  function util()
     {
         return view();
 
     }
 
- public  function select()
+    public  function code()
     {
         return view();
 
     }
 
- public  function p403()
+    public  function select()
+    {
+        return view();
+
+    }
+
+    public  function p403()
     {
         return view('403');
 
     }
 
-public  function p404()
+    public  function p404()
     {
         return view('404');
 
     }
 
-public  function p500()
+    public  function p500()
     {
         return view('500');
 
     }
-public  function pas()
+    public  function pas()
     {
         return view();
 
@@ -196,17 +192,17 @@ public  function pas()
 
     }
 
-     public  function tabs()
+    public  function tabs()
     {
         return view();
 
     }    public  function profile()
-    {
-        return view();
+{
+    return view();
 
-    }
+}
 
-     public  function utils()
+    public  function utils()
     {
         return view();
 
@@ -234,11 +230,11 @@ public  function pas()
         if (request()->isAjax()) {
             $menuModel = new Menu;
             $data = [
-            'title' => trim($param['title'])
-            ,'url' => trim($param['url'])
-            ,'sort' => intval($param['sort'])
-            ,'pid' => intval($param['pid'])
-            ,'intro' => trim($param['intro'])
+                'title' => trim($param['title'])
+                ,'url' => trim($param['url'])
+                ,'sort' => intval($param['sort'])
+                ,'pid' => intval($param['pid'])
+                ,'intro' => trim($param['intro'])
             ];
 
             $r = Common::dataExecute($menuModel, $data, $param);
@@ -332,7 +328,7 @@ public  function pas()
 //            $file_type = ['image/jpeg', 'image/png'];
 //            if (!in_array($fileType, $file_type))
 //                exit(Common::json(200, '文件上传失败'));
-            Upload::image();
+        Upload::image();
 
     }
 
