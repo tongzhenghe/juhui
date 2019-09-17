@@ -31,14 +31,23 @@
 
 
             <!--详情-->
-            <textarea id="demo" style="display: none;"></textarea>
+            <textarea id="pc" style="display: none;"></textarea>
+            <textarea id="mobile" style="display: none;"></textarea>
 
             <script>
                 layui.use('layedit', function(){
                     var layedit = layui.layedit;
-                    layedit.build('demo', {
+                    /*pc*/
+                    layedit.build('pc', {
                         height: 180 //设置编辑器高度
                     });
+
+                    /*手机*/
+                    layedit.build('mobile', {
+                        height: 180 //设置编辑器高度
+                    });
+
+
                 });
 
 
