@@ -25,22 +25,14 @@
             </a>
           </div>
           <div class="layui-card-body">
-
             <table lay-filter="demo"  lay-data="{page:true}" >
-
               <thead>
-
-
               <tr>
-
-                <th lay-data="{field:'id', width:100, sort:false}">(编号id)</th>
-
-                <th lay-data="{field:'title', width:200}">菜单名称</th>
-
-                <th lay-data="{field:'url', width:300}">跳转链接</th>
-
+                <th lay-data="{field:'id', width:100, sort:true}">(编号id)</th>
+                <th lay-data="{field:'title', width:200}">新闻标题（图标）</th>
+                <th lay-data="{field:'url', width:300}">浏览量</th>
+                <th lay-data="{field:'url', width:500}">简介</th>
                 <th lay-data="{field:'操作', width:100}">操作</th>
-
               </tr>
 
               </thead>
@@ -51,7 +43,10 @@
               <tr>
                 <td>{$vo.id}</td>
                 <td>{$vo.title}</td>
+                <td>{$vo.browse}</td>
+                <td>{$vo.intro}</td>
                 <td>
+                  <a href="#/juhui/details?id={$vo.id}" class="point"><i class="layui-icon" title="查看详情">&#xe642;</i></a>
                   <a href="#/juhui/addnews?id={$vo.id}" class="point"><i class="layui-icon" title="编辑数据">&#xe642;</i></a>
                   <a href="javascript:;" data-ids="112" data-url="{:url('index/news')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a>
                 </td>
