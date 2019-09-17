@@ -11,6 +11,7 @@ namespace app\admin\controller;
 use app\admin\model\Common;
 use app\admin\model\Menu;
 use app\admin\model\News;
+use app\extra\Upload;
 use think\Db;
 
 class Juhuiadmin extends \app\admin\controller\Common
@@ -310,6 +311,17 @@ public  function pas()
     public  function  nosey()
     {
         return view();
+    }
+
+
+    public  function cdnUploads()
+    {
+
+        $img = $_FILES;
+
+        jsondebug($img);
+
+        if ($img) Upload::image($img['file']);
     }
 
 
