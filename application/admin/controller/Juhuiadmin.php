@@ -259,7 +259,6 @@ public  function pas()
     {
         $where = ['is_del' => 1];
         $news = Db::name('news')->where($where)->select();
-
         return view('', ['news' => $news]);
 
     }
