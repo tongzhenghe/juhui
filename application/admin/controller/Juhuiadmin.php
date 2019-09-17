@@ -330,7 +330,6 @@ public  function pas()
 //                exit(Common::json(200, '文件上传失败'));
             Upload::image();
 
-        }
     }
 
 
