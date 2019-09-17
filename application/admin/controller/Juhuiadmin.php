@@ -10,6 +10,7 @@ namespace app\admin\controller;
 
 use app\admin\model\Common;
 use app\admin\model\Menu;
+use app\admin\model\News;
 use think\Db;
 
 class Juhuiadmin extends \app\admin\controller\Common
@@ -254,6 +255,45 @@ public  function pas()
     }
 
 
+    public  function news()
+    {
+        $where = ['is_del' => 1];
+        $news = Db::name('news')->where($where)->select();
+
+        return view('', ['news' => $news]);
+
+    }
+
+
+    public  function addnews()
+    {
+        $param = request()->param();
+        if (request()->isAjax()) {
+            $newsModel = new News;
+            $data = [
+                'title' => trim($param['title'])
+                ,'url' => trim($param['url'])
+                ,'sort' => intval($param['sort'])
+                ,'pid' => intval($param['pid'])
+                ,'intro' => trim($param['intro'])
+            ];
+
+            $r = Common::dataExecute($newsModel, $data, $param);
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
+        }
+
+        $dataOne = null;;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('menu')->where('id', intval($param['id']))->find();
+        }
+
+        $where = ['is_del' => 1, 'status' => 1];
+        $news = Db::name('news')->where($where)->select();
+        return view('', ['news' => $news, 'dataOne' => $dataOne]);
+
+    }
 
     public  function formindex()
     {
