@@ -244,7 +244,6 @@ return [
 
     // 七牛云文件上传默认驱动
     'UPLOAD_DRIVER' => 'Qiniu', //设置七牛上传驱动
-    //'UPLOAD_DRIVER' => 'Local',
     // 七牛上传驱动配置说明
     'Qiniu_CONFIG' => [
         'secretKey' => 'dz1lzAKprz8rfwrTTRPCpgos_siqu0jwf0PoxlC9', //七牛服务器
