@@ -255,9 +255,6 @@ public  function pas()
 
 
 
-
-
-
     public  function formindex()
     {
         return view();
