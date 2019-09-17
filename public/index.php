@@ -13,18 +13,5 @@
 define('APP_PATH', __DIR__ . '/../application/');
 define('BIND_MODULE', 'admin/juhuiadmin');
 
-function classLoader($class)
-{
-    $path = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-    $file = __DIR__ . '/Qiniu/' . $path . '.php';
-
-    if (file_exists($file)) {
-        require_once $file;
-    }
-}
-spl_autoload_register('classLoader');
-
-require_once  __DIR__ . '/../vendor/teg1c/thinkphp-qiniu-sdk/qiniu_php_driver/src/Qiniu/functions.php';
-
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
