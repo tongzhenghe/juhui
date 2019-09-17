@@ -114,7 +114,7 @@ layui.define(mods, function (e) {
                 // , {path: "/juhui/table", component: "/views/table/teble", name: "Table"}
                 // , {path: "/juhui/table2", component: "r/teble2", name: "数据表格2"}
                 // , {path: "/juhui/table3", component: "r/teble3", name: "数据表格3"}
-                , {path: "/juhui/nosey", component: "nosey", name: "数据表格3"}
+                , {path: "/juhui/news", component: "news", name: "news"}
 
                 ]};
             return "TABS" === e.loadType && (a.onChanged = function () {
