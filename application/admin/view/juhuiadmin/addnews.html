@@ -36,12 +36,12 @@
             <script>
                 layui.use('layedit', function(){
                     var layedit = layui.layedit;
-                    layedit.build('demo'); //建立编辑器
+                    layedit.build('demo', {
+                        height: 180 //设置编辑器高度
+                    });
                 });
 
-                layedit.build('id', {
-                    height: 180 //设置编辑器高度
-                });
+
             </script>
 
             <!--icon-->
