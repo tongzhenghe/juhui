@@ -77,7 +77,9 @@
                         elem: '#Mobile-icon' //绑定元素
                         ,url: '/cdnUploads' //上传接口
                         ,accept:"file"
-                        ,exts: 'txt|pdf'
+                        ,exts: 'jpg|png'
+                        , method: "post"
+                        , auto: false  //auto 参数必须设置为false
                         ,done: function(res){
                             //上传完毕回调
                             console.log(res)
@@ -96,7 +98,9 @@
                         elem: '#PC-icon' //绑定元素
                         ,url: '/cdnUploads' //上传接口
                         ,accept:"file"
-                        ,exts: 'txt|pdf'
+                        ,exts: 'jpg|png'
+                        , method: "post"
+                        , auto: false  //auto 参数必须设置为false
                         ,done: function(res){
                             //上传完毕回调
                             console.log(res)
