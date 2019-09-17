@@ -1,6 +1,6 @@
 <div class="layui-fluid">
   <div class="layui-row">
-    <div class="layui-col-sm12">
+    <div class="layui-col-sm11">
       <div class="layui-card">
 
         <!--<div class="layui-card-header">数据表格-> 文档请参考：-->
@@ -29,7 +29,8 @@
               <thead>
               <tr>
                 <th lay-data="{field:'id', width:100, sort:true}">(编号id)</th>
-                <th lay-data="{field:'title', width:200}">新闻标题（图标）</th>
+                <th lay-data="{field:'title', width:200}">（图标）</th>
+                <th lay-data="{field:'title', width:200}">新闻标题</th>
                 <th lay-data="{field:'url', width:300}">浏览量</th>
                 <th lay-data="{field:'url', width:500}">简介</th>
                 <th lay-data="{field:'操作', width:100}">操作</th>
@@ -42,6 +43,7 @@
               {foreach $news as $vo}
               <tr>
                 <td>{$vo.id}</td>
+                <td>{$vo.icon}</td>
                 <td>{$vo.title}</td>
                 <td>{$vo.browse}</td>
                 <td>{$vo.intro}</td>
