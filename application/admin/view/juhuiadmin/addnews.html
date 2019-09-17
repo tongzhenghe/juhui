@@ -1,1 +1,124 @@
-111
+<div class="layui-fluid">
+  <div class="layui-row">
+    <div class="layui-col-xs7">
+      <div class="layui-card">
+        <div class="layui-card-header">
+          <a href="#/juhui/news" title="返回"><i class="layui-icon">&#xe65c;</i></a> 新闻新增
+        </div>
+        <div class="layui-card-body">
+          <form class="layui-form" action="##" onsubmit="return false">
+
+            <div class="layui-form-item">
+              <label class="layui-form-label">顺序</label>
+              <div class="layui-input-block">
+                <input type="number" name="sort" {if !empty($dataOne.sort)}value="{$dataOne.sort}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+            <div class="layui-form-item">
+              <label class="layui-form-label">新闻标题</label>
+              <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" {if !empty($dataOne.title)}value="{$dataOne.title}"{/if} placeholder="请输入名称" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+            <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">简介</label>
+              <div class="layui-input-block">
+                <textarea name="intro" placeholder="选填" class="layui-textarea">{if !empty($dataOne.intro)}{$dataOne.intro}{/if}</textarea>
+              </div>
+            </div>
+            <!--手机-->
+            <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">封面图片</label>
+              <div class="layui-input-block">
+                <div>
+                <button type="button" class="layui-btn" id="mobile-icon">
+                  <i class="layui-icon">&#xe67c;</i>手机端图标
+                </button>
+                </div>
+                <div>
+                <button type="button" class="layui-btn" id="pc-icon">
+                  <i class="layui-icon">&#xe67c;</i>PC图标
+                </button>
+                </div>
+              </div>
+            </div>
+            <!--手机详情-->
+            <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">手机端</label>
+              <div class="layui-input-block">
+                <textarea id="mobile" style="display: none;"></textarea>
+              </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">PC端</label>
+              <div class="layui-input-block">
+                <textarea id="pc" style="display: none;"></textarea>
+              </div>
+            </div>
+            <script>
+                layui.use('layedit', function() {
+                    var layedit = layui.layedit;
+                    /*pc*/
+                    layedit.build('pc', {
+                        height: 180 //设置编辑器高度
+                        ,width: 300
+                    });
+
+                    /*手机*/
+                    layedit.build('mobile', {
+                        height: 180 //设置编辑器高度
+                        ,width: 300
+                    });
+                });
+
+                layui.use('upload', function(){
+                    var upload = layui.upload;
+                    //执行实例
+                    var uploadInst = upload.render({
+                        elem: '#mobile-icon' //绑定元素
+                        ,url: '/upload/' //上传接口
+                        ,done: function(res){
+                            //上传完毕回调
+                        }
+                        ,error: function(){
+                            //请求异常回调
+                        }
+                    });
+                });
+
+             layui.use('upload', function(){
+                    var upload = layui.upload;
+                    //执行实例
+                    var uploadInst = upload.render({
+                        elem: '#pc-icon' //绑定元素
+                        ,url: '/upload/' //上传接口
+                        ,done: function(res){
+                            //上传完毕回调
+                        }
+                        ,error: function(){
+                            //请求异常回调
+                        }
+                    });
+                });
+
+
+            </script>
+
+            <div class="layui-form-item">
+              <div class="layui-input-block">
+                <input type="hidden" name="u" value="addmenu">
+                <input type="hidden" name="id" value="2">
+                <button type="submit" class="layui-btn" lay-submit  lay-filter="tomenu">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <a href="#/juhui/news" class="layui-btn layui-btn-primary">返回列表</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="./juhuiadmin/include/submit"/}
