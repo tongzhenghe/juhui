@@ -26,5 +26,19 @@ class Common extends  SystemAdmin
 
     }
 
+   public  static  function json($code, $msg = '', $url = ''){
+        $result =[
+            'code'=>$code,
+            'msg'=>$msg,
+            'url'=>$url
+            ];
+
+        return json_encode($result);
+
+    }
+
+
+
+
 
 }

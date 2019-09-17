@@ -1,6 +1,6 @@
 <div class="layui-fluid">
   <div class="layui-row">
-    <div class="layui-col-xs12">
+    <div class="layui-col-sm7">
       <div class="layui-card">
 
         <!--<div class="layui-card-header">数据表格-> 文档请参考：-->
@@ -30,33 +30,33 @@
 
               <thead>
 
+
               <tr>
 
-                <th lay-data="{field:'id', width:100, sort:true}">(编号id)</th>
+                <th lay-data="{field:'id', width:100, sort:false}">(编号id)</th>
 
-                <th lay-data="{field:'name', width:150}">菜单名称</th>
+                <th lay-data="{field:'title', width:200}">菜单名称</th>
 
-                <th lay-data="{field:'path', width:200}">跳转链接</th>
+                <th lay-data="{field:'url', width:300}">跳转链接</th>
 
-                <th lay-data="{field:'操作', width:80}">操作</th>
+                <th lay-data="{field:'操作', width:100}">操作</th>
 
               </tr>
 
               </thead>
 
               <tbody>
+              {foreach $menu as $vo}
               <tr>
-                <td>12</td>
-
-                <td>333</td>
-
-                <td>33333</td>
-
+                <td>{$vo.id}</td>
+                <td><span style="color: #939393;">{$vo.html}</span>{$vo.title}</td>
+                <td>{$vo.url}</td>
                 <td>
-                  <a href="#/website/addmenu?id=112" class="point"><i class="layui-icon" title="编辑数据">&#xe642;</i></a>
+                  <a href="#/juhui/addmenu?id={$vo.id}" class="point"><i class="layui-icon" title="编辑数据">&#xe642;</i></a>
                   <a href="javascript:;" data-ids="112" data-url="{:url('index/menu')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a>
                 </td>
               </tr>
+              {/foreach}
               </tbody>
             </table>
           </div>

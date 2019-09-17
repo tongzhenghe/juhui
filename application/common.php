@@ -40,3 +40,37 @@ function jsondebug( $array )
 
     exit( json_encode(['str' => $array]) );
 }
+
+function tree($data, $pid = 0, $deep = 0 )
+{
+    static $arr = [];
+    foreach ($data as $val) {
+
+        if ($val['pid'] == $pid ) {
+            $val['deep'] = $deep;
+            $val['html'] = str_repeat('<span>&nbsp;|__</span>',$deep);
+            $arr[] = $val;
+            $arr = tree($data, $val['id'], $deep+1 );
+        }
+
+    }
+    return $arr;
+
+}
+
+
+function _reSort($data, $parent_id = 0) {
+    $return = [];//不能用static
+    foreach($data as $v) {
+        if($v['pid'] == $parent_id) {
+            foreach($data as $subv) {
+                if($subv['pid'] == $v['id']) {
+                    $v['children'] = _reSort($data, $v['id']);
+                    break;
+                }
+            }
+            $return[] = $v;
+        }
+    }
+    return $return;
+}

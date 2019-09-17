@@ -10,10 +10,11 @@ namespace app\admin\controller;
 
 use app\admin\model\Common;
 use app\admin\model\Menu;
-use think\Controller;
+use app\admin\model\News;
+use app\extra\Upload;
 use think\Db;
 
-class Juhuiadmin extends  Controller
+class Juhuiadmin extends \app\admin\controller\Common
 {
     public  function index()
     {
@@ -215,17 +216,19 @@ public  function pas()
 
     public  function menu()
     {
-        return view();
+        $where = ['is_del' => 1];
+        $menu = Db::name('menu')->where($where)->select();
+        $menu = tree($menu);
+        return view('', ['menu' => $menu]);
 
     }
 
 
     public  function addmenu()
     {
-
         $param = request()->param();
         if (request()->isAjax()) {
-            $menu = new Menu;
+            $menuModel = new Menu;
             $data = [
             'title' => trim($param['title'])
             ,'url' => trim($param['url'])
@@ -234,26 +237,63 @@ public  function pas()
             ,'intro' => trim($param['intro'])
             ];
 
-            $r = Common::dataExecute($menu, $data, $param);
-            jsondebug($r);
-
-
-
-
-            //if (!empty($r))
-                //返回json数据
+            $r = Common::dataExecute($menuModel, $data, $param);
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
         }
 
+        $dataOne = null;;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('menu')->where('id', intval($param['id']))->find();
+        }
 
-        //字段：title、 url sort  pid  intro
-        return view();
+        $where = ['is_del' => 1, 'status' => 1];
+        $menu = Db::name('menu')->where($where)->select();
+        $menu = tree($menu);
+        return view('', ['menu' => $menu, 'dataOne' => $dataOne]);
 
     }
 
 
+    public  function news()
+    {
+        $where = ['is_del' => 1];
+        $news = Db::name('news')->where($where)->select();
+        return view('', ['news' => $news]);
+
+    }
 
 
+    public  function addnews()
+    {
+        $param = request()->param();
+        if (request()->isAjax()) {
+            $newsModel = new News;
+            $data = [
+                'title' => trim($param['title'])
+                ,'url' => trim($param['url'])
+                ,'sort' => intval($param['sort'])
+                ,'pid' => intval($param['pid'])
+                ,'intro' => trim($param['intro'])
+            ];
 
+            $r = Common::dataExecute($newsModel, $data, $param);
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
+        }
+
+        $dataOne = null;;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('menu')->where('id', intval($param['id']))->find();
+        }
+
+        $where = ['is_del' => 1, 'status' => 1];
+        $news = Db::name('news')->where($where)->select();
+        return view('', ['news' => $news, 'dataOne' => $dataOne]);
+
+    }
 
     public  function formindex()
     {
@@ -268,6 +308,29 @@ public  function pas()
     }
 
 
+    public  function  nosey()
+    {
+        return view();
+    }
+
+
+    public  function cdnUploads()
+    {
+
+
+//
+//
+//        $img = $_FILES['file'];
+//        $fileError = $img['error'];
+//        $fileType = $img['type'];
+//        if ($fileError == 0) {
+//            //判断文件类型
+//            $file_type = ['image/jpeg', 'image/png'];
+//            if (!in_array($fileType, $file_type))
+//                exit(Common::json(200, '文件上传失败'));
+            Upload::image();
+
+    }
 
 
 }
