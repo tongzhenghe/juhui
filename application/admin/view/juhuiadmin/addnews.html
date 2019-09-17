@@ -1,0 +1,53 @@
+<div class="layui-fluid">
+  <div class="layui-row">
+    <div class="layui-col-xs8">
+      <div class="layui-card">
+        <div class="layui-card-header">
+          <a href="#/juhui/menu" title="返回"><i class="layui-icon">&#xe65c;</i></a> 菜单新增
+        </div>
+        <div class="layui-card-body">
+          <form class="layui-form" action="##" onsubmit="return false">
+
+            <div class="layui-form-item">
+              <label class="layui-form-label">顺序</label>
+              <div class="layui-input-block">
+                <input type="number" name="sort" {if !empty($dataOne.sort)}value="{$dataOne.sort}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+            <div class="layui-form-item">
+              <label class="layui-form-label">名称</label>
+              <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" {if !empty($dataOne.title)}value="{$dataOne.title}"{/if} placeholder="请输入名称" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+              <div class="layui-form-item">
+              <label class="layui-form-label">跳转链接</label>
+              <div class="layui-input-block">
+                <input type="text" name="url" required lay-verify="required" {if !empty($dataOne.url)}value="{$dataOne.url}"{/if} autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+            <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">简介</label>
+              <div class="layui-input-block">
+                <textarea name="intro" placeholder="选填" class="layui-textarea">{if !empty($dataOne.intro)}{$dataOne.intro}{/if}</textarea>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <div class="layui-input-block">
+                <input type="hidden" name="u" value="addmenu">
+                <input type="hidden" name="id" value="2">
+                <button type="submit" class="layui-btn" lay-submit  lay-filter="tomenu">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <a href="#/juhui/menu" class="layui-btn layui-btn-primary">返回列表</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="./juhuiadmin/include/submit"/}
