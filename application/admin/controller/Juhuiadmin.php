@@ -18,6 +18,8 @@ class Juhuiadmin extends \app\admin\controller\Common
 {
     public  function index()
     {
+
+        wl_debug(1);
         return view();
     }
 
