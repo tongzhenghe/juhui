@@ -29,19 +29,38 @@
               </div>
             </div>
 
-
-            <!--详情-->
             <!--手机-->
+            <div class="layui-form-item">
+              <label class="layui-form-label">手机端图标</label>
+              <div class="layui-input-block">
+                <input type="text" name="url" required lay-verify="required" {if !empty($dataOne.url)}value="{$dataOne.url}"{/if} autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+            <div class="layui-form-item">
+              <label class="layui-form-label">PC图标</label>
+              <div class="layui-input-block">
+                <input type="text" name="url" required lay-verify="required" {if !empty($dataOne.url)}value="{$dataOne.url}"{/if} autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+            <!--手机详情-->
             <div class="layui-form-item layui-form-text">
               <label class="layui-form-label">手机端</label>
               <div class="layui-input-block">
-                <textarea id="mobile" style="display: none;"></textarea>
+
+                <button type="button" class="layui-btn" id="mobile-icon">
+                  <i class="layui-icon">&#xe67c;</i>上传图片
+                </button>
               </div>
             </div>
             <div class="layui-form-item layui-form-text">
               <label class="layui-form-label">PC端</label>
               <div class="layui-input-block">
-                <textarea id="pc" style="display: none;"></textarea>
+
+                <button type="button" class="layui-btn" id="pc-icon">
+                  <i class="layui-icon">&#xe67c;</i>上传图片
+                </button>
               </div>
             </div>
             <script>
@@ -59,25 +78,23 @@
                         ,width: 300
                     });
                 });
+
+                layui.use('upload', function(){
+                    var upload = layui.upload;
+
+                    //执行实例
+                    var uploadInst = upload.render({
+                        elem: '#test1' //绑定元素
+                        ,url: '/upload/' //上传接口
+                        ,done: function(res){
+                            //上传完毕回调
+                        }
+                        ,error: function(){
+                            //请求异常回调
+                        }
+                    });
+                });
             </script>
-
-            <!--手机-->
-            <div class="layui-form-item">
-              <label class="layui-form-label">手机端图标</label>
-              <div class="layui-input-block">
-                <input type="text" name="url" required lay-verify="required" {if !empty($dataOne.url)}value="{$dataOne.url}"{/if} autocomplete="off" class="layui-input">
-              </div>
-            </div>
-
-           <div class="layui-form-item">
-              <label class="layui-form-label">pc图标</label>
-              <div class="layui-input-block">
-                <input type="text" name="url" required lay-verify="required" {if !empty($dataOne.url)}value="{$dataOne.url}"{/if} autocomplete="off" class="layui-input">
-              </div>
-            </div>
-
-
-
 
             <div class="layui-form-item">
               <div class="layui-input-block">
