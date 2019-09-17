@@ -12,6 +12,7 @@ use app\admin\model\Common;
 use app\admin\model\Menu;
 use app\admin\model\News;
 use app\extra\Upload;
+use Qiniu\Auth;
 use think\Db;
 
 class Juhuiadmin extends \app\admin\controller\Common
@@ -19,7 +20,8 @@ class Juhuiadmin extends \app\admin\controller\Common
     public  function index()
     {
 
-        wl_debug(1);
+        $dd = new Auth();
+        wl_debug($dd);
         return view();
     }
 
