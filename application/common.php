@@ -41,6 +41,18 @@ function jsondebug( $array )
     exit( json_encode(['str' => $array]) );
 }
 
+
+
+function iJson( $url = null, $status = true, $msg = '提交成功' )
+{
+    $data = [
+        'url' => $url,
+        'status' =>  $status,
+        'msg' => $msg,
+    ];
+    return  json_encode($data);
+
+}
 function tree($data, $pid = 0, $deep = 0 )
 {
     static $arr = [];
