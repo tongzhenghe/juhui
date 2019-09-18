@@ -21,12 +21,23 @@ layui.config({
 //     mymod.hello('World!'); //弹出 Hello World!
 // });
 
-var laypage, laydate, layedit, upload;
-layui.use(['upload', 'layedit', 'laypage', 'laydate'], function(){
+var laypage, laydate, layedit, upload, form;
+layui.use(['form', 'upload', 'layedit', 'laypage', 'laydate'], function(){
     laypage = layui.laypage;
     laydate = layui.laydate;
     layedit = layui.layedit;
     upload = layui.upload;
+    form = layui.form;
+
+
+
+    //addmenu
+    form.on('submit(tos)', function(data) {
+
+        alert(2)
+
+    });
+
 
 
 
