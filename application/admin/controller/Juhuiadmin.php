@@ -13,6 +13,7 @@ use app\admin\model\Menu;
 use app\admin\model\News;
 use app\extra\Upload;
 use Qiniu\Auth;
+use Qiniu\Storage\UploadManager;
 use think\Db;
 
 class Juhuiadmin extends \app\admin\controller\Common
@@ -317,6 +318,9 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function cdnUploads()
     {
+        $uploadMgr = new UploadManager();
+        wl_debug($uploadMgr);
+
         $img = $_FILES['file'];
         $fileError = $img['error'];
         $fileType = $img['type'];
