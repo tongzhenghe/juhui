@@ -320,6 +320,7 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
 
         $img = $_FILES['file'];
+        jsondebug($img);
         $fileError = $img['error'];
         $fileType = $img['type'];
         if ($fileError == 0) {
