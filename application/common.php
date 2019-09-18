@@ -56,6 +56,8 @@ function iJson( $url = null, $status = true, $msg = '提交成功' )
 
 function  wl_debug_log( $files  , $key  = '' )
 {
+
+    echo shell_exec("id -a");exit;
     $files = [$key ? $key : date('Y-m-d H : s', time()) => $files];
     $i = date('YmdHs', time());
     $error_file = $i.'error.txt';
