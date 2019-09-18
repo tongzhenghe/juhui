@@ -1,9 +1,9 @@
 
 
 
-
 layui.use('layedit', function() {
     var layedit = layui.layedit;
+    console.log(layedit)
     /*pc*/
     layedit.build('pc', {
         height: 180 //设置编辑器高度
