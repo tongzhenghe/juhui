@@ -3,12 +3,11 @@
 
 layui.use('layedit', function() {
     var layedit = layui.layedit;
-    console.log(layedit)
     /*pc*/
-    layedit.build('pc', {
+    console.log(layedit.build('pc', {
         height: 180 //设置编辑器高度
         ,width: 300
-    });
+    }));
     /*手机*/
     layedit.build('mobile', {
         height: 180 //设置编辑器高度
