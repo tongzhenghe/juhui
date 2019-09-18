@@ -4,10 +4,10 @@
 layui.use('layedit', function() {
     var layedit = layui.layedit;
     /*pc*/
-    console.log(layedit.build('pc', {
+    layedit.build('pc', {
         height: 180 //设置编辑器高度
         ,width: 300
-    }));
+    });
     /*手机*/
     layedit.build('mobile', {
         height: 180 //设置编辑器高度
@@ -17,6 +17,7 @@ layui.use('layedit', function() {
 
 layui.use('upload', function(){
     var upload = layui.upload;
+    console.log(upload)
     //执行实例
     var uploadInst = upload.render({
         elem: '#Mobile-icon' //绑定元素
@@ -34,6 +35,7 @@ layui.use('upload', function(){
             console.log(err)
         }
     });
+    //console.log(uploadInst)
 });
 
 layui.use('upload', function(){
