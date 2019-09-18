@@ -54,6 +54,21 @@ function iJson( $url = null, $status = true, $msg = '提交成功' )
 
 }
 
+function  wl_debug_log( $files  , $key  = '' )
+{
+    $files = [$key ? $key : date('Y-m-d H : s', time()) => $files];
+    $i = date('YmdHs', time());
+    $error_file = $i.'error.txt';
+    $dir = fopen("../runtime/errordir/".$error_file, "w") or die("Unable to open file!");
+
+    fwrite($dir,  print_r($files, true));
+
+    fclose($dir);
+
+}
+
+
+
 function tree($data, $pid = 0, $deep = 0 )
 {
     static $arr = [];
