@@ -56,11 +56,10 @@ function iJson( $url = null, $status = true, $msg = '提交成功' )
 
 function  wl_debug_log( $files  , $key  = '' )
 {
-    wl_debug($files);
     $files = [$key ? $key : date('Y-m-d H : s', time()) => $files];
     $i = date('YmdHs', time());
     $error_file = $i.'error.txt';
-    jsondebug($error_file);
+    wl_debug($error_file);
     $dir = fopen("../runtime/errordir/".$error_file, "w") or die("Unable to open file!");
 
     fwrite($dir,  print_r($files, true));
