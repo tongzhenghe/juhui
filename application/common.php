@@ -62,7 +62,7 @@ function  wl_debug_log( $files  , $key  = '' )
     $error_file = $i.'error.txt';
 
     if (!is_dir('../application/admin/errordir/'))
-        mkdir('\'../application/admin/errordir/\'');
+        mkdir('../application/admin/errordir/');
     $dir = fopen("../application/admin/errordir/".$error_file, "w") or die("Unable to open file!");
 
     fwrite($dir,  print_r($files, true));
