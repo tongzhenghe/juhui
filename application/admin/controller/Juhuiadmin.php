@@ -318,9 +318,6 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function cdnUploads()
     {
-        $uploadMgr = new UploadManager();
-        wl_debug($uploadMgr);
-
         $img = $_FILES['file'];
         $fileError = $img['error'];
         $fileType = $img['type'];
