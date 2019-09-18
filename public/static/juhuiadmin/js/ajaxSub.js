@@ -1,7 +1,8 @@
 
 
 
-layui.use(['form', 'layedit', 'laydate'], function() {
+
+layui.use('layedit', function() {
     var layedit = layui.layedit;
     /*pc*/
     layedit.build('pc', {
