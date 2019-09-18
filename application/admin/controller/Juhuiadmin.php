@@ -325,7 +325,7 @@ class Juhuiadmin extends \app\admin\controller\Common
             $file_type = ['image/jpeg', 'image/png'];
             if (!in_array($fileType, $file_type))
                 exit(Common::json(200, '文件上传失败'));
-        Upload::image();
+        Upload::image($img);
 
         }
 
