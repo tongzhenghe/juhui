@@ -6,7 +6,7 @@
           <a href="#/juhui/news" title="返回"><i class="layui-icon">&#xe65c;</i></a> 新闻新增
         </div>
         <div class="layui-card-body">
-          <form class="layui-form" action="##" onsubmit="return false" enctype="multipart/form-data">
+          <form class="layui-form" action="##" onsubmit="return false">
 
             <div class="layui-form-item">
               <label class="layui-form-label">顺序</label>
@@ -32,10 +32,10 @@
              <div class="layui-form-item layui-form-text">
               <label class="layui-form-label">封面图片</label>
               <div class="layui-input-block">
-                <!--<div id="Mobile-icon">-->
-                  <!--<div  class="title-tips"><span><i>*</i>Mobile图标</span></div>-->
-                  <!--<i class="layui-icon layui-icon-add-1"></i>-->
-                <!--</div>-->
+                <div id="Mobile-icon">
+                  <div  class="title-tips"><span><i>*</i>Mobile图标</span></div>
+                  <i class="layui-icon layui-icon-add-1"></i>
+                </div>
                 <div  id="PC-icon">
                   <div class="title-tips"><span><i>*</i>Pc图标</span></div>
                   <i class="layui-icon layui-icon-add-1"></i>
@@ -97,6 +97,7 @@
                     var uploadInst = upload.render({
                         elem: '#PC-icon' //绑定元素
                         ,url: '/cdnUploads' //上传接口
+                        ,accept:"file"
                         ,exts: 'jpg|png'
                         , method: "post"
                         // , auto: false  //auto 参数必须设置为false
