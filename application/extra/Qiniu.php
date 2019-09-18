@@ -56,6 +56,7 @@ class Upload
 
         list( $res, $err ) = $uploadMgr->putFile( $token, $filename, $tmp_name );
 
+        wl_debug_log($err);
         if($err !== null) {
 
             exit(false);
