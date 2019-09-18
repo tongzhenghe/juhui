@@ -260,6 +260,8 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function news()
     {
+
+        wl_debug_log(111);
         $where = ['is_del' => 1];
         $news = Db::name('news')->where($where)->select();
         return view('', ['news' => $news]);
