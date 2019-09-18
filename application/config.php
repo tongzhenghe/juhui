@@ -249,8 +249,8 @@ return [
     'Qiniu_CONFIG' => [
         'secretKey' => 'dz1lzAKprz8rfwrTTRPCpgos_siqu0jwf0PoxlC9', //七牛服务器
         'accessKey' => 'v-_-RaWsWOAusrmRIEbvaJx4wmiVwHMjfkXyhmxX', //七牛用户
-        'domain'    => 'http://huamei.juhuiny.com/', //七牛域名
-        'bucket'    => 'huamei', //空间名称
+        'domain'    => 'http://juhuicdn.juhuiny.com/', //七牛域名
+        'bucket'    => 'juhuicdn', //空间名称
         'timeout'   => 300, //超时时间
     ],
 
