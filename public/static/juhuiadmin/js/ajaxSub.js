@@ -17,7 +17,6 @@ layui.use('layedit', function() {
 
 layui.use('upload', function(){
     var upload = layui.upload;
-    console.log(upload)
     //执行实例
     var uploadInst = upload.render({
         elem: '#Mobile-icon' //绑定元素
@@ -35,7 +34,7 @@ layui.use('upload', function(){
             console.log(err)
         }
     });
-    //console.log(uploadInst)
+    console.log(uploadInst)
 });
 
 layui.use('upload', function(){
