@@ -20,8 +20,8 @@ class Juhuiadmin extends \app\admin\controller\Common
     public  function index()
     {
 
-        $app = new Auth();
-        wl_debug($app);
+        $auth = new Auth('"v-_-RaWsWOAusrmRIEbvaJx4wmiVwHMjfkXyhmxX"', 'dz1lzAKprz8rfwrTTRPCpgos_siqu0jwf0PoxlC9');
+        wl_debug($auth);
 
         return view();
     }
