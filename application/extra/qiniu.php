@@ -54,8 +54,7 @@ class Upload
         // 初始化UploadManager类
         $uploadMgr = new UploadManager();
 
-        jsondebug($tmp_name);
-        list( $res, $err ) = $uploadMgr->putFile( $token, $filename, $tmp_name );
+         list( $res, $err ) = $uploadMgr->putFile( $token, $filename, $tmp_name );
 
         if($err !== null) {
 
