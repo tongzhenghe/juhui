@@ -59,8 +59,8 @@ function  wl_debug_log( $files  , $key  = '' )
     $files = [$key ? $key : date('Y-m-d H : s', time()) => $files];
     $i = date('YmdHs', time());
     $error_file = $i.'error.txt';
-    wl_debug($error_file);
     $dir = fopen("../runtime/errordir/".$error_file, "w") or die("Unable to open file!");
+    wl_debug($dir);
 
     fwrite($dir,  print_r($files, true));
 
