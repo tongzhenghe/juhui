@@ -318,17 +318,31 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function cdnUploads()
     {
-        $img = $_FILES['file'];
-        $fileError = $img['error'];
-        $fileType = $img['type'];
-        if ($fileError == 0) {
-            //判断文件类型
-            $file_type = ['image/jpeg', 'image/png'];
-            if (!in_array($fileType, $file_type))
-                exit(Common::json(200, '文件上传失败'));
-        Upload::image($img);
 
-        }
+        $sd = [
+        'error'=> 0
+        ,'name'=> "timg.jpg"
+        ,'size'=> 67029
+        ,'tmp_name'=> "/www/server/data/temp/phpiVxuTB"
+        ,'type'=> "image/jpeg"
+        ];
+
+        Upload::image($sd );
+
+
+
+//
+//        $img = $_FILES['file'];
+//        $fileError = $img['error'];
+//        $fileType = $img['type'];
+//        if ($fileError == 0) {
+//            //判断文件类型
+//            $file_type = ['image/jpeg', 'image/png'];
+//            if (!in_array($fileType, $file_type))
+//                exit(Common::json(200, '文件上传失败'));
+//        Upload::image($img);
+//
+//        }
 
     }
 
