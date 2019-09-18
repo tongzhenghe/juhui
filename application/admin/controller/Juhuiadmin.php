@@ -19,10 +19,6 @@ class Juhuiadmin extends \app\admin\controller\Common
 {
     public  function index()
     {
-
-        $auth = new Auth('"v-_-RaWsWOAusrmRIEbvaJx4wmiVwHMjfkXyhmxX"', 'dz1lzAKprz8rfwrTTRPCpgos_siqu0jwf0PoxlC9');
-        wl_debug($auth);
-
         return view();
     }
 
@@ -321,19 +317,17 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function cdnUploads()
     {
-
-
-//
-//
-//        $img = $_FILES['file'];
-//        $fileError = $img['error'];
-//        $fileType = $img['type'];
-//        if ($fileError == 0) {
-//            //判断文件类型
-//            $file_type = ['image/jpeg', 'image/png'];
-//            if (!in_array($fileType, $file_type))
-//                exit(Common::json(200, '文件上传失败'));
+        $img = $_FILES['file'];
+        $fileError = $img['error'];
+        $fileType = $img['type'];
+        if ($fileError == 0) {
+            //判断文件类型
+            $file_type = ['image/jpeg', 'image/png'];
+            if (!in_array($fileType, $file_type))
+                exit(Common::json(200, '文件上传失败'));
         Upload::image();
+
+        }
 
     }
 
