@@ -111,9 +111,8 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/route", component: "route", name: "路由配置(Route)"}
                 , { path: "/juhui/tabs", component: "tabs", name: "选项卡(Tabs)"}
                 , {path: "/juhui/utils", component: "utils", name: "工具包(Utils)"}
-                // , {path: "/juhui/table", component: "/views/table/teble", name: "Table"}
-                // , {path: "/juhui/table2", component: "r/teble2", name: "数据表格2"}
-                // , {path: "/juhui/table3", component: "r/teble3", name: "数据表格3"}
+
+                , {path: "/juhui/about", component: "about", name: "关于我们(about)"}
                 , {path: "/juhui/news", component: "news", name: "news"}
                 , {path: "/juhui/addnews", component: "addnews", name: "addnews"}
 
