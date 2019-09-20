@@ -341,8 +341,8 @@ class Juhuiadmin extends \app\admin\controller\Common
 
         if($info){
             $name_path =str_replace('\\',"/",$info->getSaveName());
-wl_debug_log($name_path);exit;
             $result['data']["src"] = "/uploads/layui/".$name_path;
+            wl_debug_log($result);exit;
             $url    = $info->getSaveName();
             //图片上传成功后，组好json格式，返回给前端
             $arr   = array(
