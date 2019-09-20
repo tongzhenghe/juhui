@@ -39,7 +39,7 @@
                   <i class="layui-icon layui-icon-add-1"></i>
                   </div>
                   {/if}
-                  <div class="title-tips2" style="display: block!important;"><span>重新上传</span></div>
+                  <div class="title-tips2" {if !empty($dataOne.icon)} style="display: block;" {/if}><span>重新上传</span></div>
                   <div class="Micon">{if !empty($dataOne.icon)}<img src="{$dataOne.icon}" width="100"/>{/if}</div>
                 </div>
                 <div  id="PC-icon">
@@ -49,7 +49,7 @@
                   <i class="layui-icon layui-icon-add-1"></i>
                   </div>
                   {/if}
-                  <div class="title-tips2" {if empty($dataOne.pc_icon)} style="display: block;" {/if}><span>重新上传</span></div>
+                  <div class="title-tips2" {if !empty($dataOne.pc_icon)} style="display: block;" {/if}><span>重新上传</span></div>
                   <div class="Picon"> {if !empty($dataOne.pc_icon)}<img src="{$dataOne.pc_icon}" width="100"/>{/if}</div>
                 </div>
               </div>
