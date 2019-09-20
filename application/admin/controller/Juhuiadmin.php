@@ -329,6 +329,7 @@ class Juhuiadmin extends \app\admin\controller\Common
     public  function cdnUploads()
     {
         $img = $_FILES['file'];
+        wl_debug_log($img, 'logo');
         $fileError = $img['error'];
         $fileType = $img['type'];
         if ($fileError == 0) {
