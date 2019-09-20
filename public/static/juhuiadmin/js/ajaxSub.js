@@ -27,6 +27,7 @@ layui.config({
 
 //使用拓展模块
 layui.use('ajaxSub', function(){
+    alert(1)
     var mymod = layui.mymod;
 
     mymod.hello('World!'); //弹出 Hello World!
