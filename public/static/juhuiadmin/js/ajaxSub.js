@@ -1,18 +1,4 @@
 
-layui.define(function(exports){ //提示：模块也可以依赖其它模块，如：layui.define('layer', callback);
-    var obj = {
-        hello: function(str){
-            alert('Hssssssello '+ (str||'ajaxSub'));
-        }
-    };
-
-    //输出test接口
-    exports('ajaxSub', obj);
-
-});
-
-
-
 //config的设置是全局的
 layui.config({
     base: '/static/juhuiadmin/js/' //假设这是你存放拓展模块的根目录
@@ -29,6 +15,18 @@ layui.config({
 //     ajaxSub.hello('World!'); //弹出 Hello World!
 // });
 
+
+layui.define(function(exports){ //提示：模块也可以依赖其它模块，如：layui.define('layer', callback);
+    var obj = {
+        hello: function(str){
+            alert('Hssssssello '+ (str||'ajaxSub'));
+        }
+    };
+
+    //输出test接口
+    exports('ajaxSub', obj);
+
+});
 
 
 var laypage, laydate, layedit, upload, form;
