@@ -1,13 +1,13 @@
 
 layui.define(function(exports){ //提示：模块也可以依赖其它模块，如：layui.define('layer', callback);
-    var obj = {
-        hello: function(str){
-            alert('Hello '+ (str||'ajaxSub'));
-        }
-    };
+    // var obj = {
+    //     hello: function(str){
+    //         alert('Hello '+ (str||'ajaxSub'));
+    //     }
+    // };
 
     //输出test接口
-    exports('ajaxSub', obj);
+    // exports('ajaxSub', obj);
 
 });
 
