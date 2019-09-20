@@ -9,7 +9,7 @@ layui.config({
 });
 
 //使用拓展模块
-layui.use(['ajaxSub'], function(){
+layui.use( function(){
     var ajaxSub = layui.ajaxSub;
 console.log(ajaxSub)
 });
