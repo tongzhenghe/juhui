@@ -33,19 +33,23 @@
               <label class="layui-form-label">封面图片</label>
               <div class="layui-input-block">
                 <div id="Mobile-icon">
+                  {if empty($dataOne.icon)}
                   <div class="tips-1">
                   <div  class="title-tips"><span><i>*</i>Mobile图标</span></div>
                   <i class="layui-icon layui-icon-add-1"></i>
                   </div>
-                  <div class="title-tips2"><span>重新上传</span></div>
+                  {/if}
+                  <div class="title-tips2" {if empty($dataOne.icon)}style="display: block;"{/if}><span>重新上传</span></div>
                   <div class="Micon">{if !empty($dataOne.icon)}<img src="{$dataOne.icon}" width="100"/>{/if}</div>
                 </div>
                 <div  id="PC-icon">
+                  {if empty($dataOne.pc_icon)}
                   <div class="tips-2">
                   <div class="title-tips tips-2"><span><i>*</i>Pc图标</span></div>
                   <i class="layui-icon layui-icon-add-1"></i>
                   </div>
-                  <div class="title-tips2"><span>重新上传</span></div>
+                  {/if}
+                  <div class="title-tips2" {if empty($dataOne.pc_icon)}style="display: block;"{/if}><span>重新上传</span></div>
                   <div class="Picon"> {if !empty($dataOne.pc_icon)}<img src="{$dataOne.pc_icon}" width="100"/>{/if}</div>
                 </div>
               </div>
