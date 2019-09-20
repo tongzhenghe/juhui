@@ -53,7 +53,8 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     }
 
-    public  function about()
+    //关于我们
+    public  function us()
     {
         return view();
 
