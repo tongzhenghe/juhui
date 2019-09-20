@@ -30,7 +30,6 @@ class Upload
 
     {
         if(empty($file['tmp_name']))
-
             exit(iJson(null , false, '文件读取失败'));
 
         $tmp_name = $file['tmp_name'];
