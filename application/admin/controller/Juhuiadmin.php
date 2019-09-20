@@ -12,8 +12,6 @@ use app\admin\model\Common;
 use app\admin\model\Menu;
 use app\admin\model\News;
 use app\extra\Upload;
-use Qiniu\Auth;
-use Qiniu\Storage\UploadManager;
 use think\Db;
 
 class Juhuiadmin extends \app\admin\controller\Common
@@ -54,6 +52,17 @@ class Juhuiadmin extends \app\admin\controller\Common
         return view();
 
     }
+
+    public  function about()
+    {
+        return view();
+
+    }
+
+
+
+
+
     public  function tab()
     {
         return view();
