@@ -11,7 +11,7 @@
             <div class="layui-form-item">
               <label class="layui-form-label">顺序</label>
               <div class="layui-input-block">
-                <input type="number" name="sort" {if !empty($dataOne.sort)}value="{$dataOne.sort}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+                <input type="number" name="sort" value="{if !empty($dataOne.sort)}{$dataOne.sort}{/if}" lay-verify="required" autocomplete="off" class="layui-input">
               </div>
             </div>
 
@@ -38,7 +38,7 @@
                   <i class="layui-icon layui-icon-add-1"></i>
                   </div>
                   <div class="title-tips2"><span>重新上传</span></div>
-                  <div class="Micon"></div>
+                  <div class="Micon">{if !empty($dataOne.icon)}<img src="{$dataOne.icon}" width="100"/>{/if}</div>
                 </div>
                 <div  id="PC-icon">
                   <div class="tips-2">
@@ -46,7 +46,7 @@
                   <i class="layui-icon layui-icon-add-1"></i>
                   </div>
                   <div class="title-tips2"><span>重新上传</span></div>
-                  <div class="Picon"></div>
+                  <div class="Picon"> {if !empty($dataOne.pc_icon)}<img src="{$dataOne.pc_icon}" width="100"/>{/if}</div>
                 </div>
               </div>
             </div>
@@ -54,13 +54,13 @@
             <div class="layui-form-item layui-form-text">
               <label class="layui-form-label">手机端详情</label>
               <div class="layui-input-block">
-                <textarea id="mobile" style="display: none;"></textarea>
+                <textarea id="mobile" style="display: none;"> {if !empty($dataOne.pc_content)}{$dataOne.pc_content}{/if}</textarea>
               </div>
             </div>
             <div class="layui-form-item layui-form-text">
               <label class="layui-form-label">PC端详情</label>
               <div class="layui-input-block">
-                <textarea id="pc" style="display: none;"></textarea>
+                <textarea id="pc" style="display: none;">{if !empty($dataOne.content)}{$dataOne.content}{/if}</textarea>
               </div>
             </div>
 
