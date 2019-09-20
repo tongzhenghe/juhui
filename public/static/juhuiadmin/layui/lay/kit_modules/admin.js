@@ -112,7 +112,7 @@ layui.define(mods, function (e) {
                 , { path: "/juhui/tabs", component: "tabs", name: "选项卡(Tabs)"}
                 , {path: "/juhui/utils", component: "utils", name: "工具包(Utils)"}
 
-                , {path: "/juhui/about", component: "about", name: "关于我们(about)"}
+                , {path: "/juhui/us", component: "us", name: "关于我们(us)"}
                 , {path: "/juhui/news", component: "news", name: "news"}
                 , {path: "/juhui/addnews", component: "addnews", name: "addnews"}
 
