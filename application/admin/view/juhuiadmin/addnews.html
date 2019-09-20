@@ -63,6 +63,13 @@
               </div>
             </div>
 
+            <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">关键词</label>
+              <div class="layui-input-block">
+                <textarea name="keywords" placeholder="选填" class="layui-textarea">{if !empty($dataOne.keywords)}{$dataOne.keywords}{/if}</textarea>
+              </div>
+            </div>
+
             <div class="layui-form-item">
               <div class="layui-input-block">
                 <input type="hidden" name="u" value="addmenu">
