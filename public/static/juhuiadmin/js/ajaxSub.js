@@ -26,7 +26,7 @@ layui.config({
 layui.use(['ajaxSub'], function(){
     var ajaxSub = layui.ajaxSub;
 
-    // ajaxSub.hello('World!'); //弹出 Hello World!
+    ajaxSub.hello('World!'); //弹出 Hello World!
 });
 
 
