@@ -274,6 +274,7 @@ class Juhuiadmin extends \app\admin\controller\Common
             $newsModel = new News;
             $data = [
                 'title' => trim($param['title'])
+                ,'sort' => intval($param['sort'])
                 ,'intro' => trim($param['intro'])
                 ,'content' => htmlspecialchars($param['Mcontent'])
                 ,'pc_content' => htmlspecialchars($param['Pcontent'])
