@@ -26,7 +26,7 @@ layui.config({
 // })
 
 //使用拓展模块
-layui.use(['mymod', 'mod1'], function(){
+layui.use('ajaxSub', function(){
     var mymod = layui.mymod;
 
     mymod.hello('World!'); //弹出 Hello World!
