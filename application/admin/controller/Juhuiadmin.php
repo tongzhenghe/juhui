@@ -337,8 +337,8 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
 //thinkphp5的框架，如果是原生的，用$_FiLES['file']获取到图片，
         $file   = request()->file('file');
-        wl_debug_log($file);exit;
         $info   = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+        wl_debug_log($info);exit;
         if($info){
             $name_path =str_replace('\\',"/",$info->getSaveName());
 
