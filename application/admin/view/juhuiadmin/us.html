@@ -34,30 +34,6 @@
                 <div class="Micon">{if !empty($dataOne.wcode)}<img src="{$dataOne.wcode}" width="100"/>{/if}</div>
             </div>
 
-                <script>
-                   var  upload = layui.upload;
-                    upload.render({
-                        elem: '#Mobile-icon' //绑定元素
-                        ,url: '/cdnUploads' //上传接口
-                        ,accept:"file"
-                        ,exts: 'jpg|png'
-                        , method: "post"
-                        // , auto: false  //auto 参数必须设置为false
-                        ,done: function(res) {
-                            //上传完毕回调
-                            $('.tips-1').hide();
-                            $('#Mobile-icon').children('.title-tips2').show();
-                            var html;
-                            html = '<img src="'+res.data.src+'" width="100">';
-                            $('#Mobile-icon').children('.Micon').html(html);
-
-                        }
-
-                    });
-                </script>
-
-
-
             <div class="layui-form-item">
               <div class="layui-inline">
                 <label class="layui-form-label">多规则验证</label>
@@ -383,59 +359,4 @@
     </div>
   </div>
 </div>
-
-
-<script>
-  layui.use(['form', 'layedit', 'laydate'], function() {
-    var form = layui.form,
-      layer = layui.layer,
-      layedit = layui.layedit,
-      laydate = layui.laydate;
-
-    form.render();
-
-    //日期
-    laydate.render({
-      elem: '#date_hash'
-    });
-    laydate.render({
-      elem: '#date1_hash'
-    });
-
-    //创建一个编辑器
-    var editIndex = layedit.build('LAY_demo_editor_hash');
-
-    //自定义验证规则
-    form.verify({
-      title: function(value) {
-        if (value.length < 5) {
-          return '标题至少得5个字符啊';
-        }
-      },
-      pass: [/(.+){6,12}$/, '密码必须6到12位'],
-      content: function(value) {
-        layedit.sync(editIndex);
-      }
-    });
-
-    //监听指定开关
-    form.on('switch(switchTest_hash)', function(data) {
-      layer.msg('开关checked：' + (this.checked ? 'true' : 'false'), {
-        offset: '6px'
-      });
-      layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
-    });
-
-    //监听提交
-    form.on('submit(demo1_hash)', function(data) {
-      layer.alert(JSON.stringify(data.field), {
-        title: '最终的提交信息'
-      })
-      return false;
-    });
-  });
-</script>
-
-<style scoped>
-
-</style>
+{include file="./juhuiadmin/include/submit"/}
