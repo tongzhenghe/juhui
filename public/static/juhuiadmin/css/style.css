@@ -2,4 +2,3 @@
 .title-tips{position: absolute; top: 0;left: 0; z-index: 1;  width: 100%; background: rgba(0,0,0,.5);line-height: 23px;}
 .title-tips i {color:red;}
 .title-tips2{position: absolute;top: 79px; left: 0; z-index: 1;  width: 100%;  text-align: center; background: #008b7e;line-height: 23px;}
-.item-submit{position: fixed;width: 30%;background: white;bottom: 34px;margin-left: 0;    left: 32%; background: white}
