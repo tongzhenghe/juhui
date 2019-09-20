@@ -7,7 +7,6 @@
         </div>
         <div class="layui-card-body">
           <form class="layui-form" action="##" onsubmit="return false">
-
             <div class="layui-form-item">
               <label class="layui-form-label">顺序</label>
               <div class="layui-input-block">
@@ -49,6 +48,7 @@
                   <i class="layui-icon layui-icon-add-1"></i>
                   </div>
                   {/if}
+
                   <div class="title-tips2" {if !empty($dataOne.pc_icon)} style="display: block;" {/if}><span>重新上传</span></div>
                   <div class="Picon"> {if !empty($dataOne.pc_icon)}<img src="{$dataOne.pc_icon}" width="100"/>{/if}</div>
                 </div>
