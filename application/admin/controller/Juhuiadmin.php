@@ -272,14 +272,16 @@ class Juhuiadmin extends \app\admin\controller\Common
         $param = request()->param();
         if (request()->isAjax()) {
             $newsModel = new News;
-            jsondebug($param);
             $data = [
                 'title' => trim($param['title'])
-                ,'url' => trim($param['url'])
-                ,'sort' => intval($param['sort'])
-                ,'pid' => intval($param['pid'])
                 ,'intro' => trim($param['intro'])
+                ,'content' => htmlspecialchars($param['Mcontent'])
+                ,'pc_content' => htmlspecialchars($param['Pcontent'])
+                ,'pc_icon' => trim($param['Pc_icon'])
+                ,'icon' => trim($param['Mobile_icon'])
+
             ];
+            jsondebug($data);
 
             $r = Common::dataExecute($newsModel, $data, $param);
             if (!empty($r))
