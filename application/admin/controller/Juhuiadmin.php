@@ -281,9 +281,9 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'icon' => trim($param['Mobile_icon'])
 
             ];
-            jsondebug($data);
 
             $r = Common::dataExecute($newsModel, $data, $param);
+            jsondebug($r);
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
             exit(Common::json(400, '提交失败'));
