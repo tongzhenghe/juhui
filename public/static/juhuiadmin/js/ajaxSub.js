@@ -93,7 +93,7 @@ layui.define(function(exports){ //提示：模块也可以依赖其它模块，�
     });
 
 
-
+    exports('mymod', obj);
 
 });
 
