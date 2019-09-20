@@ -48,6 +48,26 @@
                     </div>
                 </div>
 
+                <!--logo-->
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">LOGO</label>
+                    <div class="layui-input-block">
+                        <div class="base-upload">
+                            {if empty($dataOne.logo)}
+                            <div class="tips-1">
+                                <div  class="title-tips"><span><i>*</i>上传LOGO</span></div>
+                                <i class="layui-icon layui-icon-add-1"></i>
+                            </div>
+                            {/if}
+                            <div class="title-tips2" {if !empty($dataOne.logo)} style="display: block;" {/if}><span>重新上传</span>
+                        </div>
+                        <div class="Baseicon">{if !empty($dataOne.logo)}<img src="{$dataOne.logo}" width="100"/>{/if}</div>
+                    </div>
+                </div>
+
+
+
+
 
 
 
