@@ -60,10 +60,6 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     }
 
-
-
-
-
     public  function tab()
     {
         return view();
