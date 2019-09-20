@@ -2,7 +2,7 @@ layui.define('jquery', function(exports){
     var $=layui.jquery;
     var base={
         test:function(){
-            console.log("helloworld")
+            console.log("hellosssssworld")
         }
     };
     exports('ajaxSub', base);
@@ -13,5 +13,10 @@ layui.config({
     , base: '/static/juhuiadmin/js/' //假设这  是你存放拓展模块的根目录
 }).use(['ajaxSub'],function(){
     var ajaxSub=layui.ajaxSub;
-   console.log(ajaxSub)
+   alert(ajaxSub)
+
+
+
+
+
 });
