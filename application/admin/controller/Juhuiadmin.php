@@ -293,7 +293,6 @@ class Juhuiadmin extends \app\admin\controller\Common
         $dataOne = null;;
         if (!empty($param['id'])) {
             $dataOne = Db::name('news')->where('id', intval($param['id']))->find();
-            wl_debug($dataOne);
         }
 
         $where = ['is_del' => 1, 'status' => 1];
