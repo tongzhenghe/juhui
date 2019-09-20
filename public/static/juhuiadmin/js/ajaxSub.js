@@ -46,6 +46,7 @@ layui.config({
         // , auto: false  //auto 参数必须设置为false
         ,done: function(res){
             //上传完毕回调
+            alert(1)
             console.log(res)
         }
         ,error: function(err){
@@ -64,6 +65,7 @@ layui.config({
         // , auto: false  //auto 参数必须设置为false
         ,done: function(res){
             //上传完毕回调
+            alert(1)
             console.log(res)
         }
         ,error: function(err){
