@@ -20,18 +20,19 @@
 
             <!--wcode-->
             <div class="layui-form-item layui-form-text">
-            <label class="layui-form-label">二维码</label>
-            <div class="layui-input-block">
-                <div id="Mobile-icon">
-                    {if empty($dataOne.wcode)}
-                    <div class="tips-1">
-                    <div  class="title-tips"><span><i>*</i>上传二维码</span></div>
-                    <i class="layui-icon layui-icon-add-1"></i>
+                <label class="layui-form-label">二维码</label>
+                <div class="layui-input-block">
+                    <div id="Mobile-icon">
+                        {if empty($dataOne.wcode)}
+                        <div class="tips-1">
+                        <div  class="title-tips"><span><i>*</i>上传二维码</span></div>
+                        <i class="layui-icon layui-icon-add-1"></i>
+                        </div>
+                        {/if}
                     </div>
-                    {/if}
                 <div class="title-tips2" {if !empty($dataOne.wcode)} style="display: block;" {/if}><span>重新上传</span></div>
                 <div class="Micon">{if !empty($dataOne.wcode)}<img src="{$dataOne.wcode}" width="100"/>{/if}</div>
-                </div>
+            </div>
 
             <div class="layui-form-item">
               <div class="layui-inline">
