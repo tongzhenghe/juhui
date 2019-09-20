@@ -13,16 +13,16 @@ layui.define(function(exports){ //提示：模块也可以依赖其它模块，�
 layui.config({
     base: '/static/juhuiadmin/js/' //假设这是你存放拓展模块的根目录
 }).extend({ //设定模块别名
-    mymod: 'ajaxSub' //如果 mymod.js 是在根目录，也可以不用设定别名
+    ajaxSub: 'ajaxSub' //如果 mymod.js 是在根目录，也可以不用设定别名
    // ,mod1: 'admin/mod1'  //相对于上述 base 目录的子目录
 });
 
 
 //使用拓展模块
 layui.use(['ajaxSub'], function(){
-    var mymod = layui.mymod;
+    var ajaxSub = layui.ajaxSub;
 
-    mymod.hello('World!'); //弹出 Hello World!
+    ajaxSub.hello('World!'); //弹出 Hello World!
 });
 
 
