@@ -89,6 +89,7 @@ class Upload
                 ),
             );
 
+            wl_debug_log($arr, 'setd');
 exit(json_encode($arr));
 
 
