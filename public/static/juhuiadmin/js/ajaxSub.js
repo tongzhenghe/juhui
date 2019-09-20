@@ -25,6 +25,7 @@ layui.config({
     });
 
 
+    console.log(layedit)
 
 
     /*pc*/
