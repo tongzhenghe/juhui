@@ -60,7 +60,21 @@ class Juhuiadmin extends \app\admin\controller\Common
 
         if (request()->isAjax()) {
 
-            jsondebug($params);
+            $data = [
+            'people' =>  trim($params['people'])
+            ,'people_tel' => trim($params['people_tel'])
+            ,'wcode' => trim($params['wcode'])
+            ,'title' => trim($params['title'])
+            ,'keywords' => trim($params['keywords'])
+            ,'logo' => trim($params['logo'])
+            ,'email' => trim($params['email'])
+            ,'pc_content' => htmlentities($params['pc_content'])
+            ,'content' => htmlentities($params['content'])
+            ,'address' => trim($params['address'])
+            ,'intro' => trim($params['intro'])
+            ,'update_time' => time()
+            ];
+            jsondebug($data);
 
 
         }
