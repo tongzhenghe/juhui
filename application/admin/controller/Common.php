@@ -20,11 +20,11 @@ class Common extends  Controller
 
     public  function  _initialize()
     {
-        // parent::_initialize();
-        // self::$adminInfo  =  SystemAdmin::activeAdminInfoOrFail();
-        //if(!is_dir('./tmp/'))mkdir ('./tmp/', 0700);
-        // session_save_path('./tmp/');
-        //if(!SystemAdmin::hasActiveAdmin()) return $this->redirect(url('Sign/signin'));
+         parent::_initialize();
+         self::$adminInfo  =  SystemAdmin::activeAdminInfoOrFail();
+        if(!is_dir('./tmp/'))mkdir ('./tmp/', 0700);
+         session_save_path('./tmp/');
+        if(!SystemAdmin::hasActiveAdmin()) return $this->redirect(url('/admin.php/signin'));
         $where = ['status' => 1, 'is_del' => 1];
         $menu = Db::name('menu')->where($where)->select();
         $menu = _reSort($menu);
