@@ -56,6 +56,16 @@ class Juhuiadmin extends \app\admin\controller\Common
     //关于我们
     public  function us()
     {
+        $params = request()->param();
+
+        if (request()->isAjax()) {
+
+            jsondebug($params);
+
+
+        }
+
+
         return view();
 
     }
