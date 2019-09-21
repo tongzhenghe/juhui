@@ -8,6 +8,7 @@
 
 namespace app\admin\controller;
 
+use app\admin\model\Banner;
 use app\admin\model\Common;
 use app\admin\model\Menu;
 use app\admin\model\News;
@@ -307,6 +308,40 @@ class Juhuiadmin extends \app\admin\controller\Common
         $where = ['is_del' => 1];
         $news = Db::name('news')->where($where)->select();
         return view('', ['news' => $news]);
+
+    }
+
+    public  function addbanner()
+    {
+        $param = request()->param();
+        if (request()->isAjax()) {
+            $bannerModel = new Banner;
+            $data = [
+                'title' => trim($param['title'])
+                ,'sort' => intval($param['sort'])
+                ,'intro' => trim($param['intro'])
+                ,'content' => htmlspecialchars($param['Mcontent'])
+                ,'pc_content' => htmlspecialchars($param['Pcontent'])
+                ,'pc_icon' => trim($param['Pc_icon'])
+                ,'icon' => trim($param['Mobile_icon'])
+
+            ];
+
+            $r = Common::dataExecute($bannerModel, $data, $param);
+
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
+        }
+
+        $dataOne = null;;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('banner')->where('id', intval($param['id']))->find();
+        }
+
+        $where = ['is_del' => 1, 'status' => 1];
+        $banner = Db::name('banner')->where($where)->select();
+        return view('', ['banner' => $banner, 'dataOne' => $dataOne]);
 
     }
 
