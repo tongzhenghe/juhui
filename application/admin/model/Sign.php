@@ -20,35 +20,31 @@ class Sign extends SystemAdmin
     static  public  function  check_login( $_user )
 
     {
-jsondebug($_user);
+
         //if(!is_dir('./tmp/'))mkdir ('./tmp/', 0700); session_save_path('./tmp/');
 
-        $second  = Session::get('second');
-
-        if ( (int)$second  > 5 ) {
-
-            $second_time = Session::get('second_time');
-
-            if ($second_time  +3600 <= time() ) {
-
-                SystemAdmin::clearLoginInfo();
-
-            }
-
-            exit( iJson('', false, '您已超出登录次数， 请于1小时后在尝试登录！'));
-
-        }
-
-
+//        $second  = Session::get('second');
+//
+//        if ( (int)$second  > 5 ) {
+//
+//            $second_time = Session::get('second_time');
+//
+//            if ($second_time  +3600 <= time() ) {
+//
+//                SystemAdmin::clearLoginInfo();
+//
+//            }
+//
+//            exit( iJson('', false, '您已超出登录次数， 请于1小时后在尝试登录！'));
+//
+//        }
 
         if ( !empty($_user)  || is_array( $_user )) {
 
             //验证
-
             $userInfo = Db::name('user')->where('username',  trim($_user['username']))->find();
 
-
-
+jsondebug($userInfo);
             if ($userInfo['state'] === 2 ) exit( iJson('', false, '该账号还未未审核， 暂时无法登陆！'));
 
 
