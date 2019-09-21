@@ -27,6 +27,7 @@
                 <textarea name="intro" placeholder="选填" class="layui-textarea">{if !empty($dataOne.intro)}{$dataOne.intro}{/if}</textarea>
               </div>
             </div>
+
             <!--手机-->
              <div class="layui-form-item layui-form-text">
               <label class="layui-form-label">封面图片</label>
@@ -41,6 +42,7 @@
                   <div class="title-tips2" {if !empty($dataOne.icon)} style="display: block;" {/if}><span>重新上传</span></div>
                   <div class="Micon">{if !empty($dataOne.icon)}<img src="{$dataOne.icon}" width="100"/>{/if}</div>
                 </div>
+
                 <div  id="PC-icon">
                   {if empty($dataOne.pc_icon)}
                   <div class="tips-2">
@@ -52,8 +54,8 @@
                   <div class="title-tips2" {if !empty($dataOne.pc_icon)} style="display: block;" {/if}><span>重新上传</span></div>
                   <div class="Picon"> {if !empty($dataOne.pc_icon)}<img src="{$dataOne.pc_icon}" width="100"/>{/if}</div>
                 </div>
-              </div>
-            </div>
+
+
               <!--手机详情-->
               <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">手机端详情</label>
