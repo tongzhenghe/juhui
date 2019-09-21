@@ -58,7 +58,6 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $params = request()->param();
         if (request()->isAjax()) {
-
             $data = [
             'people' =>  trim($params['people'])
             ,'people_tel' => trim($params['people_tel'])
@@ -303,6 +302,13 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     }
 
+    public  function banner()
+    {
+        $where = ['is_del' => 1];
+        $news = Db::name('news')->where($where)->select();
+        return view('', ['news' => $news]);
+
+    }
 
     public  function addnews()
     {
