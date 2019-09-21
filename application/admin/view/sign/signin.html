@@ -41,6 +41,7 @@
 <script>
     $('.tosignin').on('click', function () {
         $.ajax({
+            type:'POST',
             url: "/signin",
             data: {username: $("input[name='username']").val(), pass: $("input[name='password']").val()},
             dataType: "json",
