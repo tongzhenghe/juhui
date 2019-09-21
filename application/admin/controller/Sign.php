@@ -29,7 +29,7 @@ class Sign extends  Controller
             //if(!captcha_check($captcha)) exit(iJson('', 400,  false, '验证码输入错误'));
 
             $result =SignModel::check_login( $post );
-jsondebug($result);
+
             if (true === $result ) {
 
                 exit(iJson( '/#/', true,  '欢迎'. $post['username']. '回来!'));
