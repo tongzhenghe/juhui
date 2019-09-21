@@ -317,7 +317,6 @@ class Juhuiadmin extends \app\admin\controller\Common
         if (request()->isAjax()) {
             $bannerModel = new Banner;
 
-            jsondebug($param);
             $data = [
                 'banner' => trim($param['Mobile_icon'])
                 ,'pc_banner' => trim($param['Pc_icon'])
