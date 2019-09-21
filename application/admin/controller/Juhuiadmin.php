@@ -326,7 +326,7 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'intro' => trim($param['intro'])
                 ,'content' => htmlspecialchars($param['content'])
                 ,'keywords' => $param['keywords']
-                ,'pc_content' => htmlspecialchars($param['pc_content'])
+                ,'pc_content' => htmlspecialchars($param['Pcontent'])
             ];
 
             jsondebug($data);
