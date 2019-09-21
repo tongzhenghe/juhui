@@ -42,7 +42,7 @@
     $('.tosignin').on('click', function () {
         $.ajax({
             type:'POST',
-            url: "/signin",
+            url: "/admin.php/signin",
             data: {username: $("input[name='username']").val(), pass: $("input[name='password']").val()},
             dataType: "json",
             success: function(data) {
