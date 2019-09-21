@@ -49,7 +49,7 @@ class Sign extends SystemAdmin
 
             if (!empty($userInfo)) {
 
-                if ( $_user['password']  === $userInfo['password']) {
+                if ( md5($_user['password'])  === $userInfo['password']) {
                     jsondebug(1);
 
                     //SystemAdmin::setUserInfo($userInfo);
