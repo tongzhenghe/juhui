@@ -37,7 +37,6 @@
     </div>
 </div>
 {js href='/static/juhuiadmin/layui/layui.js'}
-{js href='/static/juhuiadmin/layui/lay/modules/layer.js'}
 {js href='/static/juhuiadmin/js/jquery-3.4.1.min.js'}
 <script>
     $('.tosignin').on('click', function () {
@@ -49,20 +48,9 @@
             success: function(data) {
 
                 if ( data.status )  {
-                    layer.msg('<span><i class="layui-icon layui-icon-ok" style="    color: white; background: #6cd965;     margin-right: 13px;border-radius: 10px;"></i>'+data.msg+'</span>', {
-                        time : 1000,
-                        maxWidth: 850,
-                    }, function() {
-                        layer.close(layer.index);
-                        window.location.href = (data.url);
-                    });
-                } else {
-                    layer.msg('<span><i class="layui-icon layui-icon-close" style="    color: white; background: red;     margin-right: 13px;border-radius: 10px;"></i>'+data.msg+'</span>', {
-                        time : 3000,
-                        // time: 2, //2s后自动关闭
-                    });
+                    window.location.href = (data.url);
                 }
-
+                return false;
             }
         });
     });
