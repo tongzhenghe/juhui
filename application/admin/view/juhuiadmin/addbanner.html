@@ -42,6 +42,20 @@
                 </div>
                 <div class="Micon">{if !empty($dataOne.banner)}<img src="{$dataOne.banner}" width="100"/>{/if}</div>
               </div>
+
+
+              <div class="layui-input-block">
+                <div id="Pc-icon">
+                  {if empty($dataOne.banner)}
+                  <div class="tips-1">
+                    <div  class="title-tips"><span><i>*</i>上传PC端</span></div>
+                    <i class="layui-icon layui-icon-add-1"></i>
+                  </div>
+                  {/if}
+                  <div class="title-tips2" {if !empty($dataOne.banner)} style="display: block;" {/if}><span>重新上传</span>
+                </div>
+                <div class="Pc">{if !empty($dataOne.banner)}<img src="{$dataOne.banner}" width="100"/>{/if}</div>
+              </div>
             </div>
 
 
