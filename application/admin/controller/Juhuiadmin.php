@@ -319,25 +319,14 @@ class Juhuiadmin extends \app\admin\controller\Common
             $data = [
             'banner' => trim($param['Mobile_icon'])
             ,'pc_banner' => trim($param['Pc_icon'])
-
             ,'title' => trim($param['title'])
-
             ,'url' => trim($param['url'])
-
             ,'sort' => intval($param['sort'])
-
             ,'intro' => trim($param['intro'])
-
             ,'content' => htmlspecialchars($param['content'])
-
             ,'keywords' => trim($param['keywords'])
-
             ,'pc_content' => htmlspecialchars($param['Pcontent'])
-
             ];
-
-            jsondebug($data);
-
             $r = Common::dataExecute($bannerModel, $data, $param);
 
             if (!empty($r))
