@@ -114,7 +114,8 @@ layui.define(mods, function (e) {
 
                 , {path: "/juhui/us", component: "us", name: "关于我们(us)"}
                 , {path: "/juhui/news", component: "news", name: "news"}
-                , {path: "/juhui/addnews", component: "addnews", name: "addnews"}
+                , {path: "/juhui/banner", component: "banner", name: "banner"}
+                , {path: "/juhui/addbanner", component: "addbanner", name: "addbanner"}
 
                 ]};
             return "TABS" === e.loadType && (a.onChanged = function () {
