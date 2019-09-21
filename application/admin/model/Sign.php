@@ -22,7 +22,7 @@ class Sign extends SystemAdmin
     {
 
         //if(!is_dir('./tmp/'))mkdir ('./tmp/', 0700); session_save_path('./tmp/');
-
+jsondebug(1);
         $second  = Session::get('second');
 
         if ( (int)$second  > 5 ) {
