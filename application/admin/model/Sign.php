@@ -43,38 +43,35 @@ class Sign extends SystemAdmin
 
             //验证
             $userInfo = Db::name('admin')->where('username',  trim($_user['username']))->find();
-            jsondebug($userInfo);
-            if ($userInfo['state'] === 2 ) exit( iJson('', false, '该账号还未未审核， 暂时无法登陆！'));
 
-
+            if ($userInfo['state'] === 2 )
+                exit( iJson('', false, '该账号还未未审核， 暂时无法登陆！'));
 
             if (!empty($userInfo)) {
 
-                $_user['password'] = SystemAdmin::is_md5($_user['password']) ? $_user['password'] :  md5( $_user['password'] );
-
                 if ( $_user['password']  === $userInfo['password']) {
+                    jsondebug(1);
 
-                    SystemAdmin::setUserInfo($userInfo);
+                    //SystemAdmin::setUserInfo($userInfo);
 
                     //记住密码
-
-                    if ( 1 == intval( $_user['remember'] ) ) {
-
-                        Cookie::set('username', $_user['username'], time() + 3600 * 7 );
-
-                        Cookie::set('password',  $_user['password'],  time() + 3600 * 7 );
-
-                        Cookie::set('remember', $_user['remember'] ,  time() + 3600 * 7 );
-
-                    } else {
-
-                        Cookie::delete('username');
-
-                        Cookie::delete('password');
-
-                        Cookie::delete('remember' );
-
-                    }
+//                    if ( 1 == intval( $_user['remember'] ) ) {
+//
+//                        Cookie::set('username', $_user['username'], time() + 3600 * 7 );
+//
+//                        Cookie::set('password',  $_user['password'],  time() + 3600 * 7 );
+//
+//                        Cookie::set('remember', $_user['remember'] ,  time() + 3600 * 7 );
+//
+//                    } else {
+//
+//                        Cookie::delete('username');
+//
+//                        Cookie::delete('password');
+//
+//                        Cookie::delete('remember' );
+//
+//                    }
 
                     return true;
 
