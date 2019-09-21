@@ -9,7 +9,9 @@
 namespace app\admin\controller;
 
 use app\admin\model\Sign as SignModel;
+use app\admin\model\system\SystemAdmin;
 use think\Controller;
+use think\Cookie;
 
 class Sign extends  Controller
 {
@@ -72,9 +74,7 @@ class Sign extends  Controller
 
         Cookie::delete('password');
 
-        Cookie::delete('remember');
-
-        $this->redirect('sign/signin');
+        $this->redirect('/admin.php/signin');
 
     }
 
