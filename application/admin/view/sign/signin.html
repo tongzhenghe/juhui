@@ -40,10 +40,9 @@
 
 
 <script>
-    console.log(layui)
     var form;
     form = layui.form;
-    layui.use('form', function() {
+    layui.use(['form'], function() {
         form.on('submit(tosignin)', function(data) {
 
             console.log(data.field)
