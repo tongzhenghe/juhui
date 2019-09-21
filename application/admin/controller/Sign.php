@@ -20,7 +20,6 @@ class Sign extends  Controller
         if (request()->isAjax()) {
 
             $post  = request()->post();
-            jsondebug($post);
 
             if (empty( $post['username'] )) exit(iJson('', 400,  false, '用户名不能为空！'));
 
