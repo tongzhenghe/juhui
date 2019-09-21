@@ -37,7 +37,18 @@
     </div>
 </div>
 {js href='/static/juhuiadmin/layui/layui.js'}
-{js href='/static/juhuiadmin/js/ajaxSub.js'}
+
+
+<script>
+    layui.use('form', function() {
+        form.on('submit(tosignin)', function(data) {
+
+            console.log(data.field)
+            $.fn.repost( data.field.u, data.field);
+        });
+
+    });
+</script>
 </body>
 </html>
 
