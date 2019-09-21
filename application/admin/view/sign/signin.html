@@ -49,7 +49,7 @@
             success: function(data) {
 
                 if ( data.status )  {
-                    layer.msg('<span><i class="layui-icon layui-icon-ok" style="    color: white; background: #6cd965;     margin-right: 13px;border-radius: 10px;"></i>'+res.msg+'</span>', {
+                    layer.msg('<span><i class="layui-icon layui-icon-ok" style="    color: white; background: #6cd965;     margin-right: 13px;border-radius: 10px;"></i>'+data.msg+'</span>', {
                         time : 1000,
                         maxWidth: 850,
                     }, function() {
@@ -57,7 +57,7 @@
                         window.location.href = (data.url);
                     });
                 } else {
-                    layer.msg('<span><i class="layui-icon layui-icon-close" style="    color: white; background: red;     margin-right: 13px;border-radius: 10px;"></i>'+res.msg+'</span>', {
+                    layer.msg('<span><i class="layui-icon layui-icon-close" style="    color: white; background: red;     margin-right: 13px;border-radius: 10px;"></i>'+data.msg+'</span>', {
                         time : 3000,
                         // time: 2, //2s后自动关闭
                     });
