@@ -23,21 +23,21 @@ class Sign extends SystemAdmin
 
         //if(!is_dir('./tmp/'))mkdir ('./tmp/', 0700); session_save_path('./tmp/');
 
-//        $second  = Session::get('second');
-//
-//        if ( (int)$second  > 5 ) {
-//
-//            $second_time = Session::get('second_time');
-//
-//            if ($second_time  +3600 <= time() ) {
-//
-//                SystemAdmin::clearLoginInfo();
-//
-//            }
-//
-//            exit( iJson('', false, '您已超出登录次数， 请于1小时后在尝试登录！'));
-//
-//        }
+        $second  = Session::get('second');
+
+        if ( (int)$second  > 5 ) {
+
+            $second_time = Session::get('second_time');
+
+            if ($second_time  +3600 <= time() ) {
+
+                SystemAdmin::clearLoginInfo();
+
+            }
+
+            exit( iJson('', false, '您已超出登录次数， 请于1小时后在尝试登录！'));
+
+        }
 
         if ( !empty($_user)  || is_array( $_user )) {
 
@@ -48,9 +48,8 @@ class Sign extends SystemAdmin
 
             if (!empty($userInfo)) {
                 if ( md5($_user['password'])  === $userInfo['password']) {
-                    jsondebug(1);
 
-                    //SystemAdmin::setUserInfo($userInfo);
+                    SystemAdmin::setUserInfo($userInfo);
 
                     //记住密码
 //                    if ( 1 == intval( $_user['remember'] ) ) {
@@ -68,7 +67,7 @@ class Sign extends SystemAdmin
 //                        Cookie::delete('password');
 //
 //                        Cookie::delete('remember' );
-//
+
 //                    }
 
                     return true;
