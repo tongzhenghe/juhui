@@ -86,8 +86,8 @@ class Juhuiadmin extends \app\admin\controller\Common
 
         }
 
-        $us = Db::name('us')->find();
-        return view('', ['us' => $us]);
+        $dataOne = Db::name('us')->find();
+        return view('', ['dataOne' => $dataOne]);
 
     }
 
