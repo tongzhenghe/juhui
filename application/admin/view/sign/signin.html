@@ -32,25 +32,14 @@
                 <!--<img class="admin-captcha" src=""-->
                      <!--onclick="updateVerify()">-->
             <!--</div>-->
-            <button type="submit" class="layui-btn admin-button" lay-submit lay-filter="tosignin">登&nbsp;入</button>
+            <button type="submit" class="layui-btn admin-button tosignin">登&nbsp;入</button>
         </form>
     </div>
 </div>
 {js href='/static/juhuiadmin/layui/layui.js'}
-
-
 <script>
-    var form;
-    form = layui.form;
-    console.log(form)
-    layui.use(['form'], function() {
-        form.on('submit(tosignin)', function(data) {
+    console.log($)
 
-            console.log(data.field)
-            $.fn.repost( data.field.u, data.field);
-        });
-
-    });
 </script>
 </body>
 </html>
