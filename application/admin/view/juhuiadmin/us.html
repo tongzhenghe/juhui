@@ -24,7 +24,7 @@
                 <input type="text" name="title" {if !empty($dataOne.title)}value="{$dataOne.title}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
               </div>
             </div>
- <div class="layui-form-item">
+             <div class="layui-form-item">
               <label class="layui-form-label">关键词</label>
               <div class="layui-input-block">
                 <input type="text" name="keywords" {if !empty($dataOne.keywords)}value="{$dataOne.keywords}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
@@ -65,8 +65,27 @@
                     </div>
                 </div>
 
+                <div class="layui-form-item">
+                    <label class="layui-form-label">联系邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="email" {if !empty($dataOne.email)}value="{$dataOne.email}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
 
+                <!--详情-->
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">手机端关于我们</label>
+                    <div class="layui-input-block">
+                        <textarea id="mobile" style="display: none;"> {if !empty($dataOne.content)}{$dataOne.content}{/if}</textarea>
+                    </div>
+                </div>
 
+                 <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">关于我们</label>
+                    <div class="layui-input-block">
+                        <textarea id="pc" style="display: none;"> {if !empty($dataOne.pc_content)}{$dataOne.pc_content}{/if}</textarea>
+                    </div>
+                </div>
 
 
 
