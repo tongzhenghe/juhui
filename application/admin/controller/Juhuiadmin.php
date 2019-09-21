@@ -73,8 +73,16 @@ class Juhuiadmin extends \app\admin\controller\Common
             ,'intro' => trim($params['intro'])
             ,'update_time' => time()
             ];
-            jsondebug($data);
 
+            if (!empty($params['id'])) {
+                $r = Db::name('us')->where('id', intval($params['id']))->update($data);
+            } else {
+                $r = Db::name('us')->insert($data);
+            }
+
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
 
         }
 
