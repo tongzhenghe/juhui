@@ -48,7 +48,7 @@ class Sign extends SystemAdmin
                 exit( iJson('', false, '该账号还未未审核， 暂时无法登陆！'));
 
             if (!empty($userInfo)) {
-
+jsondebug($userInfo);
                 if ( md5($_user['password'])  === $userInfo['password']) {
                     jsondebug(1);
 
