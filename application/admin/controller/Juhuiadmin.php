@@ -316,18 +316,24 @@ class Juhuiadmin extends \app\admin\controller\Common
         $param = request()->param();
         if (request()->isAjax()) {
             $bannerModel = new Banner;
-
-            jsondebug($param);
             $data = [
-                'banner' => trim($param['Mobile_icon'])
-                ,'pc_banner' => trim($param['Pc_icon'])
-                ,'title' => trim($param['title'])
-                ,'url' => trim($param['url'])
-                ,'sort' => intval($param['sort'])
-                ,'intro' => trim($param['intro'])
-                ,'content' => htmlspecialchars($param['content'])
-                ,'keywords' => $param['keywords']
-                ,'pc_content' => htmlspecialchars($param['Pcontent'])
+            'banner' => trim($param['Mobile_icon'])
+            ,'pc_banner' => trim($param['Pc_icon'])
+
+            ,'title' => trim($param['title'])
+
+            ,'url' => trim($param['url'])
+
+            ,'sort' => intval($param['sort'])
+
+            ,'intro' => trim($param['intro'])
+
+            ,'content' => htmlspecialchars($param['content'])
+
+            ,'keywords' => trim($param['keywords'])
+
+            ,'pc_content' => htmlspecialchars($param['Pcontent'])
+
             ];
 
             jsondebug($data);
