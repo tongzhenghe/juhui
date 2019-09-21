@@ -42,6 +42,7 @@ class Sign extends SystemAdmin
         if ( !empty($_user)  || is_array( $_user )) {
 
             //验证
+            jsondebug($_user);
             $userInfo = Db::name('admin')->where('username',  trim($_user['username']))->find();
             jsondebug($userInfo);
             if ($userInfo['state'] === 2 ) exit( iJson('', false, '该账号还未未审核， 暂时无法登陆！'));
