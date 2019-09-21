@@ -306,8 +306,8 @@ class Juhuiadmin extends \app\admin\controller\Common
     public  function banner()
     {
         $where = ['is_del' => 1];
-        $news = Db::name('news')->where($where)->select();
-        return view('', ['news' => $news]);
+        $banner = Db::name('banner')->where($where)->select();
+        return view('', ['banner' => $banner]);
 
     }
 
