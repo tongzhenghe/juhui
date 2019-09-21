@@ -87,9 +87,7 @@ class Juhuiadmin extends \app\admin\controller\Common
         }
 
         $us = Db::name('us')->find();
-        wl_debug($us);
-
-        return view();
+        return view('', ['us' => $us]);
 
     }
 
