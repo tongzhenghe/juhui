@@ -10,6 +10,7 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+define('BIND_MODULE', 'admin/juhuiadmin');
 
 function wl_debug( $value )
 {
