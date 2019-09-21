@@ -57,7 +57,6 @@ class Juhuiadmin extends \app\admin\controller\Common
     public  function us()
     {
         $params = request()->param();
-
         if (request()->isAjax()) {
 
             $data = [
@@ -68,7 +67,7 @@ class Juhuiadmin extends \app\admin\controller\Common
             ,'keywords' => trim($params['keywords'])
             ,'logo' => trim($params['logo'])
             ,'email' => trim($params['email'])
-            ,'pc_content' => htmlentities($params['pc_content'])
+            ,'pc_content' => htmlentities($params['Pc_content'])
             ,'content' => htmlentities($params['content'])
             ,'address' => trim($params['address'])
             ,'intro' => trim($params['intro'])
