@@ -270,7 +270,6 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $where = ['is_del' => 1];
         $goodscate = Db::name('goodscate')->where($where)->select();
-        $goodscate = tree($goodscate);
         return view('', ['goodscate' => $goodscate]);
     }
 
