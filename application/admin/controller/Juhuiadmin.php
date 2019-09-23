@@ -346,10 +346,9 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function addarticle()
     {
-        $articleModel = new Article;
-        wl_debug($articleModel);
         $param = request()->param();
         if (request()->isAjax()) {
+            $articleModel = new Article;
 
             $data = [
                 'title' => trim($param['title'])
@@ -359,6 +358,10 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'pc_content' => htmlspecialchars($param['Pcontent'])
                 ,'pc_icon' => trim($param['Pc_icon'])
                 ,'icon' => trim($param['Mobile_icon'])
+                ,'create_time' => 1213333
+                ,'update_time' => 1213333
+                ,'volume' => 1
+                ,'dz_num' => 1
 
             ];
 
@@ -436,6 +439,7 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $param = request()->param();
         if (request()->isAjax()) {
+            jsondebug($param);
             $newsModel = new News;
             $data = [
                 'title' => trim($param['title'])
@@ -445,6 +449,7 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'pc_content' => htmlspecialchars($param['Pcontent'])
                 ,'pc_icon' => trim($param['Pc_icon'])
                 ,'icon' => trim($param['Mobile_icon'])
+                ,'keywords' => trim($param['keywords'])
 
             ];
 
