@@ -521,6 +521,7 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'pc_icon' => trim($param['Pc_icon'])
                 ,'icon' => trim($param['Mobile_icon'])
                 ,'keywords' => trim($param['keywords'])
+                ,'cateid' => trim($param['cateid'])
 
             ];
 
