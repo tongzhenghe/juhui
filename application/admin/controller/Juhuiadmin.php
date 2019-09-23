@@ -503,7 +503,11 @@ class Juhuiadmin extends \app\admin\controller\Common
 
         $where = ['is_del' => 1, 'status' => 1];
         $goods = Db::name('goods')->where($where)->select();
-        return view('', ['goods' => $goods, 'dataOne' => $dataOne]);
+
+        //goods_cate
+        $goods_cate = Db::name('goodscate')->where($where)->select();
+
+        return view('', ['goods' => $goods, 'dataOne' => $dataOne, 'goods_cate' => $goods_cate]);
 
     }
 
