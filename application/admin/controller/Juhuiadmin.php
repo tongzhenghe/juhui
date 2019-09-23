@@ -511,6 +511,7 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $param = request()->param();
         if (request()->isAjax()) {
+            jsondebug($param);
             $goodsModel = new Goods;
             $data = [
                 'title' => trim($param['title'])
