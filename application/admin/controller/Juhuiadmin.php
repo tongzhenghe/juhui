@@ -265,7 +265,7 @@ class Juhuiadmin extends \app\admin\controller\Common
     }
 
     //前台菜单
-   public  function umenu()
+    public  function umenu()
     {
         $where = ['is_del' => 1];
         $umenu = Db::name('umenu')->where($where)->select();
@@ -461,6 +461,15 @@ class Juhuiadmin extends \app\admin\controller\Common
         $news = Db::name('news')->where($where)->select();
         return view('', ['news' => $news, 'dataOne' => $dataOne]);
 
+    }
+
+    //产品中心
+    public  function goods()
+    {
+        $where = ['is_del' => 1];
+        $goods = Db::name('goods')->where($where)->select();
+        $goods = tree($goods);
+        return view('', ['goods' => $goods]);
     }
 
     public  function formindex()
