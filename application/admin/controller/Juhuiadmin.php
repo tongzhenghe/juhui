@@ -439,7 +439,6 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $param = request()->param();
         if (request()->isAjax()) {
-            jsondebug($param);
             $newsModel = new News;
             $data = [
                 'title' => trim($param['title'])
@@ -452,6 +451,8 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'keywords' => trim($param['keywords'])
 
             ];
+
+            jsondebug($data);
 
             $r = Common::dataExecute($newsModel, $data, $param);
 
