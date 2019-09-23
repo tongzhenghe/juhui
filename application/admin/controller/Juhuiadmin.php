@@ -346,39 +346,18 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function addarticle()
     {
-        $articleModel = new Article;
-        $data = [
-            'title' => 2121
-            ,'sort' => 2121
-            ,'intro' => 212
-            ,'content' => 2121
-            ,'pc_content' => 212
-            ,'pc_icon' => 4234
-            ,'icon' => 4324
-            ,'keywords' => 424
-        ];
-
-        $r = Common::dataExecute($articleModel, $data);
-        wl_debug($r);
-
-
-
         $param = request()->param();
         if (request()->isAjax()) {
             $articleModel = new Article;
             $data = [
-            'title' => 2121
-            ,'sort' => 2121
-            ,'intro' => 212
-            ,'content' => 2121
-            ,'pc_content' => 212
-            ,'pc_icon' => 4234
-            ,'icon' => 4324
-            ,'keywords' => 424
-            ,'create_time' => 1213333
-            ,'update_time' => 1213333
-            ,'volume' => 1
-            ,'dz_num' => 1
+                'title' => trim($param['title'])
+                ,'sort' => intval($param['sort'])
+                ,'intro' => trim($param['intro'])
+                ,'content' => htmlspecialchars($param['Mcontent'])
+                ,'pc_content' => htmlspecialchars($param['Pcontent'])
+                ,'pc_icon' => trim($param['Pc_icon'])
+                ,'icon' => trim($param['Mobile_icon'])
+                ,'keywords' => trim($param['keywords'])
             ];
 
             $r = Common::dataExecute($articleModel, $data, $param);
