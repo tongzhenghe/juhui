@@ -340,6 +340,7 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $where = ['is_del' => 1];
         $article = Db::name('article')->where($where)->select();
+        wl_debug($article);
         return view('', ['article' => $article]);
 
     }
