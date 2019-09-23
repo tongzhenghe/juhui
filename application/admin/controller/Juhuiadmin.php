@@ -366,8 +366,6 @@ class Juhuiadmin extends \app\admin\controller\Common
 
             ];
 
-            jsondebug($data);
-
             $r = Common::dataExecute($articleModel, $data, $param);
 
             if (!empty($r))
