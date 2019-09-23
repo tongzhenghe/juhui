@@ -358,14 +358,8 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'pc_content' => htmlspecialchars($param['Pcontent'])
                 ,'pc_icon' => trim($param['Pc_icon'])
                 ,'icon' => trim($param['Mobile_icon'])
-                ,'create_time' => 1213333
-                ,'update_time' => 1213333
-                ,'volume' => 1
-                ,'dz_num' => 1
-
+                ,'keywords' => trim($param['keywords'])
             ];
-
-            jsondebug($data);
 
             $r = Common::dataExecute($articleModel, $data, $param);
 
