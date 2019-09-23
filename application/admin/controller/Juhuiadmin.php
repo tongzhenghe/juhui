@@ -277,12 +277,14 @@ class Juhuiadmin extends \app\admin\controller\Common
         $param = request()->param();
         if (request()->isAjax()) {
             $umenuModel = new Umenu();
+            jsondebug($param);
             $data = [
                 'title' => trim($param['title'])
                 ,'url' => trim($param['url'])
                 ,'sort' => intval($param['sort'])
                 ,'pid' => intval($param['pid'])
                 ,'intro' => trim($param['intro'])
+                ,'is_m' => intval($param['is_m'])
             ];
 
             $r = Common::dataExecute($umenuModel, $data, $param);
