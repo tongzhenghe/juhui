@@ -12,9 +12,6 @@
               <i class="layui-icon">&#xe615;</i>
             </a>
           </div>
-
-
-
           <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
             <ul class="layui-tab-title">
               <li class="layui-this">手机端</li>
@@ -34,7 +31,9 @@
                     </tr>
                     </thead>
                     <tbody>
+                    {if !empty($umenu)}
                     {foreach $umenu as $vo}
+                    {if $vo.is_m == 1}
                     <tr>
                       <td>{$vo.id}</td>
                       <td><span style="color: #939393;">{$vo.html}</span>{$vo.title}</td>
@@ -44,14 +43,44 @@
                         <a href="javascript:;" data-ids="112" data-url="{:url('index/umenu')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a>
                       </td>
                     </tr>
+                    {/if}
                     {/foreach}
+                    {/if}
                     </tbody>
                   </table>
                 </div>
               </div>
               <!--pc列表-->
               <div class="layui-tab-item">
-                手术室
+                <div class="layui-card-body">
+                  <table lay-filter="demo"  lay-data="{page:true}" >
+                    <thead>
+                    <tr>
+                      <th lay-data="{field:'id', width:100, sort:false}">(编号id)</th>
+                      <th lay-data="{field:'title', width:200}">菜单名称</th>
+                      <th lay-data="{field:'url', width:300}">跳转链接</th>
+                      <th lay-data="{field:'操作', width:100}">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {if !empty($umenu)}
+                    {foreach $umenu as $vo}
+                    {if $vo.is_m == 2}
+                    <tr>
+                      <td>{$vo.id}</td>
+                      <td><span style="color: #939393;">{$vo.html}</span>{$vo.title}</td>
+                      <td>{$vo.url}</td>
+                      <td>
+                        <a href="#/juhui/addumenu?id={$vo.id}" class="point"><i class="layui-icon" title="编辑数据">&#xe642;</i></a>
+                        <a href="javascript:;" data-ids="112" data-url="{:url('index/umenu')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a>
+                      </td>
+                    </tr>
+                    {/if}
+                    {/foreach}
+                    {/if}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -60,4 +89,8 @@
     </div>
   </div>
 </div>
+
+
+
+
 {include file="./juhuiadmin/include/layui_init"/}
