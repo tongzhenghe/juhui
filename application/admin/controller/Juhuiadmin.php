@@ -356,10 +356,6 @@ class Juhuiadmin extends \app\admin\controller\Common
             ,'pc_icon' => 4234
             ,'icon' => 4324
             ,'keywords' => 424
-            ,'create_time' => 1213333
-            ,'update_time' => 1213333
-            ,'volume' => 1
-            ,'dz_num' => 1
         ];
 
         $r = Common::dataExecute($articleModel, $data);
