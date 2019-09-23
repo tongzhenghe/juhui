@@ -105,14 +105,10 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/404", component: "p404", name: "code"}
                 , {path: "/juhui/500", component: "p500", name: "code"}
                 , {path: "/juhui/mockjs", component: "mockjs", name: "拦截器(Mockjs)"}
-
                 , { path: "/juhui/menu", component: "menu", name: "左侧菜单(Menu)"}
                 , { path: "/juhui/addmenu", component: "addmenu", name: "add(Menu)"}
-
                 , { path: "/juhui/umenu", component: "umenu", name: "前台菜单(umenu)"}
                 , { path: "/juhui/addumenu", component: "addumenu", name: "add(Menu)"}
-
-
                 , { path: "/juhui/menu", component: "menu", name: "左侧菜单(Menu)"}
                 , {path: "/juhui/route", component: "route", name: "路由配置(Route)"}
                 , { path: "/juhui/tabs", component: "tabs", name: "选项卡(Tabs)"}
@@ -121,6 +117,9 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/us", component: "us", name: "关于我们(us)"}
                 , {path: "/juhui/news", component: "news", name: "news"}
                 , {path: "/juhui/addnews", component: "addnews", name: "addnews"}
+
+                , {path: "/juhui/article", component: "article", name: "article"}
+                , {path: "/juhui/addarticle", component: "addarticle", name: "addarticle"}
                 , {path: "/juhui/banner", component: "banner", name: "banner"}
                 , {path: "/juhui/addbanner", component: "addbanner", name: "addbanner"}
 
