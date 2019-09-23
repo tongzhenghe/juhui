@@ -11,6 +11,7 @@ namespace app\admin\controller;
 use app\admin\model\Article;
 use app\admin\model\Banner;
 use app\admin\model\Common;
+use app\admin\model\Goods;
 use app\admin\model\Menu;
 use app\admin\model\News;
 use app\admin\model\Umenu;
@@ -469,6 +470,41 @@ class Juhuiadmin extends \app\admin\controller\Common
         $where = ['is_del' => 1];
         $goods = Db::name('goods')->where($where)->select();
         return view('', ['goods' => $goods]);
+    }
+
+    public  function addgoods()
+    {
+        $param = request()->param();
+        if (request()->isAjax()) {
+            $goodsModel = new Goods;
+            $data = [
+                'title' => trim($param['title'])
+                ,'sort' => intval($param['sort'])
+                ,'intro' => trim($param['intro'])
+                ,'content' => htmlspecialchars($param['Mcontent'])
+                ,'pc_content' => htmlspecialchars($param['Pcontent'])
+                ,'pc_icon' => trim($param['Pc_icon'])
+                ,'icon' => trim($param['Mobile_icon'])
+                ,'keywords' => trim($param['keywords'])
+
+            ];
+
+            $r = Common::dataExecute($goodsModel, $data, $param);
+
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
+        }
+
+        $dataOne = null;;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('goods')->where('id', intval($param['id']))->find();
+        }
+
+        $where = ['is_del' => 1, 'status' => 1];
+        $goods = Db::name('goods')->where($where)->select();
+        return view('', ['goods' => $goods, 'dataOne' => $dataOne]);
+
     }
 
     public  function formindex()
