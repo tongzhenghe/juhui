@@ -346,9 +346,10 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function addarticle()
     {
+        $articleModel = new Article;
+        wl_debug($articleModel);
         $param = request()->param();
         if (request()->isAjax()) {
-            $articleModel = new Article;
 
             $data = [
                 'title' => trim($param['title'])
