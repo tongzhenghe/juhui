@@ -277,6 +277,7 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $param = request()->param();
         if (request()->isAjax()) {
+            jsondebug($param);
             $goodscateModel = new Goodscate;
             $data = [
                 'title' => trim($param['title'])
