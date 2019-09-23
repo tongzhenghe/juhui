@@ -350,7 +350,6 @@ class Juhuiadmin extends \app\admin\controller\Common
         if (request()->isAjax()) {
             $articleModel = new Article;
 
-            jsondebug($param);
             $data = [
                 'title' => trim($param['title'])
                 ,'sort' => intval($param['sort'])
@@ -359,8 +358,10 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'pc_content' => htmlspecialchars($param['Pcontent'])
                 ,'pc_icon' => trim($param['Pc_icon'])
                 ,'icon' => trim($param['Mobile_icon'])
-
             ];
+
+            jsondebug($data);
+
 
             $r = Common::dataExecute($articleModel, $data, $param);
 
