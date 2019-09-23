@@ -266,7 +266,7 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     }
 
-    public  function goodsctae()
+    public  function goodscate()
     {
         $where = ['is_del' => 1];
         $goodscate = Db::name('goodscate')->where($where)->select();
