@@ -452,8 +452,6 @@ class Juhuiadmin extends \app\admin\controller\Common
 
             ];
 
-            jsondebug($data);
-
             $r = Common::dataExecute($newsModel, $data, $param);
 
             if (!empty($r))
