@@ -120,6 +120,8 @@ layui.define(mods, function (e) {
 
                 , {path: "/juhui/article", component: "article", name: "article"}
                 , {path: "/juhui/addarticle", component: "addarticle", name: "addarticle"}
+                , {path: "/juhui/goods", component: "goods", name: "goods"}
+                , {path: "/juhui/addgoods", component: "addgoods", name: "addgoods"}
                 , {path: "/juhui/banner", component: "banner", name: "banner"}
                 , {path: "/juhui/addbanner", component: "addbanner", name: "addbanner"}
 
