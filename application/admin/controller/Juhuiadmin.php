@@ -350,7 +350,6 @@ class Juhuiadmin extends \app\admin\controller\Common
         if (request()->isAjax()) {
             $articleModel = new Article;
 
-            jsondebug($param);
             $data = [
                 'title' => trim($param['title'])
                 ,'sort' => intval($param['sort'])
