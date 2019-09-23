@@ -295,10 +295,7 @@ class Juhuiadmin extends \app\admin\controller\Common
             $dataOne = Db::name('goodscate')->where('id', intval($param['id']))->find();
         }
 
-        $where = ['is_del' => 1, 'status' => 1];
-        $goodscate = Db::name('goodscate')->where($where)->select();
-        $goodscate = tree($goodscate);
-        return view('', ['goodscate' => $goodscate, 'dataOne' => $dataOne]);
+        return view('', ['dataOne' => $dataOne]);
 
     }
 
