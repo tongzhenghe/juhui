@@ -468,7 +468,6 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $where = ['is_del' => 1];
         $goods = Db::name('goods')->where($where)->select();
-        $goods = tree($goods);
         return view('', ['goods' => $goods]);
     }
 
