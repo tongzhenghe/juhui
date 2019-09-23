@@ -12,6 +12,7 @@ use app\admin\model\Banner;
 use app\admin\model\Common;
 use app\admin\model\Menu;
 use app\admin\model\News;
+use app\admin\model\Umenu;
 use app\extra\Upload;
 use think\Db;
 
@@ -262,6 +263,45 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     }
 
+    //前台菜单
+   public  function umenu()
+    {
+        $where = ['is_del' => 1];
+        $umenu = Db::name('umenu')->where($where)->select();
+        $umenu = tree($umenu);
+        return view('', ['umenu' => $umenu]);
+    }
+
+    public  function addumenu()
+    {
+        $param = request()->param();
+        if (request()->isAjax()) {
+            $umenuModel = new Umenu();
+            $data = [
+                'title' => trim($param['title'])
+                ,'url' => trim($param['url'])
+                ,'sort' => intval($param['sort'])
+                ,'pid' => intval($param['pid'])
+                ,'intro' => trim($param['intro'])
+            ];
+
+            $r = Common::dataExecute($umenuModel, $data, $param);
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
+        }
+
+        $dataOne = null;;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('umenu')->where('id', intval($param['id']))->find();
+        }
+
+        $where = ['is_del' => 1, 'status' => 1];
+        $umenu = Db::name('umenu')->where($where)->select();
+        $umenu = tree($umenu);
+        return view('', ['umenu' => $umenu, 'dataOne' => $dataOne]);
+
+    }
 
     public  function addmenu()
     {
@@ -293,7 +333,6 @@ class Juhuiadmin extends \app\admin\controller\Common
         return view('', ['menu' => $menu, 'dataOne' => $dataOne]);
 
     }
-
 
     public  function news()
     {
