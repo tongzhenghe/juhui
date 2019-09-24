@@ -604,6 +604,7 @@ class Juhuiadmin extends \app\admin\controller\Common
                 'title' => trim($param['title'])
                 ,'sort' => intval($param['sort'])
                 ,'intro' => trim($param['intro'])
+                ,'url' => trim($param['url'])
                 ,'icon' => trim($param['Mobile_icon'])
                 ,'pc_icon' => trim($param['Pc_icon'])
             ];
