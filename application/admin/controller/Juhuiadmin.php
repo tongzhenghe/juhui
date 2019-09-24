@@ -645,7 +645,7 @@ class Juhuiadmin extends \app\admin\controller\Common
         // 检查目录是否可写
             if(is_writable($path)){
         //echo '目录可写';exit;
-            }else{
+            } else {
         //echo '目录不可写';exit;
                 chmod($path,0777);
             }
@@ -708,12 +708,17 @@ class Juhuiadmin extends \app\admin\controller\Common
         echo "数据备份完成！";
     }
 
+    public  function data_backups()
+    {
+        return view();
+    }
 
     public  function formindex()
     {
         return view();
 
     }
+
 
     public  function setting()
     {
