@@ -605,10 +605,11 @@ class Juhuiadmin extends \app\admin\controller\Common
                 'title' => trim($param['title'])
                 ,'sort' => intval($param['sort'])
                 ,'intro' => trim($param['intro'])
-                ,'icon' => trim($param['icon'])
-                ,'pc_icon' => trim($param['pc_icon'])
+                ,'icon' => trim($param['Mobile_icon'])
+                ,'pc_icon' => trim($param['Pc_icon'])
                 ,'keywords' => trim($param['keywords'])
             ];
+
             $r = Common::dataExecute($recruitModel, $data, $param);
 
             if (!empty($r))
