@@ -605,7 +605,6 @@ class Juhuiadmin extends \app\admin\controller\Common
             ,'intro' => 21
             ,'icon' => 212
             ,'pc_icon' =>212
-            ,'keywords' => 212
         ];
 
         $r = Common::dataExecute($recruitModel, $data);
