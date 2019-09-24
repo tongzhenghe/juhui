@@ -32,7 +32,7 @@ layui.define(mods, function (e) {
                 title: "设置",
                 shade: !0,
                 dynamicRender: !0,
-                url: "setting"
+                url: "juhuiadmin.php/setting"
             })
              /*   , "menu" === t && layui.sidebar.render({
                 elem: e.elem,
