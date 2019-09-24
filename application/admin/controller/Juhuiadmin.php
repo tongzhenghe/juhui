@@ -600,7 +600,7 @@ class Juhuiadmin extends \app\admin\controller\Common
         $param = request()->param();
         if (request()->isAjax()) {
             $recruitModel = new Friendly;
-            jsondebug($param);
+
             $data = [
                 'title' => trim($param['title'])
                 ,'sort' => intval($param['sort'])
