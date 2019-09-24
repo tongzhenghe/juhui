@@ -640,23 +640,23 @@ class Juhuiadmin extends \app\admin\controller\Common
         $info .= "CREATE DATAbase IF NOT EXISTS `".$database."` DEFAULT CHARACTER SET utf8 ;\r\n\r\n";
         $info .= "USE `".$database."`;\r\n\r\n";
 
-// 检查目录是否存在
+        // 检查目录是否存在
         if(is_dir($path)){
-// 检查目录是否可写
+        // 检查目录是否可写
             if(is_writable($path)){
-//echo '目录可写';exit;
+        //echo '目录可写';exit;
             }else{
-//echo '目录不可写';exit;
+        //echo '目录不可写';exit;
                 chmod($path,0777);
             }
         }else{
-//echo '目录不存在';exit;
-// 新建目录
+        //echo '目录不存在';exit;
+        // 新建目录
             mkdir($path, 0777, true);
-//chmod($path,0777);
+        //chmod($path,0777);
         }
 
-// 检查文件是否存在
+        // 检查文件是否存在
         $file_name = $path.$database.'-'.date("Y-m-d",time()).'.sql';
         wl_debug($file_name);
         if(file_exists($file_name)){
@@ -665,32 +665,32 @@ class Juhuiadmin extends \app\admin\controller\Common
         }
         file_put_contents($file_name,$info,FILE_APPEND);
 
-//查询数据库的所有表
+            //查询数据库的所有表
         $result = Db::query('show tables');
-//print_r($result);exit;
+            //print_r($result);exit;
         foreach ($result as $k=>$v) {
-//查询表结构
+            //查询表结构
             $val = $v['Tables_in_'.$database];
             $sql_table = "show create table ".$val;
             $res = Db::query($sql_table);
-//print_r($res);exit;
+            //print_r($res);exit;
             $info_table = "-- ----------------------------\r\n";
             $info_table .= "-- Table structure for `".$val."`\r\n";
             $info_table .= "-- ----------------------------\r\n\r\n";
             $info_table .= "DROP TABLE IF EXISTS `".$val."`;\r\n\r\n";
             $info_table .= $res[0]['Create Table'].";\r\n\r\n";
-//查询表数据
+            //查询表数据
             $info_table .= "-- ----------------------------\r\n";
             $info_table .= "-- Data for the table `".$val."`\r\n";
             $info_table .= "-- ----------------------------\r\n\r\n";
             file_put_contents($file_name,$info_table,FILE_APPEND);
             $sql_data = "select * from ".$val;
             $data = Db::query($sql_data);
-//print_r($data);exit;
+            //print_r($data);exit;
             $count= count($data);
-//print_r($count);exit;
+            //print_r($count);exit;
             if($count<1) continue;
-            foreach ($data as $key => $value){
+            foreach ($data as $key => $value) {
                 $sqlStr = "INSERT INTO `".$val."` VALUES (";
                 foreach($value as $v_d){
                     $v_d = str_replace("'","\'",$v_d);
