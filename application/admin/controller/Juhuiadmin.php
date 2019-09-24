@@ -597,29 +597,15 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function addfriendly()
     {
-        $recruitModel = new Friendly;
-
-        $data = [
-            'title' =>121
-            ,'sort' => 2121
-            ,'intro' => 21
-            ,'icon' => 212
-            ,'pc_icon' =>212
-        ];
-
-        $r = Common::dataExecute($recruitModel, $data);
-
         $param = request()->param();
         if (request()->isAjax()) {
             $recruitModel = new Friendly;
-
             $data = [
-                'title' =>121
-                ,'sort' => 2121
-                ,'intro' => 21
-                ,'icon' => 212
-                ,'pc_icon' =>212
-                ,'keywords' => 212
+                'title' => trim($param['title'])
+                ,'sort' => intval($param['sort'])
+                ,'intro' => trim($param['intro'])
+                ,'icon' => trim($param['Mobile_icon'])
+                ,'pc_icon' => trim($param['Pc_icon'])
             ];
 
             $r = Common::dataExecute($recruitModel, $data, $param);
