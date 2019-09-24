@@ -263,8 +263,6 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function menu()
     {
-
-        echo 3;exit;
         $where = ['is_del' => 1];
         $menu = Db::name('menu')->where($where)->select();
         $menu = tree($menu);
