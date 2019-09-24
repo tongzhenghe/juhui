@@ -9,7 +9,7 @@ class Index
     {
         //menu
         $where= ['is_del' => 1, 'status' => 1, 'is_m' => 2];
-        $menu = Db::name('umenu')->where($where)->order('sort desc')->select();
+        $menu = Db::name('umenu')->where($where)->order('sort asc')->select();
         return view('', ['menu'=> $menu]);
     }
 }
