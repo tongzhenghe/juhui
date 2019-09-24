@@ -582,7 +582,7 @@ class Juhuiadmin extends \app\admin\controller\Common
             $dataOne = Db::name('recruit')->where('id', intval($param['id']))->find();
         }
 
-        $where = ['is_del' => 1, 'status' => 1];
+        $where = ['status' => 1];
         $recruit = Db::name('recruit')->where($where)->select();
         return view('', ['recruit' => $recruit, 'dataOne' => $dataOne]);
 
