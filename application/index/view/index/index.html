@@ -28,16 +28,15 @@
 </div>
 <div class="inav">
     <div class="inavc">
+
         <ul>
             <li><a href="index.html" class="tsy">网站首页</a></li>
-            <li><a href="gywm.html">关于我们</a></li>
-            <li><a href="cpzx_list.html">产品中心</a></li>
-            <li><a href="gywm.html">核心优势</a></li>
-            <li><a href="news_list.html">资讯中心</a></li>
-            <li><a href="gywm.html">维修保养</a></li>
-            <li><a href="gywm.html">营销网络</a></li>
+            {foreach $menu as $vo}
+            <li><a href="{$vo.url}">{$vo.title}</a></li>
+            {/foreach}
             <li style=" background:none;"><a href="lxwm.html">联系我们</a></li>
         </ul>
+
     </div>
 </div>
 
