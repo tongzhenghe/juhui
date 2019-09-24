@@ -8,9 +8,8 @@ class Index
     public function index()
     {
         //menu
-        $where= ['is_del' => 1, 'status' => 1];
+        $where= ['is_del' => 1, 'status' => 1, 'is_m' => 2];
         $menu = Db::name('umenu')->where($where)->select();
-        wl_debug($menu);
         return view('', ['menu'=> $menu]);
     }
 }
