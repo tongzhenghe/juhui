@@ -317,6 +317,7 @@ class Juhuiadmin extends \app\admin\controller\Common
     {
         $param = request()->param();
         if (request()->isAjax()) {
+            jsondebug($param);
             $umenuModel = new Umenu();
             $data = [
                 'title' => trim($param['title'])
