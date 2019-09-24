@@ -123,7 +123,9 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/goodscate", component: "goodscate", name: "goodscate"}
                 , {path: "/juhui/addgoodscate", component: "addgoodscate", name: "addgoodscate"}
                 , {path: "/juhui/recruit", component: "recruit", name: "recruit"}
-                , {path: "/juhui/addrecruit", component: "addrecruit", name: "addrecruit"}
+                , {path: "/juhui/addrecruit", component: "addrecruit", name: "addrecruit"},
+                    {path: "/juhui/friendly", component: "friendly", name: "friendly"}
+                , {path: "/juhui/addfriendly", component: "addfriendly", name: "addfriendly"}
                 , {path: "/juhui/banner", component: "banner", name: "banner"}
                 , {path: "/juhui/addbanner", component: "addbanner", name: "addbanner"}
 
