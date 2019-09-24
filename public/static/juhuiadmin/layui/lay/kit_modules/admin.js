@@ -14,7 +14,7 @@ layui.define(mods, function (e) {
             shade: !0,
             direction: "left",
             dynamicRender: !0,
-            url: "app",
+            url: "juhuiadmin.php/app",
             width: "50%"
         }), a("#cc").on("click", function () {
             layui.sidebar.render({
@@ -22,7 +22,7 @@ layui.define(mods, function (e) {
                 title: "这是表单盒子",
                 shade: !0,
                 dynamicRender: !0,
-                url: "formindex",
+                url: "juhuiadmin.php/formindex",
                 width: "50%"
             })
         }), m.on("nav(header_right)", function (e) {
