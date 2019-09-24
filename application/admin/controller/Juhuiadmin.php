@@ -561,6 +561,7 @@ class Juhuiadmin extends \app\admin\controller\Common
         $param = request()->param();
         if (request()->isAjax()) {
             $recruitModel = new Recruit;
+            jsondebug($param);
             $data = [
                 'title' => trim($param['title'])
                 ,'url' => trim($param['url'])
