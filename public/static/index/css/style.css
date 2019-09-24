@@ -73,7 +73,19 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .gywm2 img { float:left; border:1px solid #d6d6d6; margin-right:15px; }
 .gywm2 p { font-size:14px; color:#666565; text-indent:28px; line-height:30px;}
 .gywm2 p a { color:#0e823b;}
-
+.gywm2 ul a {
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #53B115;
+    float: left;
+    margin-right: 15px;
+    margin-left: 30px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
 /*产品中心*/
 .jfcp { width:1000px; height:auto; margin:20px auto;}
 .jfcpleft { width:210px; height:auto;  }
