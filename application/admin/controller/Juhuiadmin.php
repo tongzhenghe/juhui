@@ -15,6 +15,7 @@ use app\admin\model\Goods;
 use app\admin\model\Goodscate;
 use app\admin\model\Menu;
 use app\admin\model\News;
+use app\admin\model\Recruit;
 use app\admin\model\Umenu;
 use app\extra\Upload;
 use think\Db;
@@ -546,6 +547,51 @@ class Juhuiadmin extends \app\admin\controller\Common
         return view('', ['goods' => $goods, 'dataOne' => $dataOne, 'goods_cate' => $goods_cate]);
 
     }
+
+
+    public  function recruit()
+    {
+        $where = ['is_del' => 1];
+        $recruit = Db::name('recruit')->where($where)->select();
+        return view('', ['recruit' => $recruit]);
+
+    }
+
+    public  function addrecruit()
+    {
+        $param = request()->param();
+        if (request()->isAjax()) {
+            $recruitModel = new Recruit;
+            $data = [
+                'title' => trim($param['title'])
+                ,'url' => trim($param['url'])
+                ,'sort' => intval($param['sort'])
+                ,'intro' => trim($param['intro'])
+                ,'content' => htmlspecialchars($param['content'])
+                ,'keywords' => trim($param['keywords'])
+                ,'pc_content' => htmlspecialchars($param['Pcontent'])
+            ];
+            $r = Common::dataExecute($recruitModel, $data, $param);
+
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
+        }
+
+        $dataOne = null;;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('recruit')->where('id', intval($param['id']))->find();
+        }
+
+        $where = ['is_del' => 1, 'status' => 1];
+        $recruit = Db::name('recruit')->where($where)->select();
+        return view('', ['recruit' => $recruit, 'dataOne' => $dataOne]);
+
+    }
+
+
+
+
 
     public  function formindex()
     {
