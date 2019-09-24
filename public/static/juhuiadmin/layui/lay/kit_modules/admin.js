@@ -105,7 +105,7 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/404", component: "p404", name: "code"}
                 , {path: "/juhui/500", component: "p500", name: "code"}
                 , {path: "/juhui/mockjs", component: "mockjs", name: "拦截器(Mockjs)"}
-                , { path: "/juhui/menu", component: "/juhuiadmin.php/juhui/menumenu", name: "左侧菜单(Menu)"}
+                , { path: "/juhui/menu", component: "/juhuiadmin.php/juhui/menu", name: "左侧菜单(Menu)"}
                 , { path: "/juhui/addmenu", component: "addmenu", name: "add(Menu)"}
                 , { path: "/juhui/umenu", component: "umenu", name: "前台菜单(umenu)"}
                 , { path: "/juhui/addumenu", component: "addumenu", name: "add(Menu)"}
