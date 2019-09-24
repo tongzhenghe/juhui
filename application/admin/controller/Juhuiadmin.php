@@ -618,12 +618,12 @@ class Juhuiadmin extends \app\admin\controller\Common
 
         $dataOne = null;;
         if (!empty($param['id'])) {
-            $dataOne = Db::name('recruit')->where('id', intval($param['id']))->find();
+            $dataOne = Db::name('friendly')->where('id', intval($param['id']))->find();
         }
 
         $where = ['status' => 1];
-        $recruit = Db::name('recruit')->where($where)->select();
-        return view('', ['recruit' => $recruit, 'dataOne' => $dataOne]);
+        $friendly = Db::name('friendly')->where($where)->select();
+        return view('', ['friendly' => $friendly, 'dataOne' => $dataOne]);
 
     }
 
