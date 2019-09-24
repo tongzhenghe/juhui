@@ -113,19 +113,17 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/route", component: "route", name: "路由配置(Route)"}
                 , { path: "/juhui/tabs", component: "tabs", name: "选项卡(Tabs)"}
                 , {path: "/juhui/utils", component: "utils", name: "工具包(Utils)"}
-
                 , {path: "/juhui/us", component: "us", name: "关于我们(us)"}
                 , {path: "/juhui/news", component: "news", name: "news"}
                 , {path: "/juhui/addnews", component: "addnews", name: "addnews"}
-
                 , {path: "/juhui/article", component: "article", name: "article"}
                 , {path: "/juhui/addarticle", component: "addarticle", name: "addarticle"}
-
                 , {path: "/juhui/goods", component: "goods", name: "goods"}
                 , {path: "/juhui/addgoods", component: "addgoods", name: "addgoods"}
-                    , {path: "/juhui/goodscate", component: "goodscate", name: "goodscate"}
-                    , {path: "/juhui/addgoodscate", component: "addgoodscate", name: "addgoodscate"}
-
+                , {path: "/juhui/goodscate", component: "goodscate", name: "goodscate"}
+                , {path: "/juhui/addgoodscate", component: "addgoodscate", name: "addgoodscate"}
+                , {path: "/juhui/goodscate", component: "recruit", name: "recruit"}
+                , {path: "/juhui/addrecruit", component: "addrecruit", name: "addrecruit"}
                 , {path: "/juhui/banner", component: "banner", name: "banner"}
                 , {path: "/juhui/addbanner", component: "addbanner", name: "addbanner"}
 
