@@ -632,7 +632,6 @@ class Juhuiadmin extends \app\admin\controller\Common
         header("Content-type:text/html;charset=utf-8");
         $path = RUNTIME_PATH.'mysql/';
         $database = config('database')['database'];
-        wl_debug($database);
         echo "运行中，请耐心等待...<br/>";
         $info = "-- ----------------------------\r\n";
         $info .= "-- 日期：".date("Y-m-d H:i:s",time())."\r\n";
