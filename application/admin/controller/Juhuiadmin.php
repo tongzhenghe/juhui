@@ -658,6 +658,7 @@ class Juhuiadmin extends \app\admin\controller\Common
 
 // 检查文件是否存在
         $file_name = $path.$database.'-'.date("Y-m-d",time()).'.sql';
+        wl_debug($file_name);
         if(file_exists($file_name)){
             echo "数据备份文件已存在！";
             exit;
