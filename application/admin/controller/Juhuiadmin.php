@@ -558,33 +558,17 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function addrecruit()
     {
-//        $param = request()->param();
-
-        $recruitModel = new Recruit;
-
-        $data = [
-            'title' => 212
-            ,'sort' =>212
-            ,'intro' => 21212
-            ,'content' => 3232
-            ,'pc_content' => 3232
-            ,'keywords' => 3232
-        ];
-
-        $r = Common::dataExecute($recruitModel, $data);
-
+        $param = request()->param();
         if (request()->isAjax()) {
             $recruitModel = new Recruit;
-
             $data = [
-                'title' => 212
-                ,'sort' =>212
-                ,'intro' => 21212
-                ,'content' => 3232
-                ,'pc_content' => 3232
-                ,'keywords' => 3232
+                'title' => trim($param['title'])
+                ,'sort' => intval($param['sort'])
+                ,'intro' => trim($param['intro'])
+                ,'content' => htmlspecialchars($param['content'])
+                ,'keywords' => trim($param['keywords'])
+                ,'pc_content' => htmlspecialchars($param['Pcontent'])
             ];
-
             $r = Common::dataExecute($recruitModel, $data, $param);
 
             if (!empty($r))
