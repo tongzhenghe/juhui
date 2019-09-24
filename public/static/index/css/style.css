@@ -65,7 +65,7 @@ h1,h2,h5 { margin:0px; padding:0px;}
 strong.bt1 { font-size:16px; color:#0e823b;  line-height:40px; padding:0px 10px; font-weight:600;   float:left; }
 span.bt2 { font-size:13px; color:#9a9898; float:left; padding-top:10px;}
 .sspzx2 { width:340px; height:auto; padding:20px 0px;}
-.gywm { width:610px; height:auto; float:right;}
+.gywm { width:100%; height:auto; float:right;}
 .gywm1 {height: 30px;width: 120px;font-size: 25px;line-height: 30px;text-align: center;color: #53B115;margin: 10px auto;}
 a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:40px; display:block;}
 .gywm2 { width:100%; height:auto; padding:20px 0px;}
