@@ -20,7 +20,6 @@ use app\admin\model\Recruit;
 use app\admin\model\Umenu;
 use app\extra\Upload;
 use think\Db;
-use think\process\exception\Failed;
 
 class Juhuiadmin extends \app\admin\controller\Common
 {
@@ -557,46 +556,14 @@ class Juhuiadmin extends \app\admin\controller\Common
         return view('', ['recruit' => $recruit]);
 
     }
-
     public  function friendly()
     {
         $friendly = Db::name('friendly')->select();
         return view('', ['friendly' => $friendly]);
+
     }
 
     public  function addrecruit()
-    {
-        $param = request()->param();
-        if (request()->isAjax()) {
-            $friendlyModel = new Friendly;
-            $data = [
-                'title' => trim($param['title'])
-                ,'sort' => intval($param['sort'])
-                ,'intro' => trim($param['intro'])
-                ,'content' => htmlspecialchars($param['content'])
-                ,'keywords' => trim($param['keywords'])
-                ,'pc_content' => htmlspecialchars($param['Pcontent'])
-            ];
-            $r = Common::dataExecute($friendlyModel, $data, $param);
-
-            if (!empty($r))
-                exit(Common::json(200, '已提交'));
-            exit(Common::json(400, '提交失败'));
-        }
-
-        $dataOne = null;;
-        if (!empty($param['id'])) {
-            $dataOne = Db::name('friendly')->where('id', intval($param['id']))->find();
-        }
-
-        $where = ['status' => 1];
-        $friendly = Db::name('friendly')->where($where)->select();
-        return view('', ['friendly' => $friendly, 'dataOne' => $dataOne]);
-
-    }
-
-
-    public  function addfriendly()
     {
         $param = request()->param();
         if (request()->isAjax()) {
@@ -608,6 +575,39 @@ class Juhuiadmin extends \app\admin\controller\Common
                 ,'content' => htmlspecialchars($param['content'])
                 ,'keywords' => trim($param['keywords'])
                 ,'pc_content' => htmlspecialchars($param['Pcontent'])
+            ];
+            $r = Common::dataExecute($recruitModel, $data, $param);
+
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
+        }
+
+        $dataOne = null;;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('recruit')->where('id', intval($param['id']))->find();
+        }
+
+        $where = ['status' => 1];
+        $recruit = Db::name('recruit')->where($where)->select();
+        return view('', ['recruit' => $recruit, 'dataOne' => $dataOne]);
+
+    }
+
+
+    public  function addfriendly()
+    {
+        $param = request()->param();
+        if (request()->isAjax()) {
+            $recruitModel = new Friendly;
+            jsondebug($param);
+            $data = [
+                'title' => trim($param['title'])
+                ,'sort' => intval($param['sort'])
+                ,'intro' => trim($param['intro'])
+                ,'icon' => trim($param['icon'])
+                ,'pc_icon' => trim($param['pc_icon'])
+                ,'keywords' => trim($param['keywords'])
             ];
             $r = Common::dataExecute($recruitModel, $data, $param);
 
