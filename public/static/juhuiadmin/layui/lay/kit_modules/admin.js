@@ -50,7 +50,7 @@ layui.define(mods, function (e) {
             var t = this, a = {
                 r: [{
                     path: "/user/index",
-                    component: "juhuiadmin.php/views/user/index",
+                    component: "/views/user/index",
                     name: "用户列表",
                     children: [{
                         path: "/user/create",
