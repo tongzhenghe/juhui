@@ -76,6 +76,7 @@ layui.define(mods, function (e) {
                     path: "/cascader",
                     component: "views/cascader/index",
                     name: "Cascader"}
+                , {path: "/", component: "juhuiadmin.php/app", name: "主页"}
                 , {path: "/juhui/app", component: "juhuiadmin.php/app", name: "主页"}
                 , {path: "/juhui/profile", component: "juhuiadmin.php/profile", name: "用户中心"}
                 , {path: "/juhui/grid", component: "juhuiadmin.php/grid", name: "Grid"}
