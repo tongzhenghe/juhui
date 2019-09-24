@@ -34,7 +34,7 @@ class Sign extends  Controller
 
             if (true === $result ) {
 
-                exit(iJson( '/#/', true,  '欢迎'. $post['username']. '回来!'));
+                exit(iJson( 'juhuyiadmin.php', true,  '欢迎'. $post['username']. '回来!'));
 
             } else {
 
