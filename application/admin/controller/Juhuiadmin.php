@@ -322,14 +322,9 @@ class Juhuiadmin extends \app\admin\controller\Common
                 'title' => trim($param['title'])
                 ,'url' => trim($param['url'])
                 ,'sort' => intval($param['sort'])
-                ,'pid' => intval($param['pid'])
                 ,'intro' => trim($param['intro'])
                 ,'is_m' => intval($param['is_m'])
             ];
-
-            jsondebug($data);
-
-
             $r = Common::dataExecute($umenuModel, $data, $param);
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
