@@ -551,7 +551,7 @@ class Juhuiadmin extends \app\admin\controller\Common
 
     public  function recruit()
     {
-        $recruit = Db::name('recruit')->where($where)->select();
+        $recruit = Db::name('recruit')->select();
         return view('', ['recruit' => $recruit]);
 
     }
