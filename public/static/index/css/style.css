@@ -219,3 +219,58 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .tjan a:hover { background-color:#0c7233; }
 
 
+/*二*/
+.ProductShow_l_t {
+    width: 300px;
+    height: 200px;
+}
+.ProductShow_l_t div {
+    width: 280px;
+    height: 160px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.tjcp_nr li {
+    width: 220px;
+    height: 200px;
+    margin-left: 2px;
+    margin-bottom: 5px;
+    float: left;
+}
+.tjcp_nr img {
+    width: 220px;
+    height: 200px;
+}
+.tjcp_nr {
+    width: 450px;
+    height: 120px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.tjcp_nr li {
+    line-height: 40px;
+}
+a:link, a:visited, a:active {
+    color: #666;
+    text-decoration: none;
+}
+.tjcp_nr li span {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.ProductShow_r_f {
+    width: 420px;
+    height: 120px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.ProductShow_r_f li {
+    line-height: 40px;
+}
+.ProductShow_r_f li span {
+    margin-top: 30px;
+    font-size: 20px;
+}
+/*二部分-ENd*/
+
