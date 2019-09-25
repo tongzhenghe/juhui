@@ -85,7 +85,7 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .jfcp_title p span { font-size:13px; }
 .jfcp_nr { width:180px; height:auto; margin:15px auto;}
 .jfcp_nr ul li { width:140px; height:30px; line-height:30px; padding-left:40px;  background:#f0f0f0 url(/static/index/icon/tongtai_23-07.gif) no-repeat 20px center; margin-top:10px;  }
-.jfcpright { width:450px; height:auto; margin: auto;}
+.jfcpright { width:502px; height:auto; margin: auto;}
 .tjcp_title { width:450px; height:62px; line-height:45px; border-bottom:1px solid #33ac1e;  }
 .tjcp_title strong { font-size:16px; color:#333; line-height:43px; float:left; display:block; padding:0px 15px; border-bottom:2px solid #3292d7; }
 .tjcpleft { width:200px; float:left; padding:10px; background:url(/static/index/icon/tongtai_15.gif) no-repeat 5px center; line-height:21px;}
