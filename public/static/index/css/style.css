@@ -6,7 +6,7 @@ body { font-family:"微软雅黑"; font-size:14px; color:#333;line-height: 24px;
 a { color:#333; text-decoration:none;}
 a:hover { color:#0e823b; text-decoration:underline;}
 .fl { float:left;}
-.fr { float:right; }
+/*.fr { float:right; }*/
 ul { list-style:none; margin:0px; padding:0px;}
 img { border:0px;}
 h1,h2,h5 { margin:0px; padding:0px;}
