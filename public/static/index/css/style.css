@@ -78,10 +78,10 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .jfcp { width:1000px; height:auto; margin:20px auto;}
 .jfcpleft { width:210px; height:auto;  }
 
-.jfcp_title { width:210px; height:76px; font-size:20px; background-color:#0e823b;}
+.jfcp_title { width:210px; height:76px; font-size:25px; margin: auto;}
 .fxxian { width:208px; height:auto; border:1px solid #eae9e9; border-top:none; }
 .jfcp_title p { line-height:28px; padding:10px;color:#FFF;   }
-.jfcp_title p strong { font-weight:500;}
+.jfcp_title p strong { font-weight:500;    color: #53b115;}
 .jfcp_title p span { font-size:13px; }
 .jfcp_nr { width:180px; height:auto; margin:15px auto;}
 .jfcp_nr ul li { width:140px; height:30px; line-height:30px; padding-left:40px;  background:#f0f0f0 url(/static/index/icon/tongtai_23-07.gif) no-repeat 20px center; margin-top:10px;  }
