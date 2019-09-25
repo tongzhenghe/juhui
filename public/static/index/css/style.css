@@ -60,7 +60,7 @@ h1,h2,h5 { margin:0px; padding:0px;}
 
 
 /*视频和关于我们*/
-.spgy { width:1000px; height:auto; margin:20px auto 10px; }
+.spgy { width:1124px; height:auto; margin:20px auto 10px; }
 .sspzx1,.gywm1,.scp1,.bgys1 { width:340px; height:40px;  border-bottom:1px solid #e5ebed; }
 strong.bt1 { font-size:16px; color:#0e823b;  line-height:40px; padding:0px 10px; font-weight:600;   float:left; }
 span.bt2 { font-size:13px; color:#9a9898; float:left; padding-top:10px;}
@@ -70,7 +70,7 @@ span.bt2 { font-size:13px; color:#9a9898; float:left; padding-top:10px;}
 a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:40px; display:block;}
 .gywm2 { width:100%; height:auto; padding:20px 0px;}
 .gywm2 h2 { font-size:18px; line-height:40px;}
-.gywm2 img { float:left; border:1px solid #d6d6d6; margin-right:15px; }
+.gywm2 img {width: 581px;height: 304px; float:left; border:1px solid #d6d6d6; margin-right:15px; }
 .gywm2 p { font-size:14px; color:#666565; text-indent:28px; line-height:30px;}
 .gywm2 p a { color:#0e823b;}
 .gywm2 ul a {width: 170px;height: 40px;line-height: 40px;text-align: center;background-color: #53B115;float: left;margin-right: 15px;margin-left: 30px;color: #fff;cursor: pointer;margin-top: 10px;}
