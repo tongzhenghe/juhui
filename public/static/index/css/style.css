@@ -254,6 +254,10 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
     line-height: 40px;
 }
 a:link, a:visited, a:active {
+    color: #666;
+    text-decoration: none;
+}
+a:link, a:visited, a:active:hover {
     color: #186d1a;
     text-decoration: none;
 }
