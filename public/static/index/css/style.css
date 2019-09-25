@@ -85,14 +85,14 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .jfcp_title p span { font-size:13px; }
 .jfcp_nr { width:180px; height:auto; margin:15px auto;}
 .jfcp_nr ul li { width:140px; height:30px; line-height:30px; padding-left:40px;  background:#f0f0f0 url(/static/index/icon/tongtai_23-07.gif) no-repeat 20px center; margin-top:10px;  }
-.jfcpright { width:770px; height:auto; }
-.tjcp_title { width:770px; height:62px; line-height:45px; border-bottom:1px solid #33ac1e;  }
+.jfcpright { width:450px; height:auto; }
+.tjcp_title { width:450px; height:62px; line-height:45px; border-bottom:1px solid #33ac1e;  }
 .tjcp_title strong { font-size:16px; color:#333; line-height:43px; float:left; display:block; padding:0px 15px; border-bottom:2px solid #3292d7; }
 .tjcpleft { width:200px; float:left; padding:10px; background:url(/static/index/icon/tongtai_15.gif) no-repeat 5px center; line-height:21px;}
 .tjcpleft p { color:#414141; padding-left:15px; font-size:12px;}
 .tjcpleft p span { color:#33ac1e; font-size:15px;}
 .tjcp_title a { float:right; margin-right:10px; margin-top:22px;}
-.tjcp_nr { width:770px; height:auto; padding:8px 0px;}
+.tjcp_nr { width:450px; height:400px; padding:8px 0px;}
 .cpalt { width:232px; height:auto; float:left; margin-left:18px; margin-top:10px; text-align:center; line-height:30px;}
 .cpalt img { border:1px solid #CCC; padding:2px;}
 .ttlx { width:210px; height:auto; margin-top:15px;}
