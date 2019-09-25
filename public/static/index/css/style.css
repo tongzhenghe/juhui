@@ -275,5 +275,20 @@ a:link, a:visited, a:active {
     margin-top: 30px;
     font-size: 20px;
 }
+
+.ProductShow_middle {
+    width: 395px;
+    height: 600px;
+    float: right;
+    margin-right: 10px;
+}
+.ProductShow_m_t {
+    width: 395px;
+    height: 400px;
+}
+.ProductShow_m_t img {
+    width: 395px;
+    height: 400px;
+}
 /*二部分-ENd*/
 
