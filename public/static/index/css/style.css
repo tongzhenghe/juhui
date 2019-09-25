@@ -220,8 +220,6 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 
 
 /*二*/
-a:hover {
-    color: #186d1a;}
 .ProductShow_l_t {
     width: 300px;
     height: 200px;
@@ -256,7 +254,7 @@ a:hover {
     line-height: 40px;
 }
 a:link, a:visited, a:active {
-    color: #666;
+    color: #186d1a;
     text-decoration: none;
 }
 .tjcp_nr li span {
