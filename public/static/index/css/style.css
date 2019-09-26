@@ -367,12 +367,8 @@ a:link:hover, a:visited:hover, a:active:hover {
 
 .i_zixun_list {
     width: 560px;
-    position: absolute;
-    top: 56px;
-    left: 30px;
     overflow: hidden;
     float: right;
 }
-
 
 /*news-ENd*/
