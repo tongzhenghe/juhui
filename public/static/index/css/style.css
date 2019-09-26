@@ -56,7 +56,6 @@ h1,h2,h5 { margin:0px; padding:0px;}
 .ggBtns a:hover{color:#fff;}
 .ggBtns a:focus{outline:none;}
 .ggBtns a.current{color:#fff;/*background:url(/static/index/icon/gg.png) no-repeat;*/ background-color:#0e823b;}
-/*.ggb,.ggBtns a{background-image:url(/static/index/icon/main.jpg);}*/
 
 
 /*视频和关于我们*/
