@@ -72,8 +72,7 @@
 </div>
 
 <script id="jsID" type="text/javascript">
-    var ary = location.href.split("&");
-    jQuery(".picMarquee-left").slide( { mainCell:".bd ul",autoPlay:true,effect:ary[1],vis:ary[2],interTime:ary[3],opp:ary[4],pnLoop:ary[5],trigger:ary[6],mouseOverStop:ary[7] });
+    jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:3,interTime:50,trigger:"click"});
 </script>
 
 
