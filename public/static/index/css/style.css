@@ -368,6 +368,6 @@ a:link:hover, a:visited:hover, a:active:hover {
 .i_zixun_list {width: 560px;overflow: hidden;float: right;margin: 6px;}
 .i_zixun_list li{margin-top: 5px;}
 .tds{background: #e2edff;}
-.tds:hover {background: #0e823b;}
+.tds:hover {background: #0e823b; color:#ffffff;}
 
 /*news-ENd*/
