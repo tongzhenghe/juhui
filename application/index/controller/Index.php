@@ -12,4 +12,13 @@ class Index
         $menu = Db::name('umenu')->where($where)->order('sort asc')->select();
         return view('', ['menu'=> $menu]);
     }
+
+
+    public  function test()
+    {
+        return view();
+    }
+
+
+
 }
