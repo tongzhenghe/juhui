@@ -296,3 +296,52 @@ a:link:hover, a:visited:hover, a:active:hover {
 }
 /*二部分-ENd*/
 
+/*news*/
+.news-title {
+    width: 564px;
+    overflow: hidden;
+    float: left;
+}
+.ju_title_bg{
+    width: 566px;
+    height: 56px;
+    background: #eff4fa;
+    overflow: hidden;
+    float: left;
+}
+.i_title {
+    width: 135px;
+    height: 56px;
+    line-height: 56px;
+    background: #1557b1;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+}
+.jd_pic {
+    width: 566px;
+    overflow: hidden;
+    float: left;
+}
+#list li {
+    width: 281px;
+    height: 158px;
+    list-style: none;
+    color: #fff;
+    margin: 1px 1px 0px 0px;
+    cursor: pointer;
+    overflow: hidden;
+    float: left;
+}
+#list div.box {
+    width: 281px;
+    height: 158px;
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+/*news-ENd*/
