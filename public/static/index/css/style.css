@@ -375,7 +375,7 @@ a:link:hover, a:visited:hover, a:active:hover {
 /* 本例子css */
 .picMarquee-left{ overflow:hidden; position:relative;  border:1px solid #ccc;   }
 .picMarquee-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  }
-.picMarquee-left .hd .prev,.picMarquee-left .hd .next{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+.picMarquee-left .hd .prev,.picMarquee-left .hd .next{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;}
 .picMarquee-left .hd .next{ background-position:0 -50px;  }
 .picMarquee-left .hd .prevStop{ background-position:-60px 0; }
 .picMarquee-left .hd .nextStop{ background-position:-60px -50px; }
