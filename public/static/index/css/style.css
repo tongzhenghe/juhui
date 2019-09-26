@@ -121,7 +121,7 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 
 /*新闻中心*/
 .jxwzx { width:1000px; height:auto; margin:20px auto;}
-.jdbj { width:100%; height:auto; background-color:#f7f7f7; padding:20px 0px;}
+.jdbj { width:100%; height:100px; background-color:#f7f7f7; padding:20px 0px;}
 .jnews { width:725px; height:auto; float:left; border:1px solid #cccccc; }
 .jnews_title { width:725px; height:45px;  border-bottom:1px solid #d6d6d6; }
 .jnews_title ul li { width:362px; height:45px; float:left; text-align:center;}
@@ -383,6 +383,7 @@ a:link:hover, a:visited:hover, a:active:hover {
 .picMarquee-left .bd ul{ overflow:hidden; zoom:1; }
 .picMarquee-left .bd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
 .picMarquee-left .bd ul li .pic{ text-align:center; }
+.picMarquee-left .bd ul li .pic{ height: 100px;}
 .picMarquee-left .bd ul li .pic img{ width:120px; height:90px; display:block; padding:2px; border:1px solid #ccc; }
 .picMarquee-left .bd ul li .pic a:hover img{ border-color:#999;  }
 .picMarquee-left .bd ul li .title{ line-height:24px;   }
