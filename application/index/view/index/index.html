@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>title</title>
-    {css href='/static/index/css/style.css'}
-    {js href='/static/index/js/jquery.SuperSlide.2.1.3.js'}
-</head>
-<body>
-  <!--新头部的开始-->
-<div class="itop">
-    <div class="itopc">
-        <div class="itopcl"><span>炬晖农业</span></div>
-        <div class="itopcr"><a href="#">在线留言</a><span>|</span><a href="#">联系我们</a></div>
-    </div>
-</div>
-<div class="ilogo">
-    <div class="ilogoc">
-        <div class="ilogol"><img src="/static/index/icon/juhui.gif" width="193" />
-            <p><span>炬晖 农业</span><br>
-                <strong>专业的小米产品生产商</strong></p>
-        </div>
-        <div class="ilogor">
-            <p>全国咨询热线：<br>
-                <strong>0937-2620655</strong></p>
-        </div>
-        <div class="clear"></div>
-    </div>
-</div>
-<div class="inav">
-    <div class="inavc">
-
-        <ul>
-            <li><a href="/" class="tsy">网站首页</a></li>
-            {foreach $menu as $vo}
-            <li><a href="{$vo.url}">{$vo.title}</a></li>
-            {/foreach}
-        </ul>
-
-    </div>
-</div>
-
-<!--新头部的结束-->
-
+{include file="./index/public/header"/}
 <!--ban图片切换开始-->
 <div class="iban">
     <div class="gg" id="gg">
