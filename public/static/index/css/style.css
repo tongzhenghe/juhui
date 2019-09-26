@@ -106,7 +106,7 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .ysnr { width:1000px; height:auto; text-align:center; margin:0px auto;}
 
 /*办公环境*/
-.bghj { width:100%; height:auto; background-color:#edecec;}
+.bghj { width:93%; height:auto; background-color:#edecec;}
 .bghjc { width:1000px; height:auto; margin:0px auto;}
 .bghj_title { width:1000px; height:61px; border-bottom:1px solid #dddddd; }
 .bghj_title ul li { width:250px; height:60px; line-height:60px; text-align:center; font-size:18px; float:left;  }
@@ -302,6 +302,13 @@ a:link:hover, a:visited:hover, a:active:hover {
     overflow: hidden;
     float: left;
 }
+.news-title2 {
+    width: 564px;
+    overflow: hidden;
+    float: right;
+}
+
+
 .ju_title_bg{
     width: 566px;
     height: 56px;
@@ -357,4 +364,15 @@ a:link:hover, a:visited:hover, a:active:hover {
     opacity: 0.8;
     filter: alpha(opacity=80);
 }
+
+.i_zixun_list {
+    width: 560px;
+    position: absolute;
+    top: 56px;
+    left: 30px;
+    overflow: hidden;
+    float: right;
+}
+
+
 /*news-ENd*/
