@@ -382,8 +382,7 @@ a:link:hover, a:visited:hover, a:active:hover {
 .picMarquee-left .bd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
 .picMarquee-left .bd ul li .pic{ text-align:center; }
 .picMarquee-left .bd ul li .pic{ height: 100px;}
-.picMarquee-left .bd ul li .pic img{ width:120px; height:90px; display:block; padding:2px; border:1px solid #ccc; }
-.picMarquee-left .bd ul li .pic a:hover img{ border-color:#999;  }
+.picMarquee-left .bd ul li .pic img{ width:120px; height:90px; display:block; padding:2px;}
 .picMarquee-left .bd ul li .title{ line-height:24px;   }
 .tempWrap{width: 99%!important;}
 /*幻灯片-End*/
