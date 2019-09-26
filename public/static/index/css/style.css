@@ -100,7 +100,7 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .ttlx a:hover { text-decoration:none; background-color:#085928;}
 
 /*广告*/
-.fxgg { width:100%; height:200px; background:url(/static/index/icon/fuxing_30.gif) no-repeat center center; margin:20px auto;}
+.fxgg { width:100%; height:200px; background:url(/static/index/icon/s.png) no-repeat center center; margin:20px auto;}
 
 .yszs { width:100%; height:162px; background:url(/static/index/icon/fuxing_33.gif) no-repeat center center;}
 .ysnr { width:1000px; height:auto; text-align:center; margin:0px auto;}
