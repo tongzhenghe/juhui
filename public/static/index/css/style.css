@@ -385,5 +385,5 @@ a:link:hover, a:visited:hover, a:active:hover {
 .picMarquee-left .bd ul li .pic img{ width:120px; height:90px; display:block; padding:2px; border:1px solid #ccc; }
 .picMarquee-left .bd ul li .pic a:hover img{ border-color:#999;  }
 .picMarquee-left .bd ul li .title{ line-height:24px;   }
-.tempWrap{width: 99%}
+.tempWrap{width: 99%!important;}
 /*幻灯片-End*/
