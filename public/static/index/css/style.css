@@ -153,13 +153,11 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .jlxwm1 strong.bt1 { line-height:45px; font-weight:bold;}
 .dianhua {background: url(/static/index/icon/fuxing_39.gif) no-repeat scroll 15px 14px transparent;color: #666666;line-height: 20px;padding: 10px 0px 0px 60px;}
 .dianhua span {color: #282b33;display: block;font: 18px "Impact";}
-
 /*友情链接*/
 .jdbj { width:100%; height:auto; background-color:#f7f7f7; padding:20px 0px;}
 .syqlj { width:1156px; height:auto; margin:0px auto;}
 .yqljs { width:1000px; height:auto; padding:15px 0px;}
 .yqljs a { color:#333; float:left; margin-left:10px; line-height:30px;}
-
 /*底部代码的开始*/
 .footWrap { width:100%; height:auto; background-color:#333333;}
 .hbfooter { width:1000px; height:auto; margin:0px auto; }
