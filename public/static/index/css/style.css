@@ -365,10 +365,8 @@ a:link:hover, a:visited:hover, a:active:hover {
     filter: alpha(opacity=80);
 }
 
-.i_zixun_list {
-    width: 560px;
-    overflow: hidden;
-    float: right;
-}
+.i_zixun_list {width: 560px;overflow: hidden;float: right;margin: 6px;}
+.tds{background: #e2edff;}
+.tds:hover {background: #0e823b;}
 
 /*news-ENd*/
