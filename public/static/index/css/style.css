@@ -344,7 +344,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     position: relative;
     overflow: hidden;
 }
-#list div.tip:hover {
+#list div.tip {
     height: 40px;
     line-height: 40px;
     text-align: center;
