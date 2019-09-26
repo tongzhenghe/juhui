@@ -313,7 +313,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     width: 135px;
     height: 56px;
     line-height: 56px;
-    background: #1557b1;
+    background: #0e823b;
     color: #fff;
     text-align: center;
     overflow: hidden;
@@ -343,5 +343,18 @@ a:link:hover, a:visited:hover, a:active:hover {
     display: block;
     position: relative;
     overflow: hidden;
+}
+#list div.tip {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    width: 281px;
+    background: #000;
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 /*news-ENd*/
