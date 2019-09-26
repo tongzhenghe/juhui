@@ -34,7 +34,7 @@ h1,h2,h5 { margin:0px; padding:0px;}
 .inav { width:100%; border-top: 1px solid #e3e3e3;height:76px; background-color:#ffffff;}
 .inavc { width:77%; height:100%; margin:0px auto;}
 .inavc ul li { width:161px; height:75px; text-align:center;font-size:18px; line-height:75px; float:left; background: url(/static/index/icon/fuxing_11.gif) no-repeat right center;}
-.inavc ul li a { display:block; color:#FFF;}
+.inavc ul li a { display:block; color:#333;}
 .inavc ul li a:hover { background-color:#abcd04;
     color:#ffffff;text-decoration:none;}
 .inavc ul li a.tsy { background-color:#abcd04; text-decoration:none;}
