@@ -103,7 +103,7 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .fxgg {margin-top: 83px;width:100%; height:200px; background:url(/static/index/icon/s.png) no-repeat center center;}
 
 .yszs { width:100%; height:130px; background:url(/static/index/icon/news.jpg) no-repeat center center;}
-.ysnr { width:1169px; height:auto; text-align:center; margin:0px auto;}
+.ysnr { width:1207px; height:auto; text-align:center; margin:0px auto;}
 
 /*办公环境*/
 .bghj { width:566px; height:auto;float: right;}
@@ -369,5 +369,5 @@ a:link:hover, a:visited:hover, a:active:hover {
 .i_zixun_list li{margin-top: 18.1px;}
 .tds{background: #e2edff;}
 .tds:hover {background: #0e823b; color:#ffffff;}
-.qyfc{width: 566px;float: left; border-right: 1px solid #0e823b;padding-right: 30px;}
+.qyfc{width: 566px;float: left; border-right: 1px solid #0e823b;padding-right: 50px;}
 /*news-ENd*/
