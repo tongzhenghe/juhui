@@ -594,3 +594,48 @@ a:link:hover, a:visited:hover, a:active:hover {
     background-color: #ffeb3b1c;
 }
 /*goods_end*/
+
+/*newsList*/
+.ul_list{
+    width:875px;
+    margin:20px 0;
+}
+.ul_list .news_list{
+    line-height: 40px;
+    font-size: 14px;
+}
+.ul_list .news_list li{
+    border-bottom: 1px dashed #D1D1D1;
+    padding: 20px 0;
+    zoom: 1;
+    _zoom: 1;
+    overflow: hidden;
+}
+.ul_list .news_list li .date{
+    border: 1px solid #05AD05;
+    color: #05AD05;
+    width: 10px;
+    text-align: center;
+    height: 10px;
+}
+.ul_list .news_list li .date p{
+    background: #05AD05;
+    height:60px;
+    width:50px;
+    line-height:30px;
+    color: #fff;
+}
+.ul_list .news_list li .content{
+    width: 800px;
+    color: #959191;
+    line-height: 25px;
+}
+.ul_list .news_list li .content h3 a{
+    font-size: 16px;
+    font-weight: bold;
+    color: #1F4A85;
+}
+.ul_list .news_list li .content .mores a:HOVER{
+    color: #53B115;
+}
+/*newsList_eng*/
