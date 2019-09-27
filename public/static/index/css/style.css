@@ -1073,19 +1073,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     overflow:hidden;
     float:left
 }
-.jingqu_list li {
-    width:800px;
-    height:60px;
-    line-height:20px;
-    text-align:center;
-    margin-top:18px;
-    background:url(../images/btn_out.jpg) left no-repeat;
-    cursor:pointer;
-    color:#fff;
-    list-style:none;
-    overflow:hidden;
-    float:left
-}
+
 .gonglue_tip {
     width:615px;
     padding-top:30px;
@@ -1130,42 +1118,6 @@ a:link:hover, a:visited:hover, a:active:hover {
     display:block;
     overflow:hidden;
     float:left
-}
-.gonglue_tip .t01 a {
-    background:url(../images/t01_out.jpg) no-repeat;
-}
-.gonglue_tip .t01 a:hover {
-    background:url(../images/t01_over.jpg) no-repeat;
-}
-.gonglue_tip .t02 a {
-    background:url(../images/t02_out.jpg) no-repeat;
-}
-.gonglue_tip .t02 a:hover {
-    background:url(../images/t02_over.jpg) no-repeat;
-}
-.gonglue_tip .t03 a {
-    background:url(../images/t03_out.jpg) no-repeat;
-}
-.gonglue_tip .t03 a:hover {
-    background:url(../images/t03_over.jpg) no-repeat;
-}
-.gonglue_tip .t04 a {
-    background:url(../images/t04_out.jpg) no-repeat;
-}
-.gonglue_tip .t04 a:hover {
-    background:url(../images/t04_over.jpg) no-repeat;
-}
-.gonglue_tip .t05 a {
-    background:url(../images/t05_out.jpg) no-repeat;
-}
-.gonglue_tip .t05 a:hover {
-    background:url(../images/t05_over.jpg) no-repeat;
-}
-.gonglue_tip .t06 a {
-    background:url(../images/t06_out.jpg) no-repeat;
-}
-.gonglue_tip .t06 a:hover {
-    background:url(../images/t06_over.jpg) no-repeat;
 }
 .contact_tip {
     width:522px;
@@ -1235,36 +1187,4 @@ a:link:hover, a:visited:hover, a:active:hover {
     overflow:hidden;
     float:left
 }
-
-.contact_tip .c01 a {
-    background:url(../images/c01_out.jpg) no-repeat;
-}
-.contact_tip .c01 a:hover {
-    background:url(../images/c01_over.jpg) no-repeat;
-}
-.contact_tip .c02 a {
-    background:url(../images/c02_out.jpg) no-repeat;
-}
-.contact_tip .c02 a:hover {
-    background:url(../images/c02_over.jpg) no-repeat;
-}
-.contact_tip .c03 a {
-    background:url(../images/c03_out.jpg) no-repeat;
-}
-.contact_tip .c03 a:hover {
-    background:url(../images/c03_over.jpg) no-repeat;
-}
-.contact_tip .c04 a {
-    background:url(../images/c04_out.jpg) no-repeat;
-}
-.contact_tip .c04 a:hover {
-    background:url(../images/c04_over.jpg) no-repeat;
-}
-.contact_tip .c05 a {
-    background:url(../images/c05_out.jpg) no-repeat;
-}
-.contact_tip .c05 a:hover {
-    background:url(../images/c05_over.jpg) no-repeat;
-}
-
 /*contact_end*/
