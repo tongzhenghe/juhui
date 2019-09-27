@@ -3,14 +3,11 @@ namespace app\index\controller;
 
 use think\Db;
 
-class Index
+class Index extends Common
 {
     public function index()
     {
-        //menu
-        $where= ['is_del' => 1, 'status' => 1, 'is_m' => 2];
-        $menu = Db::name('umenu')->where($where)->order('sort asc')->select();
-        return view('', ['menu'=> $menu]);
+        return view();
     }
 
 
