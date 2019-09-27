@@ -18,9 +18,7 @@ class Common extends  Controller
     {
         $where= ['is_del' => 1, 'status' => 1, 'is_m' => 2];
         $menu = Db::name('umenu')->where($where)->order('sort asc')->select();
-        wl_debug($menu);
         return view('', ['menu'=> $menu]);
-
     }
 
 
