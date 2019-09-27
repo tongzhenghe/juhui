@@ -1,9 +1,9 @@
 <?php
 namespace app\index\controller;
 
-use think\Db;
+use app\index\controller\Common as IndexCommonController;
 
-class Index extends Common
+class Index extends IndexCommonController
 {
     public function index()
     {
