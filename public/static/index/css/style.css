@@ -1126,22 +1126,23 @@ a:link:hover, a:visited:hover, a:active:hover {
     overflow:hidden;
     margin:0 auto
 }
-
 .contactUs {
-    width:1000px;
-    height:291px;
-    padding-top:30px;
-    overflow:hidden;
-    margin:0 auto;
-    background-image:url("/static/index/icon/call.jpg");
-    background-repeat:no-repeat;
+    width: 1204px;
+    padding-top: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url(/static/index/icon/call.jpg);
+    background-repeat: no-repeat;
+    background-size: 712px;
+    background-position-x: 0;
+    background-position-y: 20px;
 }
 .contactUs_c{
     width:360px;
     height:300px;
     float:right;
     margin-right:20px;
-    margin-top:-18px;
+    margin-top:-30px;
 }
 .contactUs_c ul{
     list-style-type:none;
@@ -1157,35 +1158,40 @@ a:link:hover, a:visited:hover, a:active:hover {
     text-align:center;
     list-style:none;
     line-height:130px;
-    color:#fff;
-    display:block;
-    overflow:hidden;
-    float:left
-}
-.contact_tip li a {
-    text-decoration:none;
-    font-size:16px;
-    width:80px;
-    height:80px;
-    text-align:center;
-    list-style:none;
-    line-height:130px;
     color:#333;
     display:block;
     overflow:hidden;
     float:left
 }
+.contact_tip li a {
+    text-decoration: none;
+    font-size: 16px;
+    width: 80px;
+    height: 43px;
+    text-align: center;
+    list-style: none;
+    line-height: 42.5px;
+    color: #333;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+.contact_tip li a {
+    text-decoration: none;
+    font-size: 16px;
+    width: 80px;
+    height: 43px;
+    text-align: center;
+    list-style: none;
+    line-height: 42.5px;
+    color: #333;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+
 .contact_tip li a:hover {
-    text-decoration:none;
-    width:80px;
-    font-size:16px;
-    height:80px;
-    text-align:center;
-    list-style:none;
-    line-height:130px;
-    color:#fff;
-    display:block;
-    overflow:hidden;
-    float:left
+    color: #84c255;
+    line-height: 50.5px;
 }
 /*contact_end*/
