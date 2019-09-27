@@ -20,8 +20,9 @@ use app\admin\model\Recruit;
 use app\admin\model\Umenu;
 use app\extra\Upload;
 use think\Db;
+use app\admin\controller\Common as CommonController;
 
-class Juhuiadmin extends \app\admin\controller\Common
+class Juhuiadmin extends CommonController
 {
     public  function index()
     {
