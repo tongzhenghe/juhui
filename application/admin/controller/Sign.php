@@ -22,7 +22,6 @@ class Sign extends  Controller
         if (request()->isAjax()) {
 
             $post  = request()->post();
-            jsondebug($post);
             if (empty( $post['username'] )) exit(iJson('', 400,  false, '用户名不能为空！'));
 
             if (empty( $post['password'] )) exit(iJson('', 400,  false, '密码不能为空！'));
@@ -32,7 +31,7 @@ class Sign extends  Controller
             //if(!captcha_check($captcha)) exit(iJson('', 400,  false, '验证码输入错误'));
 
             $result =SignModel::check_login( $post );
-
+jsondebug($result);
             if (true === $result ) {
 
                 exit(iJson( '/juhuiadmin.php#/', true,  '欢迎'. $post['username']. '回来!'));
