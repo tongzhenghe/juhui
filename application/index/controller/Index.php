@@ -19,6 +19,12 @@ class Index extends IndexCommonController
         return view();
     }
 
+    public  function newslist()
+    {
+        return view();
+    }
+
+
 
 
 }
