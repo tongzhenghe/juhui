@@ -155,7 +155,7 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .dianhua span {color: #282b33;display: block;font: 18px "Impact";}
 /*友情链接*/
 .jdbj { width:100%; height:auto; background-color:#f7f7f7; padding:20px 0px;}
-.syqlj { width:1156px; height:auto; margin:0px auto;}
+.syqlj { width:1152px; height:auto; margin:0px auto;}
 .yqljs { width:1000px; height:auto; padding:15px 0px;}
 .yqljs a { color:#333; float:left; margin-left:10px; line-height:30px;}
 /*底部代码的开始*/
@@ -369,8 +369,7 @@ a:link:hover, a:visited:hover, a:active:hover {
 /*news-ENd*/
 
 
-/*幻灯片*/
-/* 本例子css */
+/*友情链接*/
 .picMarquee-left{ overflow:hidden; position:relative;}
 .picMarquee-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  }
 .picMarquee-left .hd .prev,.picMarquee-left .hd .next{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;}
@@ -385,4 +384,5 @@ a:link:hover, a:visited:hover, a:active:hover {
 .picMarquee-left .bd ul li .pic img{ width:120px; height:90px; display:block; padding:2px;}
 .picMarquee-left .bd ul li .title{ line-height:24px;   }
 .tempWrap{width: 99%!important;}
-/*幻灯片-End*/
+.news-title-yq{width:1181px;overflow:hidden;}
+/*友情链接-End*/
