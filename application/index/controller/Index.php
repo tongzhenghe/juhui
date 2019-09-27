@@ -34,7 +34,7 @@ class Index extends IndexCommonController
     {
         return view();
     }
-    public  function msg()
+    public  function wmsg()
     {
         return view();
     }
