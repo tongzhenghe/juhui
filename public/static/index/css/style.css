@@ -503,7 +503,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     border-bottom: 1px solid #fff;
 }
 .sub_nav .sub_nav_ul li.active,.sub_nav .sub_nav_ul li:hover{
-    background: url(../images/sub_nav_bg.png) no-repeat;
+    background: #333;
     margin-left:-40px;
     margin-right: -50px;
     line-height: 55px;
