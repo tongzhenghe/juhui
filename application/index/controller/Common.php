@@ -13,6 +13,8 @@ use think\Db;
 
 class Common extends  Controller
 {
+
+    echo 434;exit;
     public  function  _initialize()
     {
         $where= ['is_del' => 1, 'status' => 1, 'is_m' => 2];
