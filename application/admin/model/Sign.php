@@ -24,7 +24,7 @@ class Sign extends SystemAdmin
         if(!is_dir('./tmp/'))mkdir ('./tmp/', 0700); session_save_path('./tmp/');
         $second  = Session::get('second');
 
-        if ( (int)$second  > 5 ) {
+        if ( (int)$second  > 58 ) {
 
             $second_time = Session::get('second_time');
 
