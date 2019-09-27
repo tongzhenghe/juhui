@@ -16,11 +16,10 @@ class Common extends  Controller
 
     public  function  _initialize()
     {
-        echo 434;exit;
-
         $where= ['is_del' => 1, 'status' => 1, 'is_m' => 2];
         $menu = Db::name('umenu')->where($where)->order('sort asc')->select();
         return view('', ['menu'=> $menu]);
+
     }
 
 
