@@ -47,12 +47,11 @@
             data: {username: $("input[name='username']").val(), password: $("input[name='password']").val()},
             dataType: "json",
             success: function(data) {
-                console.log(data)
                 if ( data.status )  {
                     window.location.href = (data.url);
                 }
-                return false;
-            }
+               alert(data.msg);
+            },
         });
     });
 </script>
