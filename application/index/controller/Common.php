@@ -14,9 +14,10 @@ use think\Db;
 class Common extends  Controller
 {
 
-    echo 434;exit;
     public  function  _initialize()
     {
+        echo 434;exit;
+
         $where= ['is_del' => 1, 'status' => 1, 'is_m' => 2];
         $menu = Db::name('umenu')->where($where)->order('sort asc')->select();
         return view('', ['menu'=> $menu]);
