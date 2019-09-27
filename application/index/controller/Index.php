@@ -29,7 +29,12 @@ class Index extends IndexCommonController
     {
         return view();
     }
+
     public  function recruit()
+    {
+        return view();
+    }
+    public  function msg()
     {
         return view();
     }
