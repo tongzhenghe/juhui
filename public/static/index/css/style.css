@@ -171,7 +171,7 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
 .hbtmleft strong { color:#016832; font-size:18px; }
 .hbtmright { width:88px; height:auto; float:right; margin-right:20px; text-align:center; line-height:30px; color:#FFF; font-size:13px;}
 /*关于我们*/
-.gywmban { width:100%; height:200px; background:url(/static/index/icon/baijing.png) no-repeat center center;}
+.gywmban { width:100%; height:379px; background:url(/static/index/icon/baijing.png) no-repeat center center;}
 .cpzxban { width:100%; height:200px; background:url(/static/index/icon/baijing.png) no-repeat center center;}
 .newsban { width:100%; height:200px; background:url(/static/index/icon/baijing.png) no-repeat center center;}
 .lxwmban { width:100%; height:200px; background:url(/static/index/icon/baijing.png) no-repeat center center;}
