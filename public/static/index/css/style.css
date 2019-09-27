@@ -306,7 +306,7 @@ a:link:hover, a:visited:hover, a:active:hover {
 
 
 .ju_title_bg{
-    width: 566px;
+    width: 100%;
     height: 56px;
     background: #eff4fa;
     overflow: hidden;
