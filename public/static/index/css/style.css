@@ -390,3 +390,193 @@ a:link:hover, a:visited:hover, a:active:hover {
 /*关于我m*/
 .news-title-ab{width: 1000px;overflow:hidden;}
 /*关于我m-ENd*/
+
+/*goods*/
+.ny_web_img{
+    width:100%;
+    height:379px;
+    background-image:url(../images/baijing.jpg);
+}
+.news_list_title{
+    height:51px;
+    padding-top: 25px;
+    border-bottom: 1px solid #F4F3F3;
+}
+
+.news_list_title_content{
+    width: 1170px;
+    height:50px;
+    margin: auto;
+    overflow: hidden;
+}
+.news_list_title_content .news_list_title_left{
+    width: 205px;
+    margin: 0 20px;
+}
+
+.news_list_title_right{
+    width:875px;
+    margin-top:12px;
+}
+.news_list_title_right .title{
+    height:30px;
+}
+.news_list_title_right .title div{
+    float:left;
+    background: #E97708;
+    color:#FFF;
+    width:18px;
+    height: 18px;
+    text-align:center;
+    line-height: 18px;
+    margin-top:5px;
+    margin-right: 20px;
+}
+.news_list_title_right .title h1{
+    color:#653F2A;
+    float: left;
+}
+
+.news_list_title_right .title font{
+    display:block;
+    float:left;
+    margin-left: 10px;
+    margin-top:8px;
+    color:653F2A;
+    font-size:16px;
+}
+
+.news_list_title_right ul{
+    height:30px;
+}
+.news_list_title_right ul li{
+    float:left;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.news_list_title_right ul li:first-child{
+    color: #A8A0A0;
+}
+.news_list_title_right ul li a{
+    color: #737171;
+}
+
+.sub_content{
+    width: 1170px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/*左侧导航*/
+.sub_nav{
+    width: 205px;
+    margin: 0 20px;
+    position: relative;
+    top: -1;
+    background: #FFF;
+}
+.sub_nav .sub_nav_ul{
+    padding: 0 30px;
+    margin-bottom: 20px;
+    border:1px solid #EBEBEB;
+    border-top: none;
+    list-style-type: none;
+}
+.sub_nav .sub_nav_ul li{
+    line-height:55px;
+    border-bottom: 1px solid #F0F0F0;
+    padding-left:20px;
+}
+.sub_nav .sub_nav_ul li:last-child{
+    border-bottom: 1px solid #fff;
+}
+.sub_nav .sub_nav_ul li.active,.sub_nav .sub_nav_ul li:hover{
+    background: url(../images/sub_nav_bg.png) no-repeat;
+    margin-left:-40px;
+    margin-right: -50px;
+    line-height: 55px;
+    padding-left:60px;
+    border: none;
+}
+.sub_nav .sub_nav_ul li a{
+    font-size: 18px;
+    color:#747474;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sub_nav .sub_nav_ul li a span{
+    color: #DEDEDE;
+}
+.sub_nav .sub_nav_ul li.active a,.sub_nav .sub_nav_ul li:hover a{
+    color: #fff;
+}
+
+.sub_nav .sub_nav_ul li ul.sub_nav_ul2{
+    display: none;
+}
+.sub_nav .sub_nav_ul li ul.sub_nav_ul2 li{
+    border: none;
+    padding-left: 15px;
+}
+.sub_nav .sub_nav_ul li ul.sub_nav_ul2 li a{
+    font-size: 16px;
+}
+.sub_nav .sub_nav_ul2 li:hover{
+    background: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 55px;
+    padding-left: 30px;
+}
+.sub_nav .sub_nav_ul li:hover ul li a{
+    color: #747474;
+}
+.sub_nav .sub_nav_ul li:hover ul li:hover a{
+    color: #E97708;
+}
+
+.sub_nav .sub_nav_ul li ul.sub_nav_ul3{
+    display: none;
+}
+.sub_nav .sub_nav_ul li ul.sub_nav_ul3 li{
+    border: none;
+    padding-left: 20px;
+}
+.sub_nav .sub_nav_ul li ul.sub_nav_ul3 li a{
+    font-size: 14px;
+}
+.sub_nav .sub_nav_ul li:hover ul li:hover ul.sub_nav_ul3 li a,.sub_nav .sub_nav_ul li.active ul li a{
+    color: #747474;
+}
+.sub_nav .sub_nav_ul li:hover ul li:hover ul.sub_nav_ul3 li:hover a{
+    color: #E97708;
+}
+
+.nav_connaction{
+    padding:8px;
+    font-size:16px;
+    line-height: 30px;
+    border:1px solid #EBEBEB;
+}
+
+.ewm span{
+    line-height: 18px;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-top: 18px;
+}
+.nav_connaction table{
+    color:#999999;
+    font-size: 12px;
+}
+.nav_connaction table img{
+    height: 20px;
+}
+.nav_connaction table tr td{
+    vertical-align: top;
+    line-height: 22px;
+    padding: 5px 0;
+}
+
+/*goods_end*/
