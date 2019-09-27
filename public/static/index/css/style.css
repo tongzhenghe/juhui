@@ -590,5 +590,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     line-height: 22px;
     padding: 5px 0;
 }
-
+.ul_list ul li:hover {
+    background-color: #ffeb3b1c;
+}
 /*goods_end*/
