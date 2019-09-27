@@ -647,6 +647,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     min-width:1180px;
     padding-top:0px;
     overflow:hidden;
+    height: 589px;
     margin:0 auto
 }
 .ny_content {
@@ -1128,12 +1129,15 @@ a:link:hover, a:visited:hover, a:active:hover {
 
 .contactUs {
     width:1000px;
-    height:291px;
     padding-top:30px;
     overflow:hidden;
     margin:0 auto;
     background-image:url("/static/index/icon/call.jpg");
     background-repeat:no-repeat;
+    height: 413px;
+    background-size: 409px;
+    background-position-x: 197px;
+    background-position-y: 20px;
 }
 .contactUs_c{
     width:360px;
@@ -1156,7 +1160,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     text-align:center;
     list-style:none;
     line-height:130px;
-    color:#fff;
+    color:#333;
     display:block;
     overflow:hidden;
     float:left
@@ -1169,7 +1173,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     text-align:center;
     list-style:none;
     line-height:130px;
-    color:#fff;
+    color:#333;
     display:block;
     overflow:hidden;
     float:left
@@ -1182,7 +1186,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     text-align:center;
     list-style:none;
     line-height:130px;
-    color:#fff;
+    color:#84c255;
     display:block;
     overflow:hidden;
     float:left
