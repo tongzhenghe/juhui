@@ -25,6 +25,12 @@ class Index extends IndexCommonController
     }
 
 
+    public  function contact()
+    {
+        return view();
+    }
+
+
 
 
 }
