@@ -392,6 +392,16 @@ a:link:hover, a:visited:hover, a:active:hover {
 /*关于我m-ENd*/
 
 /*goods*/
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear:both;
+}
+
 .ny_web_img{
     width:100%;
     height:379px;
