@@ -392,6 +392,8 @@ a:link:hover, a:visited:hover, a:active:hover {
 /*关于我m-ENd*/
 
 /*goods*/
+
+.ul_list{width: 875px;margin: 20px 0;}
 .left{
     float: left;
 }
