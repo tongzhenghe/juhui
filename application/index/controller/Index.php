@@ -14,7 +14,7 @@ class Index
     }
 
 
-    public  function test()
+    public  function about()
     {
         return view();
     }
