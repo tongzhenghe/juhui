@@ -771,14 +771,14 @@ a:link:hover, a:visited:hover, a:active:hover {
     overflow:hidden;
     margin:0 auto
 }
-.left {
-    width:817px;
-    background:#fff;
-    padding-right:34px;
-    padding-bottom:50px;
-    overflow:hidden;
-    float:left
-}
+/*.left {*/
+    /*width:817px;*/
+    /*background:#fff;*/
+    /*padding-right:34px;*/
+    /*padding-bottom:50px;*/
+    /*overflow:hidden;*/
+    /*float:left*/
+/*}*/
 .left_map {
     width:790px;
     padding:20px 0px 0px 20px;
@@ -855,13 +855,13 @@ a:link:hover, a:visited:hover, a:active:hover {
     overflow:hidden;
     float:right
 }
-.right {
-    width:327px;
-    overflow:hidden;
-    padding-right:1px;
-    overflow:hidden;
-    float:right
-}
+/*.right {*/
+    /*width:327px;*/
+    /*overflow:hidden;*/
+    /*padding-right:1px;*/
+    /*overflow:hidden;*/
+    /*float:right*/
+/*}*/
 .right_pic_nav {
     width:326px;
     overflow:hidden;
