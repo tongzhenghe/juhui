@@ -1128,15 +1128,14 @@ a:link:hover, a:visited:hover, a:active:hover {
 }
 
 .contactUs {
-    width: 1000px;
+    width: 1204px;
     padding-top: 30px;
     overflow: hidden;
     margin: 0 auto;
     background-image: url(/static/index/icon/call.jpg);
     background-repeat: no-repeat;
-    height: 413px;
-    background-size: 226px;
-    background-position-x: 259px;
+    background-size: 712px;
+    background-position-x: 0;
     background-position-y: 20px;
 }
 .contactUs_c{
