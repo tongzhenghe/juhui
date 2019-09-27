@@ -1195,5 +1195,6 @@ a:link:hover, a:visited:hover, a:active:hover {
 
 .contact_tip li a:hover {
     color: #84c255;
+    line-height: 50.5px;
 }
 /*contact_end*/
