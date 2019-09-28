@@ -241,12 +241,12 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
     width: 220px;
     height: 200px;
 }
-.tjcp_nr {
-    width: 450px;
-    height: 120px;
-    margin-top: 20px;
-    margin-left: 25px;
-}
+/*.tjcp_nr {*/
+    /*width: 450px;*/
+    /*height: 120px;*/
+    /*margin-top: 20px;*/
+    /*margin-left: 25px;*/
+/*}*/
 .tjcp_nr li {
     line-height: 40px;
 }
@@ -267,7 +267,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     width: 420px;
     height: 120px;
     margin-top: 20px;
-    margin-left: 25px;
+    /*margin-left: 25px;*/
 }
 .ProductShow_r_f li {
     line-height: 40px;
