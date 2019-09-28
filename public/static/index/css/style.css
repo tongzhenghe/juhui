@@ -1268,5 +1268,16 @@ a:link:hover, a:visited:hover, a:active:hover {
     border-top:2px solid #DEDEDE;
 }
 
-
+.yydg{
+    width: 175px;
+    height: 44px;
+    text-align: center;
+    line-height: 41px;
+    background: #019944;
+    font-size: 19px;
+    color: white;
+    font-family: monospace;
+    margin: auto;
+    font-weight: 800;
+}
 /*goodsinfo-End*/
