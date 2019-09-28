@@ -1204,5 +1204,5 @@ a:link:hover, a:visited:hover, a:active:hover {
 #CONTENT {outline:none;border:solid 1px #bebebe;border-radius:4px;}
 #CONTENT:hover{border: solid 1px #727272;}
 #title-s{background-color: #333333b0;text-align: center;font-size: 18px;color: gainsboro;}
-#in-sub{background-color: #e8e8e8;}
+#in-sub:hover{background-color: #e8e8e8;}
 /*msg-end*/
