@@ -37,7 +37,8 @@ h1,h2,h5 { margin:0px; padding:0px;}
 .inavc ul li a { display:block; color:#333;}
 .inavc ul li a:hover { background-color:#019944;
     color:#ffffff;text-decoration:none;}
-.inavc ul li a.tsy { background-color:#019944; text-decoration:none;}
+.inavc ul li a.tsy {
+    color: #fffcf8;background-color:#019944; text-decoration:none;}
 /*ban部分*/
 .iban { width:100%; height:auto;}
 .gg{height:610px;position:relative;z-index:1;overflow:hidden;margin:0 auto;background:#d3d3d3 repeat-x;}
