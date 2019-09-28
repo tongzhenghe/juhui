@@ -16,7 +16,6 @@ class Index extends IndexCommonController
         //news
         $news = Db::name('news')->where($where)->order('sort asc')->limit(4)->select();
         //友情| 资质
-        wl_debug($us);
         return view('',
             [
             'banner' => $banner
