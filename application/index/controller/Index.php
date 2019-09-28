@@ -43,6 +43,10 @@ class Index extends IndexCommonController
     {
         return view();
     }
+    public  function recruitinfo()
+    {
+        return view();
+    }
 
     public  function wmsg()
     {
