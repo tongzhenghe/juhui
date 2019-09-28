@@ -14,7 +14,11 @@ class Index extends IndexCommonController
     {
         return view();
     }
-  public  function goodslist()
+    public  function goodslist()
+    {
+        return view();
+    }
+    public  function goodsinfo()
     {
         return view();
     }
