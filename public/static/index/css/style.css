@@ -250,11 +250,11 @@ a.gd { float:right; margin-right:10px; color:#333; font-size:12px; line-height:4
     line-height: 40px;
 }
 a:link, a:visited, a:active {
-    color: #fffcf8;
+    color: #666;
     text-decoration: none;
 }
 a:link:hover, a:visited:hover, a:active:hover {
-    color: #abcd04;
+    color: #186d1a;
     text-decoration: none;
 }
 .tjcp_nr li span {
