@@ -24,6 +24,11 @@ class Index extends IndexCommonController
         return view();
     }
 
+    public  function newsinfo()
+    {
+        return view();
+    }
+
 
     public  function contact()
     {
@@ -34,6 +39,7 @@ class Index extends IndexCommonController
     {
         return view();
     }
+
     public  function wmsg()
     {
         return view();
