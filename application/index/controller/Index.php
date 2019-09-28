@@ -13,9 +13,10 @@ class Index extends IndexCommonController
         $banner = Db::name('banner')->where($where)->select();
         //intro
         $us = Db::name('us')->find();
-        wl_debug($us);
         //news
         $news = Db::name('news')->where($where)->order('sort asc')->limit(4)->select();
+        wl_debug($news);
+
         //友情| 资质
         return view('',
             [
