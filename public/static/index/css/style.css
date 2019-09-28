@@ -1,5 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
+::selection {
+    background: #53B115;
+    color: #ffffff;
+}
 body { font-family:"微软雅黑"; font-size:14px; color:#333;line-height: 24px;}
 * { margin:0px; padding:0px; list-style:none;}
 .clear { clear:both;}
