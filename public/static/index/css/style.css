@@ -1196,3 +1196,12 @@ a:link:hover, a:visited:hover, a:active:hover {
     line-height: 50.5px;
 }
 /*contact_end*/
+
+
+/*msg*/
+.jingqu_list input {
+    height: 30px;
+    width: 200px;
+    margin: 0 auto;
+}
+/*msg-end*/
