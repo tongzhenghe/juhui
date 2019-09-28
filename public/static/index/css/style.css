@@ -1205,4 +1205,9 @@ a:link:hover, a:visited:hover, a:active:hover {
     width: 200px;
     margin: 0 auto;
 }
+.jingqu_list input:hover {
+    border: solid 1px #727272;
+}
+
+#CONTENT:hover{border: solid 1px #727272;}
 /*msg-end*/
