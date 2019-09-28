@@ -52,7 +52,7 @@ h1,h2,h5 { margin:0px; padding:0px;}
 .ggb{position:absolute;width:100%;left:0;bottom:0;height:30px;z-index:4;/*background-color:#32342e;background-repeat:repeat-x;*/background-position:50% -40px;}
 .ggBtns{width:132px;height:30px;margin:0 auto;  }
 .ggBtns a{float:left; margin-left:8px; display:block;width:25px;height:25px;text-align:center;color:#FFF;background-color:#666; position:relative;top:-10px;outline:none;cursor:pointer;text-decoration:none; font:14px Arial, Helvetica, sans-serif, "新宋体"; line-height:25px; -moz-border-radius: 15px;      /* Gecko browsers */ -webkit-border-radius: 15px;   /* Webkit browsers */ border-radius:15px; }
-.ggBtns a em{display:block;width:25px;height:25px;margin:0 auto;overflow:hidden;font-style:normal;}
+.ggBtns a em{color:#ffffff;display:block;width:25px;height:25px;margin:0 auto;overflow:hidden;font-style:normal;}
 .ggBtns a:hover{color:#fff;}
 .ggBtns a:focus{outline:none;}
 .ggBtns a.current{color:#fff;/*background:url(/static/index/icon/gg.png) no-repeat;*/ background-color:#0e823b;}
