@@ -882,13 +882,15 @@ a:link:hover, a:visited:hover, a:active:hover {
     margin:0 auto
 }
 .text_title {
-    width:850px;
-    height:60px;
-    line-height:60px;
-    background:#abcd04;
-    text-align:center;
-    overflow:hidden;
-    margin:0 auto
+    width: 850px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 21px;
+    background: #8e96671a;
+    margin: 0 auto;
+
 }
 .text_time {
     width:850px;
