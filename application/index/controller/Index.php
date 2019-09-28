@@ -2,12 +2,29 @@
 namespace app\index\controller;
 
 use app\index\controller\Common as IndexCommonController;
+use think\Db;
 
 class Index extends IndexCommonController
 {
     public function index()
     {
-        return view();
+        //banner
+        $where = ['	is_del' => 1, 'status' => 1];
+        $banner = Db::name('banner')->where($where)->select();
+        wl_debug($banner);
+        //intro
+        $us = Db::name('us')->find();
+        //news
+        $news = Db::name('news')->where($where)->order('sort asc')->limit(4)->select();
+        //友情| 资质
+        return view('',
+            [
+            'banner' => $banner
+            ,'us' => $us
+            ,'news' => $news
+            ,
+            ]
+        );
     }
 
     public  function about()
