@@ -737,7 +737,6 @@ class Juhuiadmin extends CommonController
     public  function cdnUploads()
     {
         $img = $_FILES['file'];
-        jsondebug($img);
         $fileError = $img['error'];
         $fileType = $img['type'];
         if ($fileError == 0) {
