@@ -19,6 +19,7 @@
                 <th lay-data="{field:'id', width:80, sort:true}">id</th>
                 <th lay-data="{field:'title', width:100}">标题</th>
                 <th lay-data="{field:'pic', width:200}">文件</th>
+                <th lay-data="{field:'pic_url', width:500}">文件链接</th>
                 <th lay-data="{field:'操作', width:200}">操作</th>
               </tr>
               </thead>
@@ -31,7 +32,7 @@
                 <td><img src="{$vo.pic}" onclick="previewImg(this);" width="50"></td>
                 <td align="left">
                   <span id="copy{$vo.id}">{$vo.pic_url}</span>
-                  <button data-id="{$vo.id}" class="layui-btn layui-btn-xs  layui-btn-success copy">复制</button>
+                  <button lay-data="{$vo.id}" class="layui-btn layui-btn-xs  layui-btn-success copy">复制</button>
                 </td>
                 <td>
                   <a href="javascript:;" data-ids="112" data-url="{:url('index/fileManage')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a>
