@@ -74,7 +74,7 @@
     }
     //复制
     layui.jquery(function () {
-        layui.jquery(".copy").on("click", function () {
+        layui.jquery(".copy").click(function(){
             console.log(1)
             var data_id =  $(this).attr("lay-data");
             alert(data_id)
@@ -88,7 +88,7 @@
             var clipboard = new Clipboard('button', {
                 // 通过target选择需要被复制的对象
                 target: function() {
-                    return document.querySelector('#copy'+data_id); //复制标签文本
+                    return document.querySelector('.copy'+data_id); //复制标签文本
                     // return document.querySelector('input'); //复制文本框的值
                 }
             });
