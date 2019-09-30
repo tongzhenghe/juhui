@@ -777,7 +777,7 @@ class Juhuiadmin extends CommonController
         $img = $_FILES['file'];
         $fileError = $img['error'];
         $fileType = $img['type'];
-        jsondebug($fileType);
+
         if ($fileError == 0) {
             //判断文件类型
             $file_type = ['image/jpeg', 'image/png', 'image/gif'];
