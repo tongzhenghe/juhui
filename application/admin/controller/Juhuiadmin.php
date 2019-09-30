@@ -739,7 +739,9 @@ class Juhuiadmin extends CommonController
     public  function  filemanage()
     {
         $files = Db::name('filem')->select();
-        wl_debug($files);
+        foreach ($files as &$v) {
+            $v['pic_url'] = $v['pic'];
+        }
         return view('', ['files' => $files]);
     }
 
