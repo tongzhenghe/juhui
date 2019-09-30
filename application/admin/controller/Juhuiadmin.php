@@ -765,7 +765,6 @@ class Juhuiadmin extends CommonController
         if (!empty($param['id'])) {
             $dataOne = Db::name('filem')->where('id', intval($param['id']))->find();
             wl_debug($dataOne);
-            $dataOne['pic_url'] = $dataOne['pic'];
         }
         wl_debug($dataOne);
         return view('', ['dataOne' => $dataOne]);
