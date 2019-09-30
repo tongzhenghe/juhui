@@ -30,8 +30,13 @@
                 <td>{$vo.id}</td>
                 <td>{$vo.title}</td>
                 <td><img src="{$vo.pic}" onclick="previewImg(this);" width="50"></td>
-                <td><span id="Copy">{$vo.pic_url}</span><span class="Copy" onclick="copytext('{$vo.id}')" >复制</span></td>
-                <td><a href="javascript:;" data-ids="112" data-url="{:url('index/fileManage')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a></td>
+                <td align="left">
+                  <span id="copy{$vo.id}">  {$vo.merchant_tel}</span>
+                  <button data-id="{$vo.id}" class="layui-btn layui-btn-xs  layui-btn-success copy">复制</button>
+                </td>
+                <td>
+                  <a href="javascript:;" data-ids="112" data-url="{:url('index/fileManage')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a>
+                </td>
               </tr>
               {/foreach}
               {/if}
@@ -43,39 +48,4 @@
     </div>
   </div>
 </div>
-
-
-<script>
-
-  function copytext(id) {
-      layui.use('layer', function() {
-          var layer = layui.layer;
-          layer.msg('复制成功');
-      });
-
-      //通过function复制
-      var clipboard = new Clipboard('button', {
-          // 通过target选择需要被复制的对象
-          target: function() {
-              return document.querySelector('#copy'+data_id); //复制标签文本
-              // return document.querySelector('input'); //复制文本框的值
-          }
-      });
-
-      clipboard.on('success', function(e) {
-          //提示：这里是个坑,需要手动销毁当前的clipboard,否则会触发两次事件
-          clipboard.destroy();
-      });
-
-      clipboard.on('error', function(e) {
-          alert('x')
-          //执行失败后需要做的事...
-          console.log(e);
-          clipboard.destroy();
-      });
-  }
-</script>
-
-
-
 {include file="./juhuiadmin/include/layui_init"/}
