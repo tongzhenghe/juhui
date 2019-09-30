@@ -780,8 +780,14 @@ class Juhuiadmin extends CommonController
         if ($fileError == 0) {
             //判断文件类型
             $file_type = ['image/jpeg', 'image/png'];
-            if (!in_array($fileType, $file_type))
-                exit(Common::json(200, '文件上传失败'));
+            if (!in_array($fileType, $file_type)) {
+                $arr   = [
+                    'code' => 400,
+                    'message'=>'文件上传失败',
+                ];
+                exit(json_encode($arr));
+            }
+
         Upload::image($img);
 
         }
