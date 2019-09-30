@@ -739,6 +739,7 @@ class Juhuiadmin extends CommonController
     public  function  filemanage()
     {
         $files = Db::name('filem')->select();
+        wl_debug($files);
         return view('', ['files' => $files]);
     }
 
@@ -764,9 +765,7 @@ class Juhuiadmin extends CommonController
         $dataOne = null;
         if (!empty($param['id'])) {
             $dataOne = Db::name('filem')->where('id', intval($param['id']))->find();
-            wl_debug($dataOne);
         }
-        wl_debug($dataOne);
         return view('', ['dataOne' => $dataOne]);
 
     }
