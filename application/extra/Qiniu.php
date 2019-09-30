@@ -59,8 +59,6 @@ class Upload
                     'src' => $conf['domain'].$filename
                 ],
             ];
-            jsondebug($arr);
-
             exit(json_encode($arr));
 
         }
