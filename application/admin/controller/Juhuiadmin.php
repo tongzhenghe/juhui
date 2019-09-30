@@ -11,6 +11,7 @@ namespace app\admin\controller;
 use app\admin\model\Article;
 use app\admin\model\Banner;
 use app\admin\model\Common;
+use app\admin\model\Filem;
 use app\admin\model\Friendly;
 use app\admin\model\Goods;
 use app\admin\model\Goodscate;
@@ -745,13 +746,29 @@ class Juhuiadmin extends CommonController
         $param = request()->param();
 
         if (request()->isAjax()) {
+            $fileModel = new Filem;
 
+            $data = [
+                'pic' => trim($param['Mobile_icon'])
+                ,'title' => trim($param['title'])
+            ];
 
-            jsondebug($param);
+            jsondebug($data);
 
+            $r = Common::dataExecute($fileModel, $data, $param);
+
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
         }
 
-        return view();
+        $dataOne = null;
+        if (!empty($param['id'])) {
+            $dataOne = Db::name('filem')->where('id', intval($param['id']))->find();
+        }
+
+        return view('', ['dataOne' => $dataOne]);
+
     }
 
     public  function cdnUploads()
