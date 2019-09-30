@@ -2,4 +2,4 @@
 .title-tips{position: absolute; text-align: center;top: 0;left: 0; z-index: 1;  width: 100%; background: rgba(0,0,0,.5);line-height: 23px;}
 .title-tips i {color:red;}
 .title-tips2, .title-tips2-1{position: absolute;top: 79px; left: 0; z-index: 1;  width: 100%;  text-align: center; background: #008b7e8c;line-height: 23px; display: none}
-.copy {background: #FF5722;float: right;color: #ffffff;border-radius: 2px;font-size: 10px;padding: 3px;line-height: 17px;margin-top: 3px;}
+.copy {background: #FF5722;float: right;color: #ffffff;border-radius: 2px;font-size: 10px;padding: 3px;line-height: 17px;margin-top: 3px;cursor:pointer;}
