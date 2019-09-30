@@ -43,8 +43,7 @@
 
 
     //复制
-    console.log(layui.jquery(".copy"))
-    layui.jquery(".copy").click(function(){
+        form.on('submit(copy)', function(data) {
         console.log(1);
         var data_id = $(this).attr("lay-data");
         alert(data_id);
