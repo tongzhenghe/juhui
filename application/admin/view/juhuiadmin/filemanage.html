@@ -30,7 +30,7 @@
                 <td>{$vo.id}</td>
                 <td>{$vo.title}</td>
                 <td><img src="{$vo.pic}" onclick="previewImg(this);" width="50"></td>
-                <td>{$vo.pic_url}<span class="copy" onclick="copytext('{$vo.pic}')" >复制</span></td>
+                <td><span id="copy">{$vo.pic_url}</span><span class="copy" onclick="copytext('{$vo.id}')" >复制</span></td>
                 <td>
                   <a href="javascript:;" data-ids="112" data-url="{:url('index/fileManage')}" id="delMenu"><i  class="layui-icon" title="删除数据">&#xe640;</i></a>
                 </td>
