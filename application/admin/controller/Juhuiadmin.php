@@ -742,6 +742,15 @@ class Juhuiadmin extends CommonController
 
     public  function  addfiles()
     {
+        $param = request()->param();
+
+        if (request()->isAjax()) {
+
+
+            jsondebug($param);
+
+        }
+
         return view();
     }
 
