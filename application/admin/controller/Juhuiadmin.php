@@ -780,7 +780,7 @@ class Juhuiadmin extends CommonController
         jsondebug($fileType);
         if ($fileError == 0) {
             //判断文件类型
-            $file_type = ['image/jpeg', 'image/png'];
+            $file_type = ['image/jpeg', 'image/png', 'image/gif'];
             if (!in_array($fileType, $file_type)) {
                 $arr   = [
                     'code' => 400,
