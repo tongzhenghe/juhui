@@ -735,7 +735,7 @@ class Juhuiadmin extends CommonController
 
 
 
-    public  function  fileManage()
+    public  function  filemanage()
     {
         return view();
     }
