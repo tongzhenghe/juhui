@@ -17,17 +17,7 @@ use Qiniu\Storage\UploadManager;
 class Upload
 
 {
-
-    /**
-
-     * 上传图片
-
-     * @return null|string
-
-     */
-
     public static function image( $file, $or_conf = null)
-
     {
         if(empty($file['tmp_name']))
             exit(iJson(null , false, '文件读取失败'));
