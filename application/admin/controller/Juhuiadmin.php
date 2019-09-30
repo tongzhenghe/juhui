@@ -753,8 +753,6 @@ class Juhuiadmin extends CommonController
                 ,'title' => trim($param['title'])
             ];
 
-            jsondebug($data);
-
             $r = Common::dataExecute($fileModel, $data, $param);
 
             if (!empty($r))
