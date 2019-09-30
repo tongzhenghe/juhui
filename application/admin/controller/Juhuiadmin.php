@@ -738,8 +738,8 @@ class Juhuiadmin extends CommonController
 
     public  function  filemanage()
     {
-        $filedata = Db::name('filem')->select();
-        return view('', ['filedata' => $filedata]);
+        $files = Db::name('filem')->select();
+        return view('', ['files' => $files]);
     }
 
     public  function  addfiles()
