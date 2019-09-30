@@ -44,7 +44,7 @@
             var clipboard = new Clipboard('button', {
                 // 通过target选择需要被复制的对象
                 target: function() {
-                    console.log(document.querySelector('.copy'+data_id);)
+                    console.log(document.querySelector('.copy'+data_id))
                     return document.querySelector('.copy'+data_id); //复制标签文本
                     // return document.querySelector('input'); //复制文本框的值
                 }
