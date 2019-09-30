@@ -130,6 +130,8 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/banner", component: "juhuiadmin.php/banner", name: "banner"}
                 , {path: "/juhui/addbanner", component: "juhuiadmin.php/addbanner", name: "addbanner"}
                 , {path: "/juhui/data_backups", component: "juhuiadmin.php/data_backups", name: "data_backups"}
+                , {path: "/juhui/fileManage", component: "juhuiadmin.php/fileManage", name: "fileManage"}
+
 
                 ]};
             return "TABS" === e.loadType && (a.onChanged = function () {
