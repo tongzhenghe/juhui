@@ -734,6 +734,13 @@ class Juhuiadmin extends CommonController
     }
 
 
+
+    public  function  fileManage()
+    {
+        echo 4343;exit;
+        return view();
+    }
+
     public  function cdnUploads()
     {
         $img = $_FILES['file'];
