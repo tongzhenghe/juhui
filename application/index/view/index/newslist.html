@@ -24,42 +24,34 @@
         <div class="clear"></div>
 
         <div class="sub_content">
-
             <!-- 右侧导航 -->
             <div class="sub_nav left">
-
                 <ul class="sub_nav_ul ce">
-                    <li class="sub_nav_ul_li"><a href="goodslist?cateid={$vo.id}"> <span>
-							» </span>谷物类</a>
-                    </li>
-                    <li class="sub_nav_ul_li"><a href=""> <span>
-							» </span>杂豆类</a>
-                    </li>
-                    <li class="sub_nav_ul_li"><a href=""> <span>
-							» </span>块茎类</a>
-                    </li>
+                    {foreach $goodscate as $vo}
+                    <li class="sub_nav_ul_li"><a href="goodslist?cateid={$vo.id}"> <span>»</span>{$vo.title}</a></li>
+                    {/foreach}
                 </ul>
                 <div class="nav_connaction">
-                    <img src="/static/index/icon/webcontact.jpg" width="100%">
+                    <img src="http://juhuispace.juhuiny.com/2019/10/1616b201910013462.jpg" width="100%">
                     <div style="width: 151px;margin: 0 auto; ">
-                        <img src="/static/index/icon/wcode_rr.jpg" height="150px" width="150px">
+                        <img src="http://juhuispace.juhuiny.com/2019/10/65382201910016501.jpg" height="150px" width="150px">
                         <div style="text-align: center;">扫一扫关注</div>
                     </div>
                     <table width="100%">
                         <tbody><tr>
                             <td width="25px"><img src="/static/index/icon/icon_posiation.png"></td>
                             <td width="55px">地址：</td>
-                            <td>酒泉东关十字</td>
+                            <td>{$about.address}</td>
                         </tr>
                         <tr>
                             <td><img src="/static/index/icon/icon_tel2.png"></td>
                             <td>电话：</td>
-                            <td>0937-2620655</td>
+                            <td>{$about.people_tel}</td>
                         </tr>
                         <tr>
                             <td><img src="/static/index/icon/icon_messages.png"></td>
                             <td>邮箱：</td>
-                            <td>805578494@qq.com.com</td>
+                            <td>{$about.email}</td>
                         </tr>
                         </tbody>
                     </table>
