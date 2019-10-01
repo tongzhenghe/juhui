@@ -1,1 +1,78 @@
-sas
+{include file="./index/public/header"/}
+<div id="content">
+    <form action="" method="post" name="Form" id="Form">
+        <div class="gywmban"></div>
+        <!-- 标题 -->
+        <div class="news_list_title">
+            <div class="news_list_title_content">
+                <div class="news_list_title_left left">
+                    <img src="/static/index/icon/title_top_hr.png">
+                </div>
+                <div class="news_list_title_right right">
+                    <ul style="list-style-type: none;">
+                        <li>当前位置：</li>
+                        <li><a href="">首页</a> &gt;</li>
+                        <li><a href="/index/toProductList">产品中心</a> </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="sub_content">
+            <!-- 右侧导航 -->
+            <div class="sub_nav left">
+                <ul class="sub_nav_ul ce">
+                    {foreach $goodscate as $vo}
+                    <li class="sub_nav_ul_li"><a href="goodslist?cateid={$vo.id}"> <span>»</span>{$vo.title}</a></li>
+                    {/foreach}
+                </ul>
+                <div class="nav_connaction">
+                    <img src="http://juhuispace.juhuiny.com/2019/10/1616b201910013462.jpg" width="100%">
+                    <div style="width: 151px;margin: 0 auto; ">
+                        <img src="http://juhuispace.juhuiny.com/2019/10/65382201910016501.jpg" height="150px" width="150px">
+                        <div style="text-align: center;">扫一扫关注</div>
+                    </div>
+                    <table width="100%">
+                        <tbody><tr>
+                            <td width="25px"><img src="/static/index/icon/icon_posiation.png"></td>
+                            <td width="55px">地址：</td>
+                            <td>{$about.address}</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/static/index/icon/icon_tel2.png"></td>
+                            <td>电话：</td>
+                            <td>{$about.people_tel}</td>
+                        </tr>
+                        <tr>
+                            <td><img src="/static/index/icon/icon_messages.png"></td>
+                            <td>邮箱：</td>
+                            <td>{$about.email}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 产品info -->
+            <div class="text_box" id="text_box11">
+                <div class="product_bottom">
+                    <div class="product_bottom_title">
+                        <h2>{$data.title}</h2>
+                        <p style="line-height:40px;">产地：酒泉肃州区&nbsp;&nbsp;&nbsp;&nbsp;发布日期：{$data.create_time}&nbsp;&nbsp;&nbsp;&nbsp;浏览量：{$data.page_view}</p>
+                    </div>
+                    <div class="product_bottom_content">
+                        <div class="product_con" style="margin-buttom:30px;">
+                            {$data.pc_content}
+                        </div>
+                    </div>
+                </div>
+                <div class="yydg">预约订购</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </form>
+</div>
+{include file="./index/public/footer"/}
