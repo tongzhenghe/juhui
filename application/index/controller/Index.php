@@ -59,16 +59,14 @@ class Index extends IndexCommonController
         $id = request()->param('id');
 
         if (!empty($id)) {
-
             $data = Db::name('goods')->where('id', $id)->find();
-            wl_debug($data);
-
-            wl_debug($id);
-
+            $this->assign('data', $data);
+        } else {
+            exit(false);
         }
 
-
         return view();
+
     }
 
     public  function newslist()
