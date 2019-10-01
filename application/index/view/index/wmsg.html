@@ -44,11 +44,8 @@
              data.user_name = $("input[name='user_name']").val();
             data.user_tel = $("input[name='user_tel']").val();
             data.user_message = $("textarea[name='user_message']").val();
-
-            console.log(data);
-
-            $.post("demo_ajax_gethint.asp",{suggest:txt},function(result){
-                $("span").html(result);
+            $.post("wmsg", data, function(result){
+                console.log(result);
             });
         });
 
