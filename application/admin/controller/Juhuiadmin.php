@@ -654,7 +654,7 @@ class Juhuiadmin extends CommonController
             exit(Common::json(400, '提交失败'));
         }
 
-        return view();
+        return view('', ['webset' => $webset]);
 
     }
 
