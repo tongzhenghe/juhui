@@ -124,11 +124,15 @@ class Index extends IndexCommonController
 
     public  function wmsg()
     {
+
+        wl_debug(get_ip());
+
         $param = request()->param();
         if (request()->isAjax()) {
-            jsondebug($param);
+
         }
-        return view();
+        $r = rand(1000,9999);
+        return view('', ['r' => $r]);
     }
 
 
