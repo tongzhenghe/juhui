@@ -3,9 +3,11 @@
     <div class="footer_nav">
         <div class="fnavc">
             <a href="/">网站首页</a>
+            {if !empty($menu)}
             {foreach $menu as $vo}
             <a href="{$vo.url}">{$vo.title}</a>
             {/foreach}
+            {/if}
         </div>
     </div>
     <div class="hbfooter">
