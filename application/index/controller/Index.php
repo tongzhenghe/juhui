@@ -125,14 +125,20 @@ class Index extends IndexCommonController
     public  function wmsg()
     {
 
-        wl_debug(get_ip());
-
         $param = request()->param();
         if (request()->isAjax()) {
+            $data = [
+            'user_name' => trim($param['user_name'])
+            ,'user_tel' => trim($param['user_tel'])
+            ,'user_message' => trim($param['user_message'])
+            ];
 
+            $res = Db::name('message')->insert($data);
+
+            if (!empty($res))
+                exit(json_encode(['state' => true, 'msg' => '已提交']));
         }
-        $r = rand(1000,9999);
-        return view('', ['r' => $r]);
+        return view();
     }
 
 
