@@ -40,9 +40,9 @@ class Index extends IndexCommonController
     {
 
         $where = ['status' => 1, 'is_del' => 1];
-        $goodscate = Db::name('goodscate')->where($where)->select();
+        $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
         //goods
-        $goods = Db::name('goods')->where($where)->select();
+        $goods = Db::name('goods')->where($where)->field('id, title, intro, pc_icon')->select();
         wl_debug($goodscate);
         return view('', ['$goodscate' => $goodscate, 'goods' => $goods]);
     }
