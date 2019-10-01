@@ -643,6 +643,7 @@ class Juhuiadmin extends CommonController
                 ,'keywords' =>trim($param['keywords'])
             ];
 
+            jsondebug($data);
             $r = Common::dataExecute($websetModel, $data, $param);
 
             if (!empty($r))
