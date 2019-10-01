@@ -650,7 +650,6 @@ class Juhuiadmin extends CommonController
             exit(Common::json(400, '提交失败'));
         }
         $webset = Db::name('websets')->find();
-        wl_debug($webset);
         return view('', ['webset' => $webset]);
 
     }
