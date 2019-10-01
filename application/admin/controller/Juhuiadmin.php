@@ -643,6 +643,7 @@ class Juhuiadmin extends CommonController
                 ,'intro' =>trim($param['intro'])
                 ,'keywords' =>trim($param['keywords'])
             ];
+            jsondebug($data);
 
             if (!empty($webset)) {
                 $r = $websetModel->save($data, ['id' => intval($param['id'])]);
