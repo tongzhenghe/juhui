@@ -46,7 +46,7 @@
             data.user_message = $("textarea[name='user_message']").val();
             $.post("wmsg", data, function(result){
                 console.log(result);
-            });
+            }, 'json');
         });
 
 
