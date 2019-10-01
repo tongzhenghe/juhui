@@ -38,10 +38,10 @@ class Index extends IndexCommonController
     }
     public  function goodslist()
     {
+        $cateid = request()->param('cateid');
         $where = ['status' => 1, 'is_del' => 1];
         $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
         //goods
-        $cateid = request()->param('cateid');
         $where2 = [];
         if (!empty($cateid))
             $where2 = ['cateid' => $cateid];
