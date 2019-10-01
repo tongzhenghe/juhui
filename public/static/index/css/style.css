@@ -652,7 +652,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     min-width:1180px;
     padding-top:0px;
     overflow:hidden;
-    height: 589px;
+    height: 690px;
     margin:0 auto
 }
 .ny_content {
@@ -1143,6 +1143,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     background-size: 712px;
     background-position-x: 0;
     background-position-y: 20px;
+    height: 366px;
 }
 .contactUs_c{
     width:360px;
