@@ -76,7 +76,6 @@ class Index extends IndexCommonController
     {
         $where = ['status' => 1, 'is_del' => 1];
         $news = Db::name('news')->where($where)->field('id, title, intro, pc_icon')->select();
-        wl_debug($news);
         foreach ($news as &$v) {
             $v['intro'] = utf8_sub_str($v['intro'], 0, 150).'..';
         }
