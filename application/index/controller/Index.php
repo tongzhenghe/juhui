@@ -60,6 +60,7 @@ class Index extends IndexCommonController
 
         if (!empty($id)) {
             $data = Db::name('goods')->where('id', $id)->find();
+            $data['create_time'] = timeTran($data['create_time']);
             $this->assign('data', $data);
         } else {
             exit(false);
