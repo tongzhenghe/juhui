@@ -112,7 +112,9 @@ class Index extends IndexCommonController
 
     public  function recruit()
     {
-        return view();
+        $where = ['status' => 1, 'is_del' => 1];
+        $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
+        return view('', ['goodscate' => $goodscate]);
     }
     public  function recruitinfo()
     {
