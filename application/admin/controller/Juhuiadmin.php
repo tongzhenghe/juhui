@@ -635,28 +635,15 @@ class Juhuiadmin extends CommonController
     {
         $param = request()->param();
         $websetModel = new Websets;
-        $data = [
-            'title' => 3333
-            ,'bscnym_path' =>33333
-            ,'intro' =>3333
-            ,'keywords' =>3333
-        ];
-
-        $r = Common::dataExecute($websetModel, $data, $param);
-
-        wl_debug($r);
-
         if (request()->isAjax()) {
             $data = [
-                'title' => 3333
-                ,'bscnym_path' =>33333
-                ,'intro' =>3333
-                ,'keywords' =>3333
+                'title' => trim($param['title'])
+                ,'bscnym_path' => trim($param['bscnym_path'])
+                ,'intro' =>trim($param['intro'])
+                ,'keywords' =>trim($param['keywords'])
             ];
 
             $r = Common::dataExecute($websetModel, $data, $param);
-            jsondebug($r);
-
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
             exit(Common::json(400, '提交失败'));
