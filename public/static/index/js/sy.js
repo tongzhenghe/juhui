@@ -25,5 +25,30 @@ $(function () {
         i = $(this).index() - 1;
         autoChange();
     });
+});
 
+$(function () {
+    $("#in-sub").click(function(){
+        var data = {};
+        data.r = $("input[name='r']").val();
+        data.user_name = $("input[name='user_name']").val();
+        data.user_tel = $("input[name='user_tel']").val();
+        data.user_message = $("textarea[name='user_message']").val();
+        $.post("wmsg", data, function(result){
+
+            if (result.state == true) {
+                alert(result.msg);
+                //清空表单
+                $("input[name='user_name']").val('');
+                $("input[name='user_tel']").val('');
+                $("textarea[name='user_message']").val('');
+            } else {
+                alert(result.msg);
+                $("input[name='user_name']").val('');
+                $("input[name='user_tel']").val('');
+                $("textarea[name='user_message']").val('');
+            }
+
+        }, 'json');
+    });
 });
