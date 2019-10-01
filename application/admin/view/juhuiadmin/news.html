@@ -35,8 +35,8 @@
                 <td>{$vo.title}</td>
                 <td>{$vo.browse}</td>
                 <td>{$vo.intro}</td>
-                <td>{$vo.is_recommend}</td>
-                <td>{$vo.status}</td>
+                <td>{if $vo.is_recommend == 1}推荐{else}否{/if}</td>
+                <td>{if $vo.status ==1}正常{else}禁用{/if}</td>
                 <td>
                   <a href="#/juhui/details?id={$vo.id}" class="point">查看详情</a>
                   <a href="#/juhui/addnews?id={$vo.id}" class="point"><i class="layui-icon" title="编辑数据">&#xe642;</i></a>
