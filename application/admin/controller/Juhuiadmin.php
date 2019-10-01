@@ -19,7 +19,7 @@ use app\admin\model\Menu;
 use app\admin\model\News;
 use app\admin\model\Recruit;
 use app\admin\model\Umenu;
-use app\admin\model\Webset;
+use app\admin\model\Websets;
 use app\extra\Upload;
 use think\Db;
 use app\admin\controller\Common as CommonController;
@@ -634,7 +634,7 @@ class Juhuiadmin extends CommonController
     public function  webset()
     {
         $param = request()->param();
-        $websetModel = new Webset;
+        $websetModel = new Websets;
         $data = [
             'title' => 3333
             ,'bscnym_path' =>33333
