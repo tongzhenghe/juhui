@@ -630,6 +630,13 @@ class Juhuiadmin extends CommonController
     }
 
 
+    public function  webset()
+    {
+        return view();
+
+    }
+
+
     public function exportDatabase(){
         header("Content-type:text/html;charset=utf-8");
         $path = RUNTIME_PATH.'mysql/';
