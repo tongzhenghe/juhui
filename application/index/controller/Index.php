@@ -32,7 +32,9 @@ class Index extends IndexCommonController
 
     public  function about()
     {
-        return view();
+        $about = Db::name('us')->find();
+        wl_debug($about);
+        return view('', ['about' => $about]);
     }
     public  function goodslist()
     {
