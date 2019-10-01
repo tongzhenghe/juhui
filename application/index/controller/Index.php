@@ -57,8 +57,7 @@ class Index extends IndexCommonController
     public  function contact()
     {
         $about = Db::name('us')->find();
-        wl_debug($about);
-        return view();
+        return view('', ['about' => $about]);
     }
 
     public  function recruit()
