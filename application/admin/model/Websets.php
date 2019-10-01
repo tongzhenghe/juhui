@@ -11,7 +11,7 @@ namespace app\admin\model;
 
 use app\admin\model\system\SystemAdmin;
 
-class Webset extends SystemAdmin
+class Websets extends SystemAdmin
 {
     protected $autoWriteTimestamp = true;
 
