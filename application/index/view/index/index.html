@@ -190,47 +190,14 @@
         </div>
         <div class="i_zixun_list">
             <ul>
+                {foreach $news as $vo}
                 <li>
                     <table width="100%" border="0" cellpadding="0" cellspacing="0">
                         <tbody>
                         <tr>
-                            <td width="61" class="tds" height="60" align="center">2018-08-19</td>
+                            <td width="61" class="tds" height="60" align="center">{$vo.create_time}</td>
                             <td width="480" height="60" align="left" style="padding-left:10px;">
-                                <p class="f_12 c_666"><a href=""><strong class="f_14">恭贺我公司被认定为2018年度自治区 “专精特新”示范企业</strong></a>
-                                </p>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-                <li>
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                        <tbody><tr>
-                            <td width="61" height="60"  class="tds"  align="center">2016-07-26</td>
-                            <td width="480" height="60" align="left" style="padding-left:10px;">
-                                <p class="f_12 c_666"><a href=""><strong class="f_14">自治区非公经济服务局处长杜宏到宁夏瑞春杂粮股份有限公司调研</strong></a>
-                                </p>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>  <li>
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                        <tbody><tr>
-                            <td width="61" height="60"  class="tds"  align="center">2016-07-26</td>
-                            <td width="480" height="60" align="left" style="padding-left:10px;">
-                                <p class="f_12 c_666"><a href=""><strong class="f_14">自治区非公经济服务局处长杜宏到宁夏瑞春杂粮股份有限公司调研</strong></a>
-                                </p>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>  <li>
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                        <tbody><tr>
-                            <td width="61" height="60"  class="tds"  align="center">2016-07-26</td>
-                            <td width="480" height="60" align="left" style="padding-left:10px;">
-                                <p class="f_12 c_666"><a href=""><strong class="f_14">自治区非公经济服务局处长杜宏到宁夏瑞春杂粮股份有限公司调研</strong></a>
+                                <p class="f_12 c_666"><a href=""><strong class="f_14">{$vo.intro}</strong></a>
                                 </p>
                             </td>
                         </tr>
