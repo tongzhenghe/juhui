@@ -635,7 +635,7 @@ class Juhuiadmin extends CommonController
     {
         $param = request()->param();
 
-        $webset = Db::name('webset')->find();
+        $webset = Db::name('websets')->find();
         wl_debug($webset);
 
 
