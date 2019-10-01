@@ -39,6 +39,7 @@ class Index extends IndexCommonController
 
     public  function goodslist()
     {
+        $cateid = '';
         $cateid = request()->param('cateid');
         $where = ['status' => 1, 'is_del' => 1];
         $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
@@ -51,7 +52,7 @@ class Index extends IndexCommonController
             $v['intro'] = utf8_sub_str($v['intro'], 0, 150).'..';
         }
 
-        return view('', ['goodscate' => $goodscate, 'goods' => $goods]);
+        return view('', ['goodscate' => $goodscate, 'goods' => $goods, 'cateid' => $cateid]);
     }
 
     public  function goodsinfo()
