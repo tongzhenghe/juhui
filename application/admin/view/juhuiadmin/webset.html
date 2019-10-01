@@ -7,13 +7,13 @@
             <div class="layui-form-item">
               <label class="layui-form-label">标题</label>
               <div class="layui-input-block">
-                  <input type="text" name="title" {if !empty($dataOne.title)}value="{$dataOne.title}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+                  <input type="text" name="title" {if !empty($webset.title)}value="{$webset.title}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
               </div>
             </div>
            <div class="layui-form-item">
               <label class="layui-form-label">商务通接入</label>
               <div class="layui-input-block">
-                  <input type="text" name="bscnym_path" {if !empty($dataOne.bscnym_path)}value="{$dataOne.bscnym_path}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+                  <input type="text" name="bscnym_path" {if !empty($webset.bscnym_path)}value="{$webset.bscnym_path}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
               </div>
             </div>
 
@@ -32,7 +32,7 @@
             </div>
             <div class="layui-form-item">
               <div class="layui-input-block">
-                  <input type="hidden" name="id" value="{if !empty($dataOne.id)}{$dataOne.id}{/if}">
+                  <input type="hidden" name="id" value="{if !empty($webset.id)}{$webset.id}{/if}">
                 <button class="layui-btn" lay-submit="" lay-filter="towebset">立即提交</button>
                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
               </div>
