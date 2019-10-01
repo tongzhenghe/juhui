@@ -38,7 +38,7 @@ class Index extends IndexCommonController
     }
     public  function goodslist()
     {
-        $param = request()->param();
+        $param = request()->get();
         if (!empty($param)) {
             wl_debug($param);
         }
