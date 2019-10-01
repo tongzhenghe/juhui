@@ -9,7 +9,7 @@
             <table cellpadding="0" cellspacing="0" align="center" width="100%">
                 <tbody>
                 <tr style="height: 45px;">
-                    <td colspan="4" id="title-s" style="background-color:#4CAF50;">订购预约</td>
+                    <td colspan="4" id="title-s" style="background-color:#333333b0;">订购预约</td>
                 </tr>
                 <tr style="height: 45px;background-color:#72727275;">
                     <td width="17%" align="center">单位/姓名：</td>
@@ -37,3 +37,33 @@
     </div>
 </div>
 {include file="./index/public/footer"/}
+
+<script>
+    $(function () {
+        $("#in-sub").click(function(){
+            var data = {};
+             data.r = $("input[name='r']").val();
+             data.user_name = $("input[name='user_name']").val();
+            data.user_tel = $("input[name='user_tel']").val();
+            data.user_message = $("textarea[name='user_message']").val();
+            $.post("wmsg", data, function(result){
+
+                if (result.state == true) {
+                    alert(result.msg);
+                    //清空表单
+                    $("input[name='user_name']").val('');
+                    $("input[name='user_tel']").val('');
+                    $("textarea[name='user_message']").val('');
+                } else {
+                    alert(result.msg);
+                    $("input[name='user_name']").val('');
+                    $("input[name='user_tel']").val('');
+                    $("textarea[name='user_message']").val('');
+                }
+
+            }, 'json');
+        });
+
+
+    });
+</script>
