@@ -27,37 +27,31 @@
             <div class="sub_nav left">
 
                 <ul class="sub_nav_ul ce">
-                    <li class="sub_nav_ul_li"><a href=""> <span>
-							» </span>谷物类</a>
-                    </li>
-                    <li class="sub_nav_ul_li"><a href=""> <span>
-							» </span>杂豆类</a>
-                    </li>
-                    <li class="sub_nav_ul_li"><a href=""> <span>
-							» </span>块茎类</a>
-                    </li>
+                    {foreach $goodscate as $vo}
+                    <li class="sub_nav_ul_li"><a href="goodslist?cateid={$vo.id}"> <span>»</span>{$vo.title}</a></li>
+                    {/foreach}
                 </ul>
                 <div class="nav_connaction">
-                    <img src="/static/index/icon/webcontact.jpg" width="100%">
+                    <img src="http://juhuispace.juhuiny.com/2019/10/1616b201910013462.jpg" width="100%">
                     <div style="width: 151px;margin: 0 auto; ">
-                        <img src="/static/index/icon/wcode_rr.jpg" height="150px" width="150px">
+                        <img src="http://juhuispace.juhuiny.com/2019/10/65382201910016501.jpg" height="150px" width="150px">
                         <div style="text-align: center;">扫一扫关注</div>
                     </div>
                     <table width="100%">
                         <tbody><tr>
                             <td width="25px"><img src="/static/index/icon/icon_posiation.png"></td>
                             <td width="55px">地址：</td>
-                            <td>酒泉东关十字</td>
+                            <td>{$about.address}</td>
                         </tr>
                         <tr>
                             <td><img src="/static/index/icon/icon_tel2.png"></td>
                             <td>电话：</td>
-                            <td>0937-2620655</td>
+                            <td>{$about.people_tel}</td>
                         </tr>
                         <tr>
                             <td><img src="/static/index/icon/icon_messages.png"></td>
                             <td>邮箱：</td>
-                            <td>805578494@qq.com.com</td>
+                            <td>{$about.email}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -67,33 +61,6 @@
             <!-- 产品列表 -->
             <div class="ul_list right">
                 <ul>
-                    <li style="border:1px solid #EBEBEB;padding:0px 0px 20px 20px;margin-top:20px;">
-                        <table width="99%" border="0" cellpadding="0" cellspacing="0">
-                            <tbody>
-                            <tr>
-                                <td width="20%" style="border-radius:10px;"><a href="">
-                                    <img src="/static/index/icon/goods.png" width="180" height="200" style="border-radius:10px;box-shadow:0px 0px 5px #000;">
-                                </a>
-                                </td>
-                                <td width="80%" valign="top" style="padding-top:20px;">
-                                    <div style="margin: 10px 20px;">
-                                        <div><span class="f_20 c_blue">
-							 		<a href="">产品名称：精制小米 </a></span> <br>
-                                            <span>
-							 		价格：￥0 元
-							 		</span>
-                                        </div>
-                                        <div><span>产品简介：</span>
-
-                                            小米也称作粟米，是谷子去皮后的结果，谷子是谷类植物，禾木本的
-                                            <a style="color: #D00707;" href="">[查看详情...]</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
                     <li style="border:1px solid #EBEBEB;padding:0px 0px 20px 20px;margin-top:20px;">
                         <table width="99%" border="0" cellpadding="0" cellspacing="0">
                             <tbody>
