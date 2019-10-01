@@ -36,6 +36,7 @@ class Index extends IndexCommonController
         $about['pc_content'] = html_entity_decode($about['pc_content']);
         return view('', ['about' => $about]);
     }
+
     public  function goodslist()
     {
         $cateid = request()->param('cateid');
@@ -52,8 +53,21 @@ class Index extends IndexCommonController
 
         return view('', ['goodscate' => $goodscate, 'goods' => $goods]);
     }
+
     public  function goodsinfo()
     {
+        $id = request()->param('id');
+
+        if (!empty($id)) {
+
+            $data = Db::name('goods')->where('id', $id)->find();
+            wl_debug($data);
+
+            wl_debug($id);
+
+        }
+
+
         return view();
     }
 
