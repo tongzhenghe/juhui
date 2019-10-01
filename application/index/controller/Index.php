@@ -43,6 +43,9 @@ class Index extends IndexCommonController
         $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
         //goods
         $goods = Db::name('goods')->where($where)->field('id, title, intro, pc_icon')->select();
+        foreach ($goods as &$v) {
+            $v['intro'] = utf8_sub_str($v['intro'], 0, 150).'..';
+        }
 
         return view('', ['goodscate' => $goodscate, 'goods' => $goods]);
     }
