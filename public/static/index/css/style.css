@@ -398,6 +398,7 @@ a:link:hover, a:visited:hover, a:active:hover {
 
 /*goods*/
 
+.glist{ border:1px solid #EBEBEB;padding:0px 0px 20px 20px;margin-top:20px;}
 .ul_list{width: 875px;margin: 20px 0;}
 .left{
     float: left;
@@ -1295,3 +1296,4 @@ a:link:hover, a:visited:hover, a:active:hover {
     height: 87px;
     line-height: 39px;
 }
+
