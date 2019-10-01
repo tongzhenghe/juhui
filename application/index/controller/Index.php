@@ -38,14 +38,14 @@ class Index extends IndexCommonController
     }
     public  function goodslist()
     {
+        $where = ['status' => 1, 'is_del' => 1];
+        $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
+        //goods
         $cateid = request()->param('cateid');
         $where2 = [];
         if (!empty($cateid))
             $where2 = ['cateid' => $cateid];
-        $where = ['status' => 1, 'is_del' => 1];
-        $goodscate = Db::name('goodscate')->where($where)->where($where2)->field('id, title')->select();
-        //goods
-        $goods = Db::name('goods')->where($where)->field('id, title, intro, pc_icon')->select();
+        $goods = Db::name('goods')->where($where)->where($where2)->field('id, title, intro, pc_icon')->select();
         foreach ($goods as &$v) {
             $v['intro'] = utf8_sub_str($v['intro'], 0, 150).'..';
         }
