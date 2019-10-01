@@ -27,7 +27,7 @@
             <div class="sub_nav left">
                 <ul class="sub_nav_ul ce">
                     {foreach $goodscate as $vo}
-                    <li class="sub_nav_ul_li"><a href="goodslist?cateid={$vo.id}"> <span>»</span>{$vo.title}</a></li>
+                    <li class="sub_nav_ul_li" {if $vo.id == $cateid} style="background: #333;"{/if}><a href="goodslist?cateid={$vo.id}"> <span>»</span>{$vo.title}</a></li>
                     {/foreach}
                 </ul>
                 <div class="nav_connaction">
