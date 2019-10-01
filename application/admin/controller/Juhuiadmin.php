@@ -643,8 +643,8 @@ class Juhuiadmin extends CommonController
                 ,'keywords' =>trim($param['keywords'])
             ];
 
-            jsondebug($data);
             $r = Common::dataExecute($websetModel, $data, $param);
+            jsondebug($r);
 
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
