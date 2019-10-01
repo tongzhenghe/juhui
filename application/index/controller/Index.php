@@ -61,6 +61,7 @@ class Index extends IndexCommonController
         $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
         if (!empty($id)) {
             $data = Db::name('goods')->where('id', $id)->find();
+            $data['pc_content'] = html_entity_decode($data['pc_content']);
             $data['create_time'] = timeTran($data['create_time']);
             $this->assign('data', $data);
         } else {
