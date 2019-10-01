@@ -30,25 +30,6 @@
                   <textarea style="width: 60%;height: 100px;" name="intro" class="layui-textarea"></textarea>
               </div>
             </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">对话框</label>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">PC端</label>
-                        <div class="layui-input-inline">
-                            <input type="radio" name="is_open_dialog_pc" value="1" title="开启"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><div>开启</div></div>
-                            <input type="radio" name="is_open_dialog_pc" value="2" checked="" title="关闭"><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><div>关闭</div></div>
-                            <div class="layui-inline layui-word-aux">注意： 默认未开启。</div>
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">移动端</label>
-                        <div class="layui-input-inline">
-                            <input type="radio" name="is_open_dialog_mobile" checked="" value="1" title="开启"><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><div>开启</div></div>
-                            <input type="radio" name="is_open_dialog_mobile" value="2" title="关闭"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><div>关闭</div></div>
-                            <div class="layui-inline layui-word-aux">注意： 默认未开启。</div>
-                        </div>
-                    </div>
-                </div>
             <div class="layui-form-item">
               <div class="layui-input-block">
                   <input type="hidden" name="id" value="{if !empty($dataOne.id)}{$dataOne.id}{/if}">
