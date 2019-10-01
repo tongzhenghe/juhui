@@ -57,7 +57,8 @@ class Index extends IndexCommonController
     public  function goodsinfo()
     {
         $id = request()->param('id');
-
+        $where = ['status' => 1, 'is_del' => 1];
+        $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
         if (!empty($id)) {
             $data = Db::name('goods')->where('id', $id)->find();
             $data['create_time'] = timeTran($data['create_time']);
@@ -66,7 +67,7 @@ class Index extends IndexCommonController
             exit(false);
         }
 
-        return view();
+        return view('', ['goodscate' => $goodscate]);
 
     }
 
