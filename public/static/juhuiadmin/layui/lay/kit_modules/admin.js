@@ -133,8 +133,6 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/fileManage", component: "juhuiadmin.php/fileManage", name: "fileManage"}
                 , {path: "/juhui/addfiles", component: "juhuiadmin.php/addfiles", name: "addfiles"}
                 , {path: "/juhui/webset", component: "juhuiadmin.php/webset", name: "webset"}
-
-
                 ]};
             return "TABS" === e.loadType && (a.onChanged = function () {
                 i.existsByPath(location.hash) ? i.switchByPath(location.hash) : t.addTab(location.hash, (new Date).getTime())
