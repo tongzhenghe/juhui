@@ -132,6 +132,7 @@ layui.define(mods, function (e) {
                 , {path: "/juhui/data_backups", component: "juhuiadmin.php/data_backups", name: "data_backups"}
                 , {path: "/juhui/fileManage", component: "juhuiadmin.php/fileManage", name: "fileManage"}
                 , {path: "/juhui/addfiles", component: "juhuiadmin.php/addfiles", name: "addfiles"}
+                , {path: "/juhui/webset", component: "juhuiadmin.php/webset", name: "webset"}
 
 
                 ]};
