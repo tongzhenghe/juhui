@@ -635,7 +635,7 @@ class Juhuiadmin extends CommonController
     {
         $param = request()->param();
         $webset = Db::name('websets')->find();
-        $websetModel = new Webset;
+
         if (request()->isAjax()) {
             $data = [
                 'title' => trim($param['title'])
@@ -643,12 +643,12 @@ class Juhuiadmin extends CommonController
                 ,'intro' =>trim($param['intro'])
                 ,'keywords' =>trim($param['keywords'])
             ];
-            jsondebug($data);
 
             if (!empty($webset)) {
-                $r = $websetModel->save($data, ['id' => intval($param['id'])]);
+               $r = Db::name('websets')->update($data);
+               jsondebug($r);
             } else {
-                $r = $websetModel->save($data);
+                $r = Db::name('websets')->inset($data);
             }
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
