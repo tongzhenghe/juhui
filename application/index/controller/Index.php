@@ -125,7 +125,8 @@ class Index extends IndexCommonController
 
     public  function wmsg()
     {
-
+        if(!is_dir('./tmp/'))mkdir ('./tmp/', 0700);
+        session_save_path('./tmp/');
         wl_debug(Session::get('uip'));
         $param = request()->param();
         if (request()->isAjax()) {
