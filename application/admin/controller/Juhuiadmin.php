@@ -19,6 +19,7 @@ use app\admin\model\Menu;
 use app\admin\model\News;
 use app\admin\model\Recruit;
 use app\admin\model\Umenu;
+use app\admin\model\Webset;
 use app\extra\Upload;
 use think\Db;
 use app\admin\controller\Common as CommonController;
@@ -632,6 +633,23 @@ class Juhuiadmin extends CommonController
 
     public function  webset()
     {
+        $param = request()->param();
+        $websetModel = new Webset;
+        if (request()->isAjax()) {
+            $data = [
+                'title' => trim($param['title'])
+                ,'bscnym_path' => trim($param['bscnym_path'])
+                ,'intro' =>trim($param['intro'])
+                ,'keywords' =>trim($param['keywords'])
+            ];
+
+            $r = Common::dataExecute($websetModel, $data, $param);
+
+            if (!empty($r))
+                exit(Common::json(200, '已提交'));
+            exit(Common::json(400, '提交失败'));
+
+        }
         return view();
 
     }
