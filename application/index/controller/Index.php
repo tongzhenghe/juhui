@@ -126,10 +126,11 @@ class Index extends IndexCommonController
     public  function wmsg()
     {
 
+        wl_debug(Session::get('uip'));
         $param = request()->param();
         if (request()->isAjax()) {
 
-            if ( Session::get('uip') == get_ip())
+            if (Session::get('uip') == get_ip())
                 exit(json_encode(['state' => false, 'msg' => '重复提交']));
 
             $data = [
