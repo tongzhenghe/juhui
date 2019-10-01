@@ -88,7 +88,19 @@ class Index extends IndexCommonController
 
     public  function newsinfo()
     {
-        return view();
+        $id = request()->param('id');
+        $where = ['status' => 1, 'is_del' => 1];
+        $goodscate = Db::name('goodscate')->where($where)->field('id, title')->select();
+        if (!empty($id)) {
+            $data = Db::name('news')->where('id', $id)->find();
+            $data['pc_content'] = html_entity_decode($data['pc_content']);
+            $data['create_time'] = date('Y-m-d', ($data['create_time']));
+            $this->assign('data', $data);
+        } else {
+            exit(false);
+        }
+
+        return view('', ['goodscate' => $goodscate]);
     }
 
 
