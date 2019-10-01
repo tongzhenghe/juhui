@@ -17,6 +17,7 @@ class Index extends IndexCommonController
         $news = Db::name('news')->where($where)->where('is_recommend', 1)->order('sort asc')->limit(4)->select();
         foreach ($news as &$v) {
             $v['create_time'] = timeTran($v['create_time']);
+            $v['intro'] = utf8_sub_str($v['intro'], 0, 100);
         }
         //友情| 资质
         return view('',
