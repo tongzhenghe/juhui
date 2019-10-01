@@ -20,14 +20,14 @@
             <div class="layui-form-item">
               <label class="layui-form-label">网站关键词</label>
               <div class="layui-input-block">
-                <input type="text" name="keywords" {if !empty($dataOne.keywords)}value="{$dataOne.keywords}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+                  <textarea style="width: 60%;height: 300px;" name="keywords" class="layui-textarea"></textarea>
               </div>
             </div>
 
              <div class="layui-form-item">
               <label class="layui-form-label">网站简介</label>
               <div class="layui-input-block">
-                <input type="text" name="intro" {if !empty($dataOne.intro)}value="{$dataOne.intro}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+                  <textarea style="width: 60%;height: 300px;" name="intro" class="layui-textarea"></textarea>
               </div>
             </div>
                 <div class="layui-form-item">
@@ -49,6 +49,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!--wcode-->
                 <div class="layui-form-item layui-form-text">
                     <label class="layui-form-label">二维码</label>
