@@ -8,25 +8,28 @@
         </div>
           <div class="contact_tip">
             <ul>
-              <li class="c05"><a href="#">关于我们</a></li>
-              <li class="c01"><a href="#">关于集团</a></li>
-              <li class="c02"><a href="#">人才招聘</a></li>
-              <li class="c04"><a href="#">联系我们</a></li>
+            {if !empty($menu)}
+            {foreach $menu as $vo}
+             <li class="c05"><a href="{$vo.url}">{$vo.title}</a></li>
+            {/foreach}
+            {/if}
             </ul>
           </div>
+        {if !empty($about)}
         <div class="contactUs">
             <div class="contactUs_c">
                 <ul>
-                    <li>公司名称：宁夏瑞春杂粮股份有限公司</li>
-                    <li>咨询电话：0954-2046256</li>
-                    <li>销售热线：0954-2653366<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18995439076</li>
-                    <li>邮箱：sell@nxrczl.com</li>
-                    <li>微信：nx_wglp</li>
-                    <li>地址：宁夏固原市原州区清水河工业园区原州路37号</li>
+                    <li>公司名称：{$about.title}</li>
+                    <li>咨询电话：{$about.people_tel}</li>
+                    <li>销售热线：{$about.people_tel}<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$about.people_tel}</li>
+                    <li>邮箱：{$about.email}</li>
+                    <li>微信：<img src="{$about.wcode}" width="50"/></li>
+                    <li>地址：{$about.address}</li>
                 </ul>
             </div>
         </div>
+        {/if}
     </div>
 </div>
 <div class="clear"></div>
