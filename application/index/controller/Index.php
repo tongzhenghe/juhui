@@ -14,7 +14,7 @@ class Index extends IndexCommonController
         //intro
         $us = Db::name('us')->find();
         //news
-        $news = Db::name('news')->where($where)->order('sort asc')->limit(4)->select();
+        $news = Db::name('news')->where($where)->where('is_recommend', 1)->order('sort asc')->limit(4)->select();
         foreach ($news as &$v) {
             $v['create_time'] = timeTran($v['create_time']);
         }
