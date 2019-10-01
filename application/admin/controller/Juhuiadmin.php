@@ -643,13 +643,14 @@ class Juhuiadmin extends CommonController
                 ,'keywords' =>trim($param['keywords'])
             ];
 
+
             $r = Common::dataExecute($websetModel, $data, $param);
             if (!empty($r))
                 exit(Common::json(200, '已提交'));
             exit(Common::json(400, '提交失败'));
-
         }
-        return view();
+        $webset = Db::name('websets')->find();
+        return view('', ['webset' => $webset]);
 
     }
 
