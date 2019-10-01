@@ -50,6 +50,13 @@ function timeTran($time)
     }
 }
 
+function utf8_sub_str( $text, $statr = 0, $end = 10 )
+{
+    if (empty($text) ) return false;
+
+    return mb_substr($text, $statr, $end, 'utf-8');
+
+}
 
 function jsondebug( $array )
 {
