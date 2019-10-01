@@ -634,6 +634,11 @@ class Juhuiadmin extends CommonController
     public function  webset()
     {
         $param = request()->param();
+
+        $webset = Db::name('webset')->find();
+        wl_debug($webset);
+
+
         $websetModel = new Webset;
         if (request()->isAjax()) {
             $data = [
