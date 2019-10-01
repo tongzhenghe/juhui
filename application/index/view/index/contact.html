@@ -1,1 +1,35 @@
-dsdsd
+{include file="./index/public/header"/}
+<div class="gywmban"></div>
+<div class="ny_web" style="">
+    <div class="ny_content">
+        <div class="map">
+            <div class="map_title c_blue"><a href="">联系我们</a></div>
+            <div class="map_nav">您当前的位置：<a href="">主页</a> &gt; <a href="">联系我们</a></div>
+        </div>
+          <div class="contact_tip">
+            <ul>
+            {if !empty($menu)}
+            {foreach $menu as $vo}
+             <li class="c05"><a href="{$vo.url}">{$vo.title}</a></li>
+            {/foreach}
+            {/if}
+            </ul>
+          </div>
+        {if !empty($about)}
+        <div class="contactUs">
+            <div class="contactUs_c">
+                <ul>
+                    <li>公司名称：{$about.title}</li>
+                    <li>咨询电话：{$about.people_tel}</li>
+                    <li>销售热线：{$about.people_tel}</li>
+                    <li>邮箱：{$about.email}</li>
+                    <li style="background: url('{$about.wcode}')">微信：</li>
+                    <li>地址：{$about.address}</li>
+                </ul>
+            </div>
+        </div>
+        {/if}
+    </div>
+</div>
+<div class="clear"></div>
+{include file="./index/public/footer"/}
