@@ -38,7 +38,13 @@ class Index extends IndexCommonController
     }
     public  function goodslist()
     {
-        return view();
+
+        $where = ['status' => 1, 'is_del' => 1];
+        $goodscate = Db::name('goodscate')->where($where)->select();
+        //goods
+        $goods = Db::name('goods')->where($where)->select();
+        wl_debug($goodscate);
+        return view('', ['$goodscate' => $goodscate, 'goods' => $goods]);
     }
     public  function goodsinfo()
     {
