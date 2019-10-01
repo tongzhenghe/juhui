@@ -1,0 +1,82 @@
+<div class="layui-fluid">
+  <div class="layui-row">
+    <div class="layui-col-xs8">
+      <div class="layui-card">
+        <div class="layui-card-body">
+            <form class="layui-form" action="##" onsubmit="return false">
+            <div class="layui-form-item">
+              <label class="layui-form-label">标题</label>
+              <div class="layui-input-block">
+                  <input type="text" name="title" {if !empty($dataOne.title)}value="{$dataOne.title}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+           <div class="layui-form-item">
+              <label class="layui-form-label">商务通接入</label>
+              <div class="layui-input-block">
+                  <input type="text" name="bscnym_path" {if !empty($dataOne.bscnym_path)}value="{$dataOne.bscnym_path}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+            <div class="layui-form-item">
+              <label class="layui-form-label">网站关键词</label>
+              <div class="layui-input-block">
+                <input type="text" name="keywords" {if !empty($dataOne.keywords)}value="{$dataOne.keywords}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+
+             <div class="layui-form-item">
+              <label class="layui-form-label">网站简介</label>
+              <div class="layui-input-block">
+                <input type="text" name="intro" {if !empty($dataOne.intro)}value="{$dataOne.intro}"{/if} lay-verify="required" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">对话框</label>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">PC端</label>
+                        <div class="layui-input-inline">
+                            <input type="radio" name="is_open_dialog_pc" value="1" title="开启"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><div>开启</div></div>
+                            <input type="radio" name="is_open_dialog_pc" value="2" checked="" title="关闭"><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><div>关闭</div></div>
+                            <div class="layui-inline layui-word-aux">注意： 默认未开启。</div>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">移动端</label>
+                        <div class="layui-input-inline">
+                            <input type="radio" name="is_open_dialog_mobile" checked="" value="1" title="开启"><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><div>开启</div></div>
+                            <input type="radio" name="is_open_dialog_mobile" value="2" title="关闭"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><div>关闭</div></div>
+                            <div class="layui-inline layui-word-aux">注意： 默认未开启。</div>
+                        </div>
+                    </div>
+                </div>
+                <!--wcode-->
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">二维码</label>
+                    <div class="layui-input-block">
+                        <div class="base-upload-1">
+                            {if empty($dataOne.wcode)}
+                            <div class="tips-1-1">
+                                <div  class="title-tips"><span><i>*</i>上传二维码</span></div>
+                                <i class="layui-icon layui-icon-add-1"></i>
+                            </div>
+                            {/if}
+                            <div class="title-tips2-1" {if !empty($dataOne.wcode)} style="display: block;" {/if}><span>重新上传</span>
+                        </div>
+                        <div class="Baseicon-1">{if !empty($dataOne.wcode)}<img src="{$dataOne.wcode}" width="100"/>{/if}</div>
+                    </div>
+                </div>
+            <div class="layui-form-item">
+              <div class="layui-input-block">
+                  <input type="hidden" name="u" value="Us">
+                  <input type="hidden" name="id" value="{if !empty($dataOne.id)}{$dataOne.id}{/if}">
+                <button class="layui-btn" lay-submit="" lay-filter="tous">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="./juhuiadmin/include/submit"/}
