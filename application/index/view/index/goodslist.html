@@ -57,40 +57,31 @@
                     </table>
                 </div>
             </div>
-
             <!-- 产品列表 -->
             <div class="ul_list right">
                 <ul>
-                    <li>
+                    {if !empty($goods)}
+                    {foreach $goods as $vo}
+                    <li class="glist">
                         <table width="99%" border="0" cellpadding="0" cellspacing="0">
                             <tbody>
                             <tr>
-                                <td width="20%" style="border-radius:10px;"><a href="/index/toProductXq?PRODUCT_ID=5595bdc1b4394880ac49a70dc3ff2feb&amp;HITS=">
-                                    <img src="/static/index/icon/goods.png" width="180" height="200" style="border-radius:10px;box-shadow:0px 0px 5px #000;">
+                                <td width="20%" style="border-radius:10px;"><a href="goodsinfo?id={$vo.id}">
+                                    <img src="{$vo.pc_icon}" width="180" height="200" style="border-radius:10px;box-shadow:0px 0px 5px #000;">
                                 </a>
                                 </td>
                                 <td width="80%" valign="top" style="padding-top:20px;">
                                     <div style="margin: 10px 20px;">
                                         <div><span class="f_20 c_blue">
-							 		<a href="/index/toProductXq?PRODUCT_ID=5595bdc1b4394880ac49a70dc3ff2feb&amp;HITS=">产品名称：黄米 </a></span> <br>
+							 		<a href="goodsinfo?id={$vo.id}">产品名称:{$vo.title} </a></span> <br>
                                             <span>
 							 		价格：￥0 元
 							 		</span> <br>
 
                                         </div>
                                         <div><span>产品简介：</span>
-
-                                            <!--  判断是否有 html标签-->
-
-
-
-
-                                            黄米又称黍、糜子、黄米、夏小米、黄小米，有糯质和非糯质之别，糯质黍多作以醇酒，非糯质黍，称为穄，以食用为
-
-
-
-
-                                            <a style="color: #D00707;" href="/index/toProductXq?PRODUCT_ID=5595bdc1b4394880ac49a70dc3ff2feb&amp;HITS=">[查看详情...]</a>
+                                            {$vo.intro}
+                                            <a style="color: #D00707;" href="goodsinfo?id={$vo.id}">[查看详情...]</a>
                                         </div>
                                     </div>
                                 </td>
@@ -98,6 +89,8 @@
                             </tbody>
                         </table>
                     </li>
+                    {/foreach}
+                    {/if}
                 </ul>
                 <!--分页-->
                 <!--分页-->
