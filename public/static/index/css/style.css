@@ -600,6 +600,11 @@ a:link:hover, a:visited:hover, a:active:hover {
     background-color: #05ad050f;
 }
 .f_20 { font-size: 19px;}
+
+.c_blue a:hover {
+    color: #51AF1D;
+    text-decoration: none;
+}
 /*goods_end*/
 
 /*newsList*/
