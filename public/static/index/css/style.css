@@ -1303,3 +1303,6 @@ a:link:hover, a:visited:hover, a:active:hover {
     line-height: 39px;
 }
 
+/*wmsg*/
+#in-sub {cursor:pointer;width:143px; height:40px;box-shadow:3px 3px 3px #000;border:solid 1px #FFF;border-radius:4px;background-color:#FFF;margin-left:190px}
+/*wmsg-End*/
