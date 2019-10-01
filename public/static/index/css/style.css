@@ -395,7 +395,7 @@ a:link:hover, a:visited:hover, a:active:hover {
 /*关于我m*/
 .news-title-ab{width: 1000px;overflow:hidden;}
 /*关于我m-ENd*/
-
+.sub_nav_ul_li_hover{background: #333;margin-left: -40px;margin-right: -50px;line-height: 55px;padding-left: 60px;border: none;}
 /*goods*/
 
 .glist{ border:1px solid #EBEBEB;padding:0px 0px 20px 20px;margin-top:20px;}
