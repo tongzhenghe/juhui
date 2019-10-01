@@ -15,6 +15,9 @@ class Index extends IndexCommonController
         $us = Db::name('us')->find();
         //news
         $news = Db::name('news')->where($where)->order('sort asc')->limit(4)->select();
+        foreach ($news as &$v) {
+            $v['create_time'] = timeTran($v['create_time']);
+        }
         wl_debug($news);
         //友情| 资质
         return view('',
