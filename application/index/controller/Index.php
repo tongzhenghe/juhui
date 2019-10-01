@@ -3,6 +3,7 @@ namespace app\index\controller;
 
 use app\index\controller\Common as IndexCommonController;
 use think\Db;
+use think\Session;
 
 class Index extends IndexCommonController
 {
@@ -127,6 +128,10 @@ class Index extends IndexCommonController
 
         $param = request()->param();
         if (request()->isAjax()) {
+
+            if ( Session::get('uip') == get_ip())
+                exit(json_encode(['state' => false, 'msg' => '重复提交']));
+
             $data = [
             'user_name' => trim($param['user_name'])
             ,'user_tel' => trim($param['user_tel'])
@@ -136,6 +141,7 @@ class Index extends IndexCommonController
             $res = Db::name('message')->insert($data);
 
             if (!empty($res))
+                Session::set('uip', get_ip());
                 exit(json_encode(['state' => true, 'msg' => '已提交']));
         }
         return view();
