@@ -75,7 +75,7 @@ class Index extends IndexCommonController
     public  function newslist()
     {
         $where = ['status' => 1, 'is_del' => 1];
-        $news = Db::name('news')->where($where)->field('id, title, intro, pc_icon')->select();
+        $news = Db::name('news')->where($where)->field('id, title, intro, create_time')->select();
         foreach ($news as &$v) {
             $v['intro'] = utf8_sub_str($v['intro'], 0, 150).'..';
             $v['create_time'] = date('Y-m-d', ($v['create_time']));
