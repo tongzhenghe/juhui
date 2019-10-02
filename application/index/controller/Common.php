@@ -19,6 +19,9 @@ class Common extends  Controller
         $where= ['is_del' => 1, 'status' => 1, 'is_m' => 2];
         $menu = Db::name('umenu')->where($where)->order('sort asc')->select();
         $about = Db::name('us')->find();
+
+        $webset = Db::name('websets')->find();
+        wl_debug($webset);
         $this->assign('about', $about);
         $this->assign('menu', $menu);
 
