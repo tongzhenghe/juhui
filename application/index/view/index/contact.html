@@ -15,16 +15,16 @@
             {/if}
             </ul>
           </div>
-        {if !empty($about)}
+        {if !empty($data)}
         <div class="contactUs">
             <div class="contactUs_c">
                 <ul>
-                    <li>公司名称：{$about.title}</li>
-                    <li>咨询电话：{$about.people_tel}</li>
-                    <li>销售热线：{$about.people_tel}</li>
-                    <li>邮箱：{$about.email}</li>
+                    <li>公司名称：{$data.title}</li>
+                    <li>咨询电话：{$data.people_tel}</li>
+                    <li>销售热线：{$data.people_tel}</li>
+                    <li>邮箱：{$data.email}</li>
                     <li class="wcode">微信：</li>
-                    <li>地址：{$about.address}</li>
+                    <li>地址：{$data.address}</li>
                 </ul>
             </div>
         </div>
