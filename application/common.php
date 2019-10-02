@@ -10,13 +10,13 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
-function wl_debug( $value )
+/*function wl_debug( $value )
 {
     echo '<pre>';
     print_r( $value );
     echo '<pre>';
     exit;
-}
+}*/
 
 //function  wl_debug_log( $files  , $key  = '' )
 //{
@@ -77,14 +77,14 @@ function utf8_sub_str( $text, $statr = 0, $end = 10 )
 
 }
 
-function jsondebug( $array )
+/*function jsondebug( $array )
 {
     if (is_array($array)) {
         exit(json_encode(['json' => $array]));
     }
 
     exit( json_encode(['str' => $array]) );
-}
+}*/
 
 
 
@@ -99,7 +99,7 @@ function iJson( $url = null, $status = true, $msg = '提交成功' )
 
 }
 
-function  wl_debug_log( $files  , $key  = '' )
+/*function  wl_debug_log( $files  , $key  = '' )
 {
 
     $files = [$key ? $key : date('Y-m-d H : s', time()) => $files];
@@ -114,7 +114,7 @@ function  wl_debug_log( $files  , $key  = '' )
 
     fclose($dir);
 
-}
+}*/
 
 
 
