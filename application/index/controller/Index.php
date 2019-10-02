@@ -108,8 +108,8 @@ class Index extends IndexCommonController
 
     public  function contact()
     {
-        $about = Db::name('us')->find();
-        return view('', ['about' => $about]);
+        $data = Db::name('us')->find();
+        return view('', ['data' => $data]);
     }
 
     public  function recruit()
