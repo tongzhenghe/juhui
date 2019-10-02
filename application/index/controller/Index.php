@@ -33,9 +33,9 @@ class Index extends IndexCommonController
 
     public  function about()
     {
-        $about = Db::name('us')->find();
-        $about['pc_content'] = html_entity_decode($about['pc_content']);
-        return view('', ['about' => $about]);
+        $data = Db::name('us')->find();
+        $data['pc_content'] = html_entity_decode($data['pc_content']);
+        return view('', ['data' => $data]);
     }
 
     public  function goodslist()
